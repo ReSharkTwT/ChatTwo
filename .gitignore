@@ -367,3 +367,6 @@ FodyWeavers.xsd
 TestResults
 *.db-shm
 *.db-wal
+ChatTwo.sln
+ChatTwo/ChatTwo.csproj
+ChatTwo.Tests/ChatTwo.Tests.csproj

@@ -24,6 +24,9 @@ public sealed class Plugin : IDalamudPlugin
     [PluginService] internal static IPluginLog Log { get; private set; } = null!;
     [PluginService] internal static IDalamudPluginInterface Interface { get; private set; } = null!;
     [PluginService] internal static IChatGui ChatGui { get; private set; } = null!;
+
+    // 【新增】添加 ISigScanner 服务注入
+    [PluginService] internal static ISigScanner SigScanner { get; private set; } = null!;
     [PluginService] internal static IClientState ClientState { get; private set; } = null!;
     [PluginService] internal static ICommandManager CommandManager { get; private set; } = null!;
     [PluginService] internal static ICondition Condition { get; private set; } = null!;
@@ -93,6 +96,12 @@ public sealed class Plugin : IDalamudPlugin
             LanguageChanged(Interface.UiLanguage);
             ImGuiUtil.Initialize(this);
 
+            // ================= 新增这行 =================
+            // 初始化反屏蔽扫描器
+            CensorshipScanner.Initialize(SigScanner);
+            // ===========================================
+
+
             // Functions calls this in its ctor if the player is already logged in
             ServerCore = new ServerCore(this);
 
@@ -135,6 +144,15 @@ public sealed class Plugin : IDalamudPlugin
             Framework.Update += FrameworkUpdate;
             Interface.UiBuilder.Draw += Draw;
             Interface.LanguageChanged += LanguageChanged;
+
+            // ================= 新增这段代码 =================
+            // 注册主界面打开回调，消除 "does not register a main UI callback" 警告
+            Interface.UiBuilder.OpenMainUi += () =>
+            {
+                SettingsWindow.IsOpen = true;
+                SettingsWindow.BringToFront(); // 可选：确保窗口置顶
+            };
+            // ==============================================
 
             if (Config.ShowEmotes)
                 Task.Run(EmoteCache.LoadData);

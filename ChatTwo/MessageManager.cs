@@ -255,8 +255,35 @@ internal class MessageManager : IAsyncDisposable
             });
         }
 
-        var contentChunks = ChunkUtil.ToChunks(pendingMessage.Content, ChunkSource.Content, chatCode.Type).ToList();
-        var message = new Message(CurrentContentId, pendingMessage.ContentId, pendingMessage.AccountId, chatCode, senderChunks, contentChunks, pendingMessage.Sender, pendingMessage.Content);
+        var processedContent = pendingMessage.Content;
+
+        if (Plugin.Config.EnableCensorshipHighlight)
+        {
+            // 1. 调用处理
+            var highlightResult = CensorshipHighlighter.Process(
+                pendingMessage.Content
+            );
+
+            // 2. 检查是否被修改
+            var isModified = !ReferenceEquals(highlightResult, pendingMessage.Content);
+
+            if (!isModified && highlightResult != null && pendingMessage.Content != null)
+            {
+                if (highlightResult.Payloads.Count != pendingMessage.Content.Payloads.Count)
+                {
+                    isModified = true;
+                }
+            }
+
+            if (isModified)
+            {
+                processedContent = highlightResult;
+            }
+        }
+
+        var contentChunks = ChunkUtil.ToChunks(processedContent!, ChunkSource.Content, chatCode.Type).ToList();
+
+        var message = new Message(CurrentContentId, pendingMessage.ContentId, pendingMessage.AccountId, chatCode, senderChunks, contentChunks, pendingMessage.Sender, processedContent!);
 
         if (Plugin.Config.DatabaseBattleMessages || !message.Code.IsBattle())
             Store.UpsertMessage(message);

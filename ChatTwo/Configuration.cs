@@ -82,6 +82,14 @@ internal class Configuration : IPluginConfiguration
     public bool ShowEmotes = true;
     public HashSet<string> BlockedEmotes = [];
 
+    // ================= 新增代码开始 =================
+    /// <summary>
+    /// 是否启用屏蔽词高亮功能
+    /// </summary>
+    public bool EnableCensorshipHighlight = true;
+    // ================= 新增代码结束 =================
+
+
     public bool FontsEnabled = true;
     public ExtraGlyphRanges ExtraGlyphRanges = 0;
     public float FontSizeV2 = 12.75f;
@@ -171,6 +179,11 @@ internal class Configuration : IPluginConfiguration
         Use24HourClock = other.Use24HourClock;
         ShowEmotes = other.ShowEmotes;
         BlockedEmotes = other.BlockedEmotes;
+
+        // ================= 新增代码 =================
+        EnableCensorshipHighlight = other.EnableCensorshipHighlight;
+        // ===========================================
+
         FontsEnabled = other.FontsEnabled;
         ItalicEnabled = other.ItalicEnabled;
         ExtraGlyphRanges = other.ExtraGlyphRanges;

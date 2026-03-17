@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Dalamud.Game.Text.SeStringHandling;
 using Dalamud.Game.Text.SeStringHandling.Payloads;
-using ChatTwo.Util;
 namespace ChatTwo.Util;
 
 public static class CensorshipHighlighter
@@ -53,6 +52,94 @@ public static class CensorshipHighlighter
         }
 
         return modified ? new SeString(newPayloads) : original;
+    }
+
+
+    /// <summary>
+    /// 遍历 Chunks 将屏蔽词高亮后组装成新的 Chunks
+    /// </summary>
+    /// <param name="chunks"></param>
+    /// <returns></returns>
+    public static List<Chunk> HighLightCensorshipWords(List<Chunk> chunks)
+    {
+        var highlight_chunks = new List<Chunk>();
+        foreach (var chunk in chunks)
+        {
+            // 仅处理文本块
+            if (chunk is not TextChunk textChunk)
+            {
+                highlight_chunks.Add(chunk);
+                continue;
+            }
+
+            var originalText = textChunk.Content;
+            var filteredText = CensorshipScanner.GetFilteredString(originalText);
+
+            // 如果文本未被修改，直接添加原块
+            if (originalText == filteredText)
+            {
+                highlight_chunks.Add(chunk);
+                continue;
+            }
+
+            int startIndex = 0;
+            var censoredRanges = GetCensoredRanges(originalText, filteredText);
+
+            foreach (var range in censoredRanges)
+            {
+                // 添加高亮前的正常文本
+                if (range.Start > startIndex)
+                {
+                    var normalText = originalText.Substring(startIndex, range.Start - startIndex);
+                    highlight_chunks.Add(new TextChunk(
+                        textChunk.Source, // 保持原来的 Source (应该是 ChunkSource.Content)
+                        textChunk.Link,
+                        normalText
+                    )
+                    {
+                        FallbackColour = textChunk.FallbackColour,
+                        Foreground = textChunk.Foreground,
+                        Glow = textChunk.Glow,
+                        Italic = textChunk.Italic
+                    });
+                }
+
+                // 添加高亮的屏蔽词文本
+                var censoredText = originalText.Substring(range.Start, range.Length);
+                highlight_chunks.Add(new TextChunk(
+                    textChunk.Source, // 保持原来的 Source
+                    textChunk.Link,
+                    censoredText
+                )
+                {
+                    FallbackColour = textChunk.FallbackColour,
+                    Foreground = Plugin.Config.CensorshipHighlightColor, // 红色高亮
+                    Glow = textChunk.Glow,
+                    Italic = textChunk.Italic
+                });
+
+                startIndex = range.Start + range.Length;
+            }
+
+            // 添加剩余的文本
+            if (startIndex < originalText.Length)
+            {
+                var remainingText = originalText.Substring(startIndex);
+                highlight_chunks.Add(new TextChunk(
+                    textChunk.Source, // 保持原来的 Source
+                    textChunk.Link,
+                    remainingText
+                )
+                {
+                    FallbackColour = textChunk.FallbackColour,
+                    Foreground = textChunk.Foreground,
+                    Glow = textChunk.Glow,
+                    Italic = textChunk.Italic
+                });
+            }
+        }
+
+        return highlight_chunks;
     }
 
     /// <summary>
@@ -110,5 +197,73 @@ public static class CensorshipHighlighter
             result.Add(new TextPayload(original[i..]));
 
         return result;
+    }
+
+    /// <summary>
+    /// 通过对比原始文本和过滤后的文本，找出被屏蔽词替换的区间
+    /// </summary>
+    /// <param name="originalText">原始文本</param>
+    /// <param name="filteredText">经过 CensorshipScanner 处理后的文本</param>
+    /// <returns>屏蔽词区间列表</returns>
+    private static List<CensoredRange> GetCensoredRanges(string originalText, string filteredText)
+    {
+        var ranges = new List<CensoredRange>();
+
+        // 如果内容相同，直接返回空
+        if (originalText == filteredText)
+            return ranges;
+
+        int i = 0;
+        while (i < originalText.Length)
+        {
+            // 如果当前位置字符一致，跳过
+            if (i < filteredText.Length && originalText[i] == filteredText[i])
+            {
+                i++;
+                continue;
+            }
+
+            // 发现差异，记录起始位置
+            int start = i;
+
+            // 跳过差异部分，直到字符重新匹配或到达末尾
+            // 这里处理过滤文本可能比原始文本短的情况（例如字符被删除）
+            while (i < originalText.Length)
+            {
+                // 检查是否可以重新对齐
+                // 条件1: i还没超出过滤文本长度，且字符匹配了
+                // 条件2: i已经超出了过滤文本长度（说明后面都被删了）
+                bool isAligned = (i < filteredText.Length && originalText[i] == filteredText[i]);
+                bool isEndOfFiltered = (i >= filteredText.Length);
+
+                if (isAligned || isEndOfFiltered)
+                    break;
+
+                i++;
+            }
+
+            int length = i - start;
+            if (length > 0)
+            {
+                ranges.Add(new CensoredRange(start, length));
+            }
+        }
+
+        return ranges;
+    }
+
+
+}
+
+
+public readonly struct CensoredRange
+{
+    public int Start { get; }
+    public int Length { get; }
+
+    public CensoredRange(int start, int length)
+    {
+        Start = start;
+        Length = length;
     }
 }

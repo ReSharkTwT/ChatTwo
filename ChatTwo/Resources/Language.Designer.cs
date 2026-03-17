@@ -79,6 +79,15 @@ namespace ChatTwo.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Censorship Highlight Color 的本地化字符串。
+        /// </summary>
+        internal static string CensorshipHighlightColor {
+            get {
+                return ResourceManager.GetString("CensorshipHighlightColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 An error occured while sending this tell message 的本地化字符串。
         /// </summary>
         internal static string Chat_SendTell_Error {

@@ -123,6 +123,9 @@
   <data name="Options_HideChat_Description" xml:space="preserve">
     <value>Döljer spelets chattfönster när plugin är aktiverat.</value>
   </data>
+  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
+    <value>Enable Censorship Higlight</value>
+  </data>
   <data name="Options_EnableCensorshipHighlight_Description" xml:space="preserve">
     <value>Set Message Highlight on Censorship Words</value>
   </data>
@@ -1398,7 +1401,7 @@
   <data name="Webinterface_UsageNotice" xml:space="preserve">
     <value>Usage Notice</value>
   </data>
-  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
-    <value>Enable Censorship Higlight</value>
+  <data name="CensorshipHighlightColor" xml:space="preserve">
+    <value>Censorship Highlight Color</value>
   </data>
 </root>

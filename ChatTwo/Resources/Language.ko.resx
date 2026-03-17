@@ -123,6 +123,9 @@
   <data name="Options_HideChat_Description" xml:space="preserve">
     <value>플러그인이 활성화 상태일 때 기존의 인게임 채팅창을 숨깁니다.</value>
   </data>
+  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
+    <value>Enable Censorship Higlight</value>
+  </data>
   <data name="Options_EnableCensorshipHighlight_Description" xml:space="preserve">
     <value>Set Message Highlight on Censorship Words</value>
   </data>
@@ -1398,7 +1401,7 @@
   <data name="Webinterface_UsageNotice" xml:space="preserve">
     <value>Usage Notice</value>
   </data>
-  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
-    <value>Enable Censorship Higlight</value>
+  <data name="CensorshipHighlightColor" xml:space="preserve">
+    <value>Censorship Highlight Color</value>
   </data>
 </root>

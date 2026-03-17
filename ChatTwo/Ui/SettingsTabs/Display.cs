@@ -1,13 +1,15 @@
 using ChatTwo.Code;
 using ChatTwo.Resources;
 using ChatTwo.Util;
-using Dalamud.Interface.Utility.Raii;
 using Dalamud.Bindings.ImGui;
+using Dalamud.Interface;
+using Dalamud.Interface.Utility.Raii;
 
 namespace ChatTwo.Ui.SettingsTabs;
 
 internal sealed class Display : ISettingsTab
 {
+    private Plugin Plugin { get; }
     private Configuration Mutable { get; }
 
     public string Name => Language.Options_Display_Tab + "###tabs-display";
@@ -25,6 +27,15 @@ internal sealed class Display : ISettingsTab
         ImGui.Spacing();
 
         ImGuiUtil.OptionCheckbox(ref Mutable.EnableCensorshipHighlight, Language.Options_EnableCensorshipHighlight_Name, Language.Options_EnableCensorshipHighlight_Description);
+        ImGui.Spacing();
+
+        if (ImGuiUtil.IconButton(FontAwesomeIcon.UndoAlt, "CensorshipHighlightColor", Language.Options_ChatColours_Reset))
+            Mutable.CensorshipHighlightColor = 0xFF0000FF;
+        ImGui.SameLine();
+
+        var censorshipColor = ColourUtil.RgbaToVector3(Mutable.CensorshipHighlightColor);
+        if (ImGui.ColorEdit3(Language.CensorshipHighlightColor, ref censorshipColor, ImGuiColorEditFlags.NoInputs))
+            Mutable.CensorshipHighlightColor = ColourUtil.Vector3ToRgba(censorshipColor);
         ImGui.Spacing();
 
         ImGuiUtil.OptionCheckbox(ref Mutable.HideDuringCutscenes, Language.Options_HideDuringCutscenes_Name, string.Format(Language.Options_HideDuringCutscenes_Description, Plugin.PluginName));

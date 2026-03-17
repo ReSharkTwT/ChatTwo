@@ -1401,4 +1401,7 @@
   <data name="Webinterface_UsageNotice" xml:space="preserve">
     <value>使用须知</value>
   </data>
+  <data name="CensorshipHighlightColor" xml:space="preserve">
+    <value>屏蔽词高亮颜色</value>
+  </data>
 </root>

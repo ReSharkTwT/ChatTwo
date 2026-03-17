@@ -84,7 +84,7 @@ internal class Configuration : IPluginConfiguration
 
     /// 是否启用屏蔽词高亮功能
     public bool EnableCensorshipHighlight = false;
-
+    public uint CensorshipHighlightColor = 0xFF0000FF;
     public bool FontsEnabled = true;
     public ExtraGlyphRanges ExtraGlyphRanges = 0;
     public float FontSizeV2 = 12.75f;
@@ -177,6 +177,7 @@ internal class Configuration : IPluginConfiguration
 
         // ================= 新增代码 =================
         EnableCensorshipHighlight = other.EnableCensorshipHighlight;
+        CensorshipHighlightColor = other.CensorshipHighlightColor;
         // ===========================================
 
         FontsEnabled = other.FontsEnabled;

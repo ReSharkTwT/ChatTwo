@@ -10,10 +10,9 @@ namespace ChatTwo.Util;
 
 internal static class ChunkUtil
 {
-    internal static IEnumerable<Chunk> ToChunks(SeString msg, ChunkSource source, ChatType? defaultColour)
+    internal static IEnumerable<Chunk> ToChunks(SeString msg, ChunkSource source, ChatType? chatType)
     {
         var chunks = new List<Chunk>();
-
         var italic = false;
         var foreground = new Stack<uint>();
         var glow = new Stack<uint>();
@@ -23,13 +22,12 @@ internal static class ChunkUtil
         {
             chunks.Add(new TextChunk(source, link, text)
             {
-                FallbackColour = defaultColour,
+                FallbackColour = chatType,
                 Foreground = foreground.Count > 0 ? foreground.Peek() : null,
                 Glow = glow.Count > 0 ? glow.Peek() : null,
                 Italic = italic,
             });
         }
-
         foreach (var payload in msg.Payloads)
         {
             switch (payload.Type)
@@ -143,7 +141,10 @@ internal static class ChunkUtil
                     break;
             }
         }
-
+        if (Plugin.Config.EnableCensorshipHighlight && HighlightWhitelist.Contains(chatType)) {
+            Plugin.Log.Info("存在屏蔽词，已高亮");
+            return CensorshipHighlighter.HighLightCensorshipWords(chunks);
+        }
         return chunks;
     }
 
@@ -194,4 +195,37 @@ internal static class ChunkUtil
         }
         Plugin.Log.Information(str.ToString());
     }
+
+    private static readonly HashSet<ChatType?> HighlightWhitelist =
+    [
+        ChatType.Say,         // 说话
+        ChatType.Shout,       // 喊话
+        ChatType.Yell,        // 呼喊
+        ChatType.Party,       // 小队
+        ChatType.Alliance,    // 团队
+        ChatType.FreeCompany, // 部队
+        ChatType.Linkshell1,  // 通讯贝 [1]
+        ChatType.Linkshell2,  // 通讯贝 [2]
+        ChatType.Linkshell3,  // 通讯贝 [3]
+        ChatType.Linkshell4,  // 通讯贝 [4]
+        ChatType.Linkshell5,  // 通讯贝 [5]
+        ChatType.Linkshell6,  // 通讯贝 [6]
+        ChatType.Linkshell7,  // 通讯贝 [7]
+        ChatType.Linkshell8,  // 通讯贝 [8]
+        ChatType.CrossParty,  // 跨服小队
+        ChatType.CrossLinkshell1, // 跨服通讯贝 [1]
+        ChatType.CrossLinkshell2, // 跨服通讯贝 [2]
+        ChatType.CrossLinkshell3, // 跨服通讯贝 [3]
+        ChatType.CrossLinkshell4, // 跨服通讯贝 [4]
+        ChatType.CrossLinkshell5, // 跨服通讯贝 [5]
+        ChatType.CrossLinkshell6, // 跨服通讯贝 [6]
+        ChatType.CrossLinkshell7, // 跨服通讯贝 [7]
+        ChatType.CrossLinkshell8, // 跨服通讯贝 [8]
+        ChatType.NoviceNetwork,   // 新人频道
+        ChatType.TellIncoming,    // 悄悄话(接收)
+        ChatType.TellOutgoing,    // 悄悄话(发出)
+        ChatType.PvpTeam,         // 战队
+        ChatType.CustomEmote,     // 自定义情感动作
+        ChatType.StandardEmote,   // 情感动作
+    ];
 }

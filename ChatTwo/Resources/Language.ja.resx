@@ -123,6 +123,9 @@
   <data name="Options_HideChat_Description" xml:space="preserve">
     <value>プラグインがアクティブな場合、ゲーム内チャットウィンドウを非表示にします。</value>
   </data>
+  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
+    <value>Enable Censorship Higlight</value>
+  </data>
   <data name="Options_EnableCensorshipHighlight_Description" xml:space="preserve">
     <value>Set Message Highlight on Censorship Words</value>
   </data>
@@ -1398,7 +1401,7 @@
   <data name="Webinterface_UsageNotice" xml:space="preserve">
     <value>使用上の注意</value>
   </data>
-  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
-    <value>Enable Censorship Higlight</value>
+  <data name="CensorshipHighlightColor" xml:space="preserve">
+    <value>Censorship Highlight Color</value>
   </data>
 </root>

@@ -257,30 +257,6 @@ internal class MessageManager : IAsyncDisposable
 
         var processedContent = pendingMessage.Content;
 
-        //屏蔽词高亮
-        if (Plugin.Config.EnableCensorshipHighlight)
-        {
-            Plugin.Log.Info($"判断是否需要高亮处理 chatCode.Type: {chatCode.Type}");
-            if (HighlightWhitelist.Contains(chatCode.Type))
-            {
-                var highlightResult = CensorshipHighlighter.Process(
-                    pendingMessage.Content
-                );
-                var isModified = !ReferenceEquals(highlightResult, pendingMessage.Content);
-                if (!isModified && highlightResult != null && pendingMessage.Content != null)
-                {
-                    if (highlightResult.Payloads.Count != pendingMessage.Content.Payloads.Count)
-                    {
-                        isModified = true;
-                    }
-                }
-                if (isModified)
-                {
-                    processedContent = highlightResult;
-                }
-            }
-        }
-
         var contentChunks = ChunkUtil.ToChunks(processedContent!, ChunkSource.Content, chatCode.Type).ToList();
 
         var message = new Message(CurrentContentId, pendingMessage.ContentId, pendingMessage.AccountId, chatCode, senderChunks, contentChunks, pendingMessage.Sender, processedContent!);
@@ -302,7 +278,6 @@ internal class MessageManager : IAsyncDisposable
                     Plugin.ServerCore.SendNewMessage(message);
             }
         }
-        
     }
 
     internal class NameFormatting
@@ -373,37 +348,4 @@ internal class MessageManager : IAsyncDisposable
         internal SeString Sender { get; set; }
         internal SeString Content { get; set; }
     }
-
-    private static readonly HashSet<ChatType> HighlightWhitelist =
-    [
-        ChatType.Say,         // 说话
-        ChatType.Shout,       // 喊话
-        ChatType.Yell,        // 呼喊
-        ChatType.Party,       // 小队
-        ChatType.Alliance,    // 团队
-        ChatType.FreeCompany, // 部队
-        ChatType.Linkshell1,  // 通讯贝 [1]
-        ChatType.Linkshell2,  // 通讯贝 [2]
-        ChatType.Linkshell3,  // 通讯贝 [3]
-        ChatType.Linkshell4,  // 通讯贝 [4]
-        ChatType.Linkshell5,  // 通讯贝 [5]
-        ChatType.Linkshell6,  // 通讯贝 [6]
-        ChatType.Linkshell7,  // 通讯贝 [7]
-        ChatType.Linkshell8,  // 通讯贝 [8]
-        ChatType.CrossParty,  // 跨服小队
-        ChatType.CrossLinkshell1, // 跨服通讯贝 [1]
-        ChatType.CrossLinkshell2, // 跨服通讯贝 [2]
-        ChatType.CrossLinkshell3, // 跨服通讯贝 [3]
-        ChatType.CrossLinkshell4, // 跨服通讯贝 [4]
-        ChatType.CrossLinkshell5, // 跨服通讯贝 [5]
-        ChatType.CrossLinkshell6, // 跨服通讯贝 [6]
-        ChatType.CrossLinkshell7, // 跨服通讯贝 [7]
-        ChatType.CrossLinkshell8, // 跨服通讯贝 [8]
-        ChatType.NoviceNetwork,   // 新人频道
-        ChatType.TellIncoming,    // 悄悄话(接收)
-        ChatType.TellOutgoing,    // 悄悄话(发出)
-        ChatType.PvpTeam,         // 战队
-        ChatType.CustomEmote,     // 自定义情感动作
-        ChatType.StandardEmote,   // 情感动作
-    ];
 }

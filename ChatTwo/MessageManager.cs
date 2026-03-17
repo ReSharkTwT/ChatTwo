@@ -374,33 +374,36 @@ internal class MessageManager : IAsyncDisposable
         internal SeString Content { get; set; }
     }
 
-    private static readonly HashSet<ChatType> HighlightWhitelist = new HashSet<ChatType>
-    {
+    private static readonly HashSet<ChatType> HighlightWhitelist =
+    [
         ChatType.Say,         // 说话
-        ChatType.Yell,        // 大声喊话
+        ChatType.Shout,       // 喊话
+        ChatType.Yell,        // 呼喊
         ChatType.Party,       // 小队
-        ChatType.Alliance,    // 队伍
-        ChatType.FreeCompany, // 自由公司
-        ChatType.Linkshell1,  // 频道1
-        ChatType.Linkshell2,  // 频道2
-        ChatType.Linkshell3,  // 频道3
-        ChatType.Linkshell4,  // 频道4
-        ChatType.Linkshell5,  // 频道5
-        ChatType.Linkshell6,  // 频道6
-        ChatType.Linkshell7,  // 频道7
-        ChatType.Linkshell8,  // 频道8
+        ChatType.Alliance,    // 团队
+        ChatType.FreeCompany, // 部队
+        ChatType.Linkshell1,  // 通讯贝 [1]
+        ChatType.Linkshell2,  // 通讯贝 [2]
+        ChatType.Linkshell3,  // 通讯贝 [3]
+        ChatType.Linkshell4,  // 通讯贝 [4]
+        ChatType.Linkshell5,  // 通讯贝 [5]
+        ChatType.Linkshell6,  // 通讯贝 [6]
+        ChatType.Linkshell7,  // 通讯贝 [7]
+        ChatType.Linkshell8,  // 通讯贝 [8]
         ChatType.CrossParty,  // 跨服小队
-        ChatType.CrossLinkshell1, // 跨服频道1
-        ChatType.CrossLinkshell2, // 跨服频道2
-        ChatType.CrossLinkshell3, // 跨服频道3
-        ChatType.CrossLinkshell4, // 跨服频道4
-        ChatType.CrossLinkshell5, // 跨服频道5
-        ChatType.CrossLinkshell6, // 跨服频道6
-        ChatType.CrossLinkshell7, // 跨服频道7
-        ChatType.CrossLinkshell8, // 跨服频道8
-        ChatType.NoviceNetwork,   // 新手社区
-        ChatType.TellIncoming,    // 收到密语
-        ChatType.TellOutgoing,    // 发出密语
-        ChatType.PvpTeam,         // PVP小队
-    };
+        ChatType.CrossLinkshell1, // 跨服通讯贝 [1]
+        ChatType.CrossLinkshell2, // 跨服通讯贝 [2]
+        ChatType.CrossLinkshell3, // 跨服通讯贝 [3]
+        ChatType.CrossLinkshell4, // 跨服通讯贝 [4]
+        ChatType.CrossLinkshell5, // 跨服通讯贝 [5]
+        ChatType.CrossLinkshell6, // 跨服通讯贝 [6]
+        ChatType.CrossLinkshell7, // 跨服通讯贝 [7]
+        ChatType.CrossLinkshell8, // 跨服通讯贝 [8]
+        ChatType.NoviceNetwork,   // 新人频道
+        ChatType.TellIncoming,    // 悄悄话(接收)
+        ChatType.TellOutgoing,    // 悄悄话(发出)
+        ChatType.PvpTeam,         // 战队
+        ChatType.CustomEmote,     // 自定义情感动作
+        ChatType.StandardEmote,   // 情感动作
+    ];
 }

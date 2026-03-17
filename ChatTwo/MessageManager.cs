@@ -257,27 +257,27 @@ internal class MessageManager : IAsyncDisposable
 
         var processedContent = pendingMessage.Content;
 
+        //屏蔽词高亮
         if (Plugin.Config.EnableCensorshipHighlight)
         {
-            // 1. 调用处理
-            var highlightResult = CensorshipHighlighter.Process(
-                pendingMessage.Content
-            );
-
-            // 2. 检查是否被修改
-            var isModified = !ReferenceEquals(highlightResult, pendingMessage.Content);
-
-            if (!isModified && highlightResult != null && pendingMessage.Content != null)
+            Plugin.Log.Info($"判断是否需要高亮处理 chatCode.Type: {chatCode.Type}");
+            if (HighlightWhitelist.Contains(chatCode.Type))
             {
-                if (highlightResult.Payloads.Count != pendingMessage.Content.Payloads.Count)
+                var highlightResult = CensorshipHighlighter.Process(
+                    pendingMessage.Content
+                );
+                var isModified = !ReferenceEquals(highlightResult, pendingMessage.Content);
+                if (!isModified && highlightResult != null && pendingMessage.Content != null)
                 {
-                    isModified = true;
+                    if (highlightResult.Payloads.Count != pendingMessage.Content.Payloads.Count)
+                    {
+                        isModified = true;
+                    }
                 }
-            }
-
-            if (isModified)
-            {
-                processedContent = highlightResult;
+                if (isModified)
+                {
+                    processedContent = highlightResult;
+                }
             }
         }
 
@@ -302,6 +302,7 @@ internal class MessageManager : IAsyncDisposable
                     Plugin.ServerCore.SendNewMessage(message);
             }
         }
+        
     }
 
     internal class NameFormatting
@@ -372,4 +373,34 @@ internal class MessageManager : IAsyncDisposable
         internal SeString Sender { get; set; }
         internal SeString Content { get; set; }
     }
+
+    private static readonly HashSet<ChatType> HighlightWhitelist = new HashSet<ChatType>
+    {
+        ChatType.Say,         // 说话
+        ChatType.Yell,        // 大声喊话
+        ChatType.Party,       // 小队
+        ChatType.Alliance,    // 队伍
+        ChatType.FreeCompany, // 自由公司
+        ChatType.Linkshell1,  // 频道1
+        ChatType.Linkshell2,  // 频道2
+        ChatType.Linkshell3,  // 频道3
+        ChatType.Linkshell4,  // 频道4
+        ChatType.Linkshell5,  // 频道5
+        ChatType.Linkshell6,  // 频道6
+        ChatType.Linkshell7,  // 频道7
+        ChatType.Linkshell8,  // 频道8
+        ChatType.CrossParty,  // 跨服小队
+        ChatType.CrossLinkshell1, // 跨服频道1
+        ChatType.CrossLinkshell2, // 跨服频道2
+        ChatType.CrossLinkshell3, // 跨服频道3
+        ChatType.CrossLinkshell4, // 跨服频道4
+        ChatType.CrossLinkshell5, // 跨服频道5
+        ChatType.CrossLinkshell6, // 跨服频道6
+        ChatType.CrossLinkshell7, // 跨服频道7
+        ChatType.CrossLinkshell8, // 跨服频道8
+        ChatType.NoviceNetwork,   // 新手社区
+        ChatType.TellIncoming,    // 收到密语
+        ChatType.TellOutgoing,    // 发出密语
+        ChatType.PvpTeam,         // PVP小队
+    };
 }

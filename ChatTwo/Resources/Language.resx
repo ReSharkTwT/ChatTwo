@@ -127,6 +127,12 @@
     <data name="Options_HideChat_Description">
         <value>Hide the in-game chat window when the plugin is active.</value>
     </data>
+    <data name="Options_EnableCensorshipHighlight_Name">
+        <value>Enable Censorship Higlight</value>
+    </data>
+    <data name="Options_EnableCensorshipHighlight_Description">
+        <value>Set Message Highlight on Censorship Words</value>
+    </data>
     <data name="Options_HideDuringCutscenes_Name">
         <value>Hide during cutscenes</value>
     </data>

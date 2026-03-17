@@ -1,104 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-      Microsoft ResX Schema
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-      Version 2.0
-
-      The primary goals of this format is to allow a simple XML format
-      that is mostly human readable. The generation and parsing of the
-      various data types are done through the TypeConverter classes
-      associated with the data types.
-
-      Example:
-
-      ... ado.net/XML headers & schema ...
-      <resheader name="resmimetype">text/microsoft-resx</resheader>
-      <resheader name="version">2.0</resheader>
-      <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-      <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-      <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-      <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-      <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-          <value>[base64 mime encoded serialized .NET Framework object]</value>
-      </data>
-      <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-          <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-          <comment>This is a comment</comment>
-      </data>
-
-      There are any number of "resheader" rows that contain simple
-      name/value pairs.
-
-      Each data row contains a name, and value. The row also contains a
-      type or mimetype. Type corresponds to a .NET class that support
-      text/value conversion through the TypeConverter architecture.
-      Classes that don't support this are serialized and stored with the
-      mimetype set.
-
-      The mimetype is used for serialized objects, and tells the
-      ResXResourceReader how to depersist the object. This is currently not
-      extensible. For a given mimetype the value must be set accordingly:
-
-      Note - application/x-microsoft.net.object.binary.base64 is the format
-      that the ResXResourceWriter will generate, however the reader can
-      read any of the formats listed below.
-
-      mimetype: application/x-microsoft.net.object.binary.base64
-      value   : The object must be serialized with
-              : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-              : and then encoded with base64 encoding.
-
-      mimetype: application/x-microsoft.net.object.soap.base64
-      value   : The object must be serialized with
-              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-              : and then encoded with base64 encoding.
-
-      mimetype: application/x-microsoft.net.object.bytearray.base64
-      value   : The object must be serialized into a byte array
-              : using a System.ComponentModel.TypeConverter
-              : and then encoded with base64 encoding.
-      -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -112,1291 +112,1293 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Options_HideChat_Name">
+  <data name="Options_HideChat_Name" xml:space="preserve">
     <value>バニラチャットを非表示</value>
   </data>
-  <data name="Options_HideChat_Description">
+  <data name="Options_HideChat_Description" xml:space="preserve">
     <value>プラグインがアクティブな場合、ゲーム内チャットウィンドウを非表示にします。</value>
   </data>
-  <data name="Options_HideDuringCutscenes_Name">
+  <data name="Options_EnableCensorshipHighlight_Description" xml:space="preserve">
+    <value>Set Message Highlight on Censorship Words</value>
+  </data>
+  <data name="Options_HideDuringCutscenes_Name" xml:space="preserve">
     <value>カットシーン中は非表示</value>
   </data>
-  <data name="Options_HideDuringCutscenes_Description">
+  <data name="Options_HideDuringCutscenes_Description" xml:space="preserve">
     <value>カットシーン中は {0} を非表示にします。</value>
   </data>
-  <data name="Options_NativeItemTooltips_Name">
+  <data name="Options_NativeItemTooltips_Name" xml:space="preserve">
     <value>ネイティブアイテムのツールチップを表示</value>
   </data>
-  <data name="Options_NativeItemTooltips_Description">
+  <data name="Options_NativeItemTooltips_Description" xml:space="preserve">
     <value>{0} のアイテムにカーソルを合わせると、ゲーム内のアイテムツールチップを表示します。</value>
   </data>
-  <data name="Options_SidebarTabView_Name">
+  <data name="Options_SidebarTabView_Name" xml:space="preserve">
     <value>タブをサイドバーに表示</value>
   </data>
-  <data name="Options_SidebarTabView_Description">
+  <data name="Options_SidebarTabView_Description" xml:space="preserve">
     <value>上部にバーの代わりにサイドバーとして {0} のタブを表示します。</value>
   </data>
-  <data name="Options_PrettierTimestamps_Name">
+  <data name="Options_PrettierTimestamps_Name" xml:space="preserve">
     <value>モダンなレイアウトを使用</value>
   </data>
-  <data name="Options_PrettierTimestamps_Description">
+  <data name="Options_PrettierTimestamps_Description" xml:space="preserve">
     <value>よりモダンなスタイルでメッセージを表示します。</value>
   </data>
-  <data name="Options_Use24HourClock_Name">
+  <data name="Options_Use24HourClock_Name" xml:space="preserve">
     <value>24時間表示</value>
   </data>
-  <data name="Options_Use24HourClock_Description">
+  <data name="Options_Use24HourClock_Description" xml:space="preserve">
     <value>タイムスタンプを24時間表示します。</value>
   </data>
-  <data name="Options_MoreCompactPretty_Name">
+  <data name="Options_MoreCompactPretty_Name" xml:space="preserve">
     <value>コンパクトなモダンなレイアウト</value>
   </data>
-  <data name="Options_MoreCompactPretty_Description">
+  <data name="Options_MoreCompactPretty_Description" xml:space="preserve">
     <value>メッセージ間の間隔を縮小します。</value>
   </data>
-  <data name="Options_ShowNoviceNetwork_Name">
+  <data name="Options_ShowNoviceNetwork_Name" xml:space="preserve">
     <value>ビギナーチャット参加ボタンを表示する</value>
   </data>
-  <data name="Options_ShowNoviceNetwork_Description">
+  <data name="Options_ShowNoviceNetwork_Description" xml:space="preserve">
     <value>メンターとしてログインしている場合は、設定ボタンの横にビギナーチャット参加ボタンを表示します。</value>
   </data>
   <data name="Options_ShowHideButton_Name" xml:space="preserve">
-        <value>非表示ボタンを表示</value>
-    </data>
+    <value>非表示ボタンを表示</value>
+  </data>
   <data name="Options_ShowHideButton_Description" xml:space="preserve">
-        <value>設定ボタンの横に非表示ボタンを表示します。チャットウィンドウは、リターンまたはスラッシュを押してフォーカスできます。</value>
-    </data>
-  <data name="Options_FontSize_Name">
+    <value>設定ボタンの横に非表示ボタンを表示します。チャットウィンドウは、リターンまたはスラッシュを押してフォーカスできます。</value>
+  </data>
+  <data name="Options_FontSize_Name" xml:space="preserve">
     <value>フォントサイズ</value>
   </data>
-  <data name="Options_WindowOpacity_Name">
+  <data name="Options_WindowOpacity_Name" xml:space="preserve">
     <value>ウィンドウの不透明度</value>
   </data>
-  <data name="Options_CanMove_Name">
+  <data name="Options_CanMove_Name" xml:space="preserve">
     <value>チャットの移動を許可</value>
   </data>
-  <data name="Options_CanResize_Name">
+  <data name="Options_CanResize_Name" xml:space="preserve">
     <value>チャットのサイズ変更を許可</value>
   </data>
-  <data name="Popout_CanMove_Name">
+  <data name="Popout_CanMove_Name" xml:space="preserve">
     <value>ウィンドウの移動を許可</value>
   </data>
-  <data name="Popout_CanResize_Name">
+  <data name="Popout_CanResize_Name" xml:space="preserve">
     <value>ウィンドウのサイズ変更を許可</value>
   </data>
-  <data name="Options_ShowTitleBar_Name">
+  <data name="Options_ShowTitleBar_Name" xml:space="preserve">
     <value>チャットのタイトルバーを表示</value>
   </data>
-  <data name="Options_Display_Tab">
+  <data name="Options_Display_Tab" xml:space="preserve">
     <value>表示</value>
   </data>
-  <data name="Options_ChatColours_Tab">
+  <data name="Options_ChatColours_Tab" xml:space="preserve">
     <value>チャットの色</value>
   </data>
-  <data name="Options_ChatColours_Reset">
+  <data name="Options_ChatColours_Reset" xml:space="preserve">
     <value>既定にリセット</value>
   </data>
-  <data name="Options_ChatColours_Import">
+  <data name="Options_ChatColours_Import" xml:space="preserve">
     <value>ゲームからインポート</value>
   </data>
-  <data name="Options_Tabs_Tab">
+  <data name="Options_Tabs_Tab" xml:space="preserve">
     <value>タブ</value>
   </data>
-  <data name="Options_Tabs_Add">
+  <data name="Options_Tabs_Add" xml:space="preserve">
     <value>追加</value>
   </data>
-  <data name="Options_Tabs_Delete">
+  <data name="Options_Tabs_Delete" xml:space="preserve">
     <value>削除</value>
   </data>
-  <data name="Options_Tabs_MoveUp">
+  <data name="Options_Tabs_MoveUp" xml:space="preserve">
     <value>上へ移動</value>
   </data>
-  <data name="Options_Tabs_MoveDown">
+  <data name="Options_Tabs_MoveDown" xml:space="preserve">
     <value>下へ移動</value>
   </data>
-  <data name="Options_Tabs_Name">
+  <data name="Options_Tabs_Name" xml:space="preserve">
     <value>名前</value>
   </data>
-  <data name="Options_Tabs_ShowTimestamps">
+  <data name="Options_Tabs_ShowTimestamps" xml:space="preserve">
     <value>タイムスタンプを表示</value>
   </data>
-  <data name="Options_Tabs_UnreadMode">
+  <data name="Options_Tabs_UnreadMode" xml:space="preserve">
     <value>未読モード</value>
   </data>
-  <data name="Options_Tabs_InactivityBehaviour">
+  <data name="Options_Tabs_InactivityBehaviour" xml:space="preserve">
     <value>アクティビティ時にチャットウィンドウを再表示する</value>
   </data>
-  <data name="Options_Tabs_NoInputChannel">
+  <data name="Options_Tabs_NoInputChannel" xml:space="preserve">
     <value>；</value>
   </data>
-  <data name="Options_Tabs_InputChannel">
+  <data name="Options_Tabs_InputChannel" xml:space="preserve">
     <value>入力チャンネル</value>
   </data>
-  <data name="Options_Tabs_Channels">
+  <data name="Options_Tabs_Channels" xml:space="preserve">
     <value>チャネル</value>
   </data>
-  <data name="UnreadMode_All_Tooltip">
+  <data name="UnreadMode_All_Tooltip" xml:space="preserve">
     <value>未読のインジケーターを常に表示します。</value>
   </data>
-  <data name="UnreadMode_Unseen_Tooltip">
+  <data name="UnreadMode_Unseen_Tooltip" xml:space="preserve">
     <value>未読のインジケータのみを表示します。</value>
   </data>
-  <data name="UnreadMode_None_Tooltip">
+  <data name="UnreadMode_None_Tooltip" xml:space="preserve">
     <value>未読のインジケータを表示しない。</value>
   </data>
-  <data name="Tab_DefaultName">
+  <data name="Tab_DefaultName" xml:space="preserve">
     <value>新しいタブ</value>
   </data>
-  <data name="Settings_SaveAndClose">
+  <data name="Settings_SaveAndClose" xml:space="preserve">
     <value>保存して閉じる</value>
   </data>
-  <data name="Settings_Save">
+  <data name="Settings_Save" xml:space="preserve">
     <value>保存する</value>
   </data>
-  <data name="Settings_Discard">
+  <data name="Settings_Discard" xml:space="preserve">
     <value>破棄する</value>
   </data>
-  <data name="Settings_Title">
+  <data name="Settings_Title" xml:space="preserve">
     <value>{0} 設定</value>
   </data>
-  <data name="ChatLog_SwitcherDisabled">
+  <data name="ChatLog_SwitcherDisabled" xml:space="preserve">
     <value>このタブでは無効です</value>
   </data>
-  <data name="ChatLog_HideChat">
+  <data name="ChatLog_HideChat" xml:space="preserve">
     <value>チャットを非表示</value>
   </data>
-  <data name="ChatLog_Tabs_MoveUp">
+  <data name="ChatLog_Tabs_MoveUp" xml:space="preserve">
     <value>上へ移動</value>
   </data>
-  <data name="ChatLog_Tabs_MoveLeft">
+  <data name="ChatLog_Tabs_MoveLeft" xml:space="preserve">
     <value>左へ移動</value>
   </data>
-  <data name="ChatLog_Tabs_MoveDown">
+  <data name="ChatLog_Tabs_MoveDown" xml:space="preserve">
     <value>下へ移動</value>
   </data>
-  <data name="ChatLog_Tabs_MoveRight">
+  <data name="ChatLog_Tabs_MoveRight" xml:space="preserve">
     <value>右へ移動</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Chat">
+  <data name="Options_Tabs_ChannelTypes_Chat" xml:space="preserve">
     <value>チャット</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Battle">
+  <data name="Options_Tabs_ChannelTypes_Battle" xml:space="preserve">
     <value>戦闘</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Announcements">
+  <data name="Options_Tabs_ChannelTypes_Announcements" xml:space="preserve">
     <value>お知らせ</value>
   </data>
-  <data name="UnreadMode_All">
+  <data name="UnreadMode_All" xml:space="preserve">
     <value>すべて</value>
   </data>
-  <data name="UnreadMode_Unseen">
+  <data name="UnreadMode_Unseen" xml:space="preserve">
     <value>Unseen</value>
   </data>
-  <data name="UnreadMode_None">
+  <data name="UnreadMode_None" xml:space="preserve">
     <value>なし</value>
   </data>
-  <data name="ChatSource_Self">
+  <data name="ChatSource_Self" xml:space="preserve">
     <value>自身</value>
   </data>
-  <data name="ChatSource_PartyMember">
+  <data name="ChatSource_PartyMember" xml:space="preserve">
     <value>Ptメンバー</value>
   </data>
-  <data name="ChatSource_AllianceMember">
+  <data name="ChatSource_AllianceMember" xml:space="preserve">
     <value>アライアンスメンバー</value>
   </data>
-  <data name="ChatSource_Other">
+  <data name="ChatSource_Other" xml:space="preserve">
     <value>その他</value>
   </data>
-  <data name="ChatSource_EngagedEnemy">
+  <data name="ChatSource_EngagedEnemy" xml:space="preserve">
     <value>交戦中の敵</value>
   </data>
-  <data name="ChatSource_UnengagedEnemy">
+  <data name="ChatSource_UnengagedEnemy" xml:space="preserve">
     <value>未交戦の敵</value>
   </data>
-  <data name="ChatSource_FriendlyNpc">
+  <data name="ChatSource_FriendlyNpc" xml:space="preserve">
     <value>フレンドリーな NPC</value>
   </data>
-  <data name="ChatSource_SelfPet">
+  <data name="ChatSource_SelfPet" xml:space="preserve">
     <value>ペット（自分）</value>
   </data>
-  <data name="ChatSource_PartyPet">
+  <data name="ChatSource_PartyPet" xml:space="preserve">
     <value>ペット (パーティー)</value>
   </data>
-  <data name="ChatSource_AlliancePet">
+  <data name="ChatSource_AlliancePet" xml:space="preserve">
     <value>ペット (アライアンス)</value>
   </data>
-  <data name="ChatSource_OtherPet">
+  <data name="ChatSource_OtherPet" xml:space="preserve">
     <value>ペット (他人)</value>
   </data>
-  <data name="Options_Font_Name">
+  <data name="Options_Font_Name" xml:space="preserve">
     <value>フォント</value>
   </data>
-  <data name="Options_JapaneseFont_Name">
+  <data name="Options_JapaneseFont_Name" xml:space="preserve">
     <value>日本語フォント</value>
   </data>
-  <data name="Options_Font_Description">
+  <data name="Options_Font_Description" xml:space="preserve">
     <value>フォント {0} は日本語以外のテキストを表示するために使用します。</value>
   </data>
-  <data name="Options_Font_Warning">
+  <data name="Options_Font_Warning" xml:space="preserve">
     <value>特定のシステムフォントを使用するとゲームがクラッシュする可能性があります。警告されています。</value>
   </data>
-  <data name="Options_JapaneseFont_Description">
+  <data name="Options_JapaneseFont_Description" xml:space="preserve">
     <value>フォント {0} は日本語以外のテキストを表示するために使用します。</value>
   </data>
-  <data name="Options_ItalicFont_Name">
+  <data name="Options_ItalicFont_Name" xml:space="preserve">
     <value>斜体フォント</value>
   </data>
-  <data name="Options_Italic_Description">
+  <data name="Options_Italic_Description" xml:space="preserve">
     <value>有効にすると、 {0}で斜体フォントを使用します。そうでなければ、斜体フォントを使用します。</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Special">
+  <data name="Options_Tabs_ChannelTypes_Special" xml:space="preserve">
     <value>特別</value>
   </data>
-  <data name="Options_Fonts_Tab">
+  <data name="Options_Fonts_Tab" xml:space="preserve">
     <value>フォント</value>
   </data>
-  <data name="Options_SymbolsFontSize_Name">
+  <data name="Options_SymbolsFontSize_Name" xml:space="preserve">
     <value>シンボルのフォント サイズ</value>
   </data>
-  <data name="Options_JapaneseFontSize_Name">
+  <data name="Options_JapaneseFontSize_Name" xml:space="preserve">
     <value>日本語のフォントサイズ</value>
   </data>
-  <data name="Options_SymbolsFontSize_Description">
+  <data name="Options_SymbolsFontSize_Description" xml:space="preserve">
     <value>ゲームシンボルに使用するフォントサイズ。</value>
   </data>
-  <data name="ChatLog_Tabs_Delete">
+  <data name="ChatLog_Tabs_Delete" xml:space="preserve">
     <value>タブの削除</value>
   </data>
-  <data name="Options_HideWhenNotLoggedIn_Name">
+  <data name="Options_HideWhenNotLoggedIn_Name" xml:space="preserve">
     <value>ログインしていない時は非表示</value>
   </data>
-  <data name="Options_HideWhenNotLoggedIn_Description">
+  <data name="Options_HideWhenNotLoggedIn_Description" xml:space="preserve">
     <value>キャラクターにログインしていないときは、 {0} を非表示にします。</value>
   </data>
-  <data name="Tabs_Presets_General">
+  <data name="Tabs_Presets_General" xml:space="preserve">
     <value>全般</value>
   </data>
-  <data name="Options_Tabs_Preset">
+  <data name="Options_Tabs_Preset" xml:space="preserve">
     <value>プリセット: {0}</value>
   </data>
-  <data name="Tabs_Presets_Event">
+  <data name="Tabs_Presets_Event" xml:space="preserve">
     <value>イベント</value>
   </data>
-  <data name="Options_Tabs_NewTab">
+  <data name="Options_Tabs_NewTab" xml:space="preserve">
     <value>新しいタブ</value>
   </data>
-  <data name="Options_About_Tab">
+  <data name="Options_About_Tab" xml:space="preserve">
     <value>概要</value>
   </data>
-  <data name="Options_About_Opening">
+  <data name="Options_About_Opening" xml:space="preserve">
     <value>{0} はゲーム内チャットを完全に再現し、さらに改善するためのプロジェクトです。</value>
   </data>
-  <data name="Options_About_CrowdIn">
+  <data name="Options_About_CrowdIn" xml:space="preserve">
     <value>翻訳の手助け: </value>
   </data>
-  <data name="Options_About_Translators">
+  <data name="Options_About_Translators" xml:space="preserve">
     <value>翻訳者</value>
   </data>
-  <data name="CommandHelpSide_None">
+  <data name="CommandHelpSide_None" xml:space="preserve">
     <value>なし</value>
   </data>
-  <data name="CommandHelpSide_Left">
+  <data name="CommandHelpSide_Left" xml:space="preserve">
     <value>左</value>
   </data>
-  <data name="CommandHelpSide_Right">
+  <data name="CommandHelpSide_Right" xml:space="preserve">
     <value>右</value>
   </data>
-  <data name="Options_CommandHelpSide_Name">
+  <data name="Options_CommandHelpSide_Name" xml:space="preserve">
     <value>コマンドヘルプサイド (None = off)</value>
   </data>
-  <data name="Options_CommandHelpSide_Description">
+  <data name="Options_CommandHelpSide_Description" xml:space="preserve">
     <value>コマンドのヘルプを表示する {0} 側。</value>
   </data>
-  <data name="Options_HideWhenUiHidden_Name">
+  <data name="Options_HideWhenUiHidden_Name" xml:space="preserve">
     <value>ゲームUIが非表示の場合は非表示</value>
   </data>
-  <data name="Options_HideWhenUiHidden_Description">
+  <data name="Options_HideWhenUiHidden_Description" xml:space="preserve">
     <value>ゲームUIが非表示の場合、 {0} を非表示にします。</value>
   </data>
-  <data name="Options_HideWhenInactive_Name">
+  <data name="Options_HideWhenInactive_Name" xml:space="preserve">
     <value>非アクティブ時は非表示</value>
   </data>
-  <data name="Options_HideWhenInactive_Description">
+  <data name="Options_HideWhenInactive_Description" xml:space="preserve">
     <value>非アクティブ期間後にチャットを非表示にします。現在のタブや設定が有効になっているその他のタブはアクティビティとみなされます。</value>
   </data>
-  <data name="Options_InactivityHideTimeout_Name">
+  <data name="Options_InactivityHideTimeout_Name" xml:space="preserve">
     <value>未使用時タイムアウト</value>
   </data>
-  <data name="Options_InactivityHideTimeout_Description">
+  <data name="Options_InactivityHideTimeout_Description" xml:space="preserve">
     <value>チャットログの非アクティブ化を検討するまでの待機時間 (秒単位)。</value>
   </data>
   <data name="Options_InactivityHideActiveDuringBattle_Name" xml:space="preserve">
-        <value>戦闘中の非表示を有効にする</value>
-    </data>
+    <value>戦闘中の非表示を有効にする</value>
+  </data>
   <data name="Options_InactivityHideActiveDuringBattle_Description" xml:space="preserve">
-        <value>無効にすると、チャットログは戦闘中に表示されます。</value>
-    </data>
-  <data name="Options_InactivityHideChannels_Name">
+    <value>無効にすると、チャットログは戦闘中に表示されます。</value>
+  </data>
+  <data name="Options_InactivityHideChannels_Name" xml:space="preserve">
     <value>チャットチャンネルはアクティビティを検討しています</value>
   </data>
-  <data name="Options_InactivityHideChannels_Description">
+  <data name="Options_InactivityHideChannels_Description" xml:space="preserve">
     <value>どのチャットチャンネルがアクティビティのために考慮されるべきか。他のチャンネルは、どのタブで発生するかに関係なくチャットを復元しません。</value>
   </data>
-  <data name="Options_InactivityHideChannels_All_Label">
+  <data name="Options_InactivityHideChannels_All_Label" xml:space="preserve">
     <value>すべて選択</value>
   </data>
-  <data name="Options_InactivityHideChannels_None_Label">
+  <data name="Options_InactivityHideChannels_None_Label" xml:space="preserve">
     <value>すべて解除</value>
   </data>
-  <data name="Options_InactivityHideChannels_Button_Tooltip">
+  <data name="Options_InactivityHideChannels_Button_Tooltip" xml:space="preserve">
     <value>Ctrl + Shift キーを押しながらクリックします。</value>
   </data>
-  <data name="Options_KeybindMode_Name">
+  <data name="Options_KeybindMode_Name" xml:space="preserve">
     <value>キー割り当てモード</value>
   </data>
-  <data name="Options_KeybindMode_Description">
+  <data name="Options_KeybindMode_Description" xml:space="preserve">
     <value>{0} がキーバインドを処理する方法。</value>
   </data>
-  <data name="Options_Miscellaneous_Tab">
+  <data name="Options_Miscellaneous_Tab" xml:space="preserve">
     <value>その他の設定</value>
   </data>
-  <data name="Options_Webinterface_Tab">
+  <data name="Options_Webinterface_Tab" xml:space="preserve">
     <value>Webインターフェイス</value>
   </data>
-  <data name="LanguageOverride_None">
+  <data name="LanguageOverride_None" xml:space="preserve">
     <value>Dalamudのデフォルト言語を使用する</value>
   </data>
-  <data name="KeybindMode_Flexible_Name">
+  <data name="KeybindMode_Flexible_Name" xml:space="preserve">
     <value>Flexible</value>
   </data>
-  <data name="KeybindMode_Strict_Name">
+  <data name="KeybindMode_Strict_Name" xml:space="preserve">
     <value>Strict</value>
   </data>
-  <data name="KeybindMode_Flexible_Tooltip">
+  <data name="KeybindMode_Flexible_Tooltip" xml:space="preserve">
     <value>プロセスキーは、他の修飾子が押されていても修飾子と結合します。</value>
   </data>
-  <data name="KeybindMode_Strict_Tooltip">
+  <data name="KeybindMode_Strict_Tooltip" xml:space="preserve">
     <value>他の修飾子が押されていない場合、プロセスキーは修飾子で結合されます。</value>
   </data>
-  <data name="Options_Language_Name">
+  <data name="Options_Language_Name" xml:space="preserve">
     <value>言語</value>
   </data>
-  <data name="Options_Language_Description">
+  <data name="Options_Language_Description" xml:space="preserve">
     <value>{0} を表示する言語。</value>
   </data>
-  <data name="Options_DatabaseBattleMessages_Name">
+  <data name="Options_DatabaseBattleMessages_Name" xml:space="preserve">
     <value>戦闘メッセージをデータベースに保存する</value>
   </data>
-  <data name="Options_DatabaseBattleMessages_Description">
+  <data name="Options_DatabaseBattleMessages_Description" xml:space="preserve">
     <value>バトルメッセージをデータベースに保存すると、データベースのサイズが大きくなります。 設定を保存するとフリーズが顕著になります 無効のままにすることをお勧めします。</value>
   </data>
-  <data name="Options_LoadPreviousSession_Name">
+  <data name="Options_LoadPreviousSession_Name" xml:space="preserve">
     <value>ログイン時に前のチャットセッションを表示する</value>
   </data>
-  <data name="Options_LoadPreviousSession_Description">
+  <data name="Options_LoadPreviousSession_Description" xml:space="preserve">
     <value>ログイン後、最後にログオフした時点からのメッセージをチャットに入力します。</value>
   </data>
-  <data name="Options_Database_Tab">
+  <data name="Options_Database_Tab" xml:space="preserve">
     <value>データベース</value>
   </data>
-  <data name="Options_FilterIncludePreviousSessions_Name">
+  <data name="Options_FilterIncludePreviousSessions_Name" xml:space="preserve">
     <value>タブを入力するときに以前のセッションを含める</value>
   </data>
-  <data name="Options_FilterIncludePreviousSessions_Description">
+  <data name="Options_FilterIncludePreviousSessions_Description" xml:space="preserve">
     <value>タブを入力したときにゲームが開始される前のメッセージを含めます。設定が保存されたときにタブが表示されます。</value>
   </data>
-  <data name="Options_Database_Advanced_Warning">
+  <data name="Options_Database_Advanced_Warning" xml:space="preserve">
     <value>何をしているか分からない限り、これらのボタンをクリックしないでください。</value>
   </data>
-  <data name="Options_Database_Advanced">
+  <data name="Options_Database_Advanced" xml:space="preserve">
     <value>高度な設定</value>
   </data>
-  <data name="ChatLog_Tabs_PopOut">
+  <data name="ChatLog_Tabs_PopOut" xml:space="preserve">
     <value>ポップアウト</value>
   </data>
-  <data name="Options_HideSameTimestamps_Name">
+  <data name="Options_HideSameTimestamps_Name" xml:space="preserve">
     <value>冗長時にタイムスタンプを隠す</value>
   </data>
-  <data name="Options_HideSameTimestamps_Description">
+  <data name="Options_HideSameTimestamps_Description" xml:space="preserve">
     <value>前のメッセージが同じタイムスタンプを持っている場合はタイムスタンプを非表示にします。</value>
   </data>
-  <data name="Options_ShowPopOutTitleBar_Name">
+  <data name="Options_ShowPopOutTitleBar_Name" xml:space="preserve">
     <value>ポップアップタブのタイトルバーを表示</value>
   </data>
-  <data name="Options_Tabs_PopOut">
+  <data name="Options_Tabs_PopOut" xml:space="preserve">
     <value>別のウィンドウで表示</value>
   </data>
-  <data name="Options_Tabs_IndependentOpacity">
+  <data name="Options_Tabs_IndependentOpacity" xml:space="preserve">
     <value>メインウィンドウとは異なる不透明度を使用する</value>
   </data>
-  <data name="Options_Tabs_Opacity">
+  <data name="Options_Tabs_Opacity" xml:space="preserve">
     <value>透明度</value>
   </data>
-  <data name="Options_Tabs_IndependentHide">
+  <data name="Options_Tabs_IndependentHide" xml:space="preserve">
     <value>メインウィンドウとは異なる非表示条件を使用する</value>
   </data>
-  <data name="Options_FontsEnabled">
+  <data name="Options_FontsEnabled" xml:space="preserve">
     <value>カスタムフォントを有効にする</value>
   </data>
-  <data name="Options_ItalicEnabled">
+  <data name="Options_ItalicEnabled" xml:space="preserve">
     <value>斜体フォントを使用</value>
   </data>
-  <data name="AutoTranslate_Search_Hint">
+  <data name="AutoTranslate_Search_Hint" xml:space="preserve">
     <value>自動翻訳を検索…</value>
   </data>
-  <data name="Options_SortAutoTranslate_Name">
+  <data name="Options_SortAutoTranslate_Name" xml:space="preserve">
     <value>自動翻訳リストを並べ替える</value>
   </data>
-  <data name="Options_SortAutoTranslate_Description">
+  <data name="Options_SortAutoTranslate_Description" xml:space="preserve">
     <value>これが有効な場合、自動翻訳リストはアルファベット順にソートされます。</value>
   </data>
-  <data name="Options_WebinterfaceEnable_Name">
+  <data name="Options_WebinterfaceEnable_Name" xml:space="preserve">
     <value>有効</value>
   </data>
-  <data name="Options_WebinterfaceEnable_Description">
+  <data name="Options_WebinterfaceEnable_Description" xml:space="preserve">
     <value>ブラウザでアクセスできるWebインターフェースを有効にします。</value>
   </data>
-  <data name="Options_WebinterfaceAutoStart_Name">
+  <data name="Options_WebinterfaceAutoStart_Name" xml:space="preserve">
     <value>自動で開始</value>
   </data>
-  <data name="Options_WebinterfaceAutoStart_Description">
+  <data name="Options_WebinterfaceAutoStart_Description" xml:space="preserve">
     <value>Webインターフェイスは自動的にプラグインと一緒に起動します</value>
   </data>
-  <data name="Options_OverrideStyle_Name">
+  <data name="Options_OverrideStyle_Name" xml:space="preserve">
     <value>スタイルを上書き</value>
   </data>
-  <data name="Options_OverrideStyleDropdown_Name">
+  <data name="Options_OverrideStyleDropdown_Name" xml:space="preserve">
     <value>スタイル</value>
   </data>
-  <data name="Options_ChatTabForwardKeybind_Name">
+  <data name="Options_ChatTabForwardKeybind_Name" xml:space="preserve">
     <value>チャットタブの順方向キーバインド</value>
   </data>
-  <data name="Options_ChatTabBackwardKeybind_Name">
+  <data name="Options_ChatTabBackwardKeybind_Name" xml:space="preserve">
     <value>チャットタブの逆方向キーバインド</value>
   </data>
-  <data name="Webinterface_CurrentPassword">
+  <data name="Webinterface_CurrentPassword" xml:space="preserve">
     <value>認証コード：</value>
   </data>
-  <data name="Webinterface_PasswordReset_Tooltip">
+  <data name="Webinterface_PasswordReset_Tooltip" xml:space="preserve">
     <value>パスワードをリセットし、すべてのセッショントークンを無効にします。</value>
   </data>
-  <data name="Webinterface_Controls">
+  <data name="Webinterface_Controls" xml:space="preserve">
     <value>コントロールパネル：</value>
   </data>
-  <data name="Webinterface_Controls_Active">
+  <data name="Webinterface_Controls_Active" xml:space="preserve">
     <value>有効：</value>
   </data>
-  <data name="Webinterface_Controls_Url">
+  <data name="Webinterface_Controls_Url" xml:space="preserve">
     <value>URL：</value>
   </data>
-  <data name="Keybind_None">
+  <data name="Keybind_None" xml:space="preserve">
     <value>未設定</value>
   </data>
-  <data name="Keybind_EscToClear">
+  <data name="Keybind_EscToClear" xml:space="preserve">
     <value>ESCでクリア</value>
   </data>
-  <data name="Keybind_Modifier_Ctrl">
+  <data name="Keybind_Modifier_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
   </data>
-  <data name="Keybind_Modifier_Alt">
+  <data name="Keybind_Modifier_Alt" xml:space="preserve">
     <value>Alt</value>
   </data>
-  <data name="Keybind_Modifier_Shift">
+  <data name="Keybind_Modifier_Shift" xml:space="preserve">
     <value>Shift</value>
   </data>
-  <data name="AutoTranslate_Completion_Key">
+  <data name="AutoTranslate_Completion_Key" xml:space="preserve">
     <value>Ctrl + {0}</value>
   </data>
-  <data name="Options_ExtraGlyphs_Name">
+  <data name="Options_ExtraGlyphs_Name" xml:space="preserve">
     <value>Extra font glyphs</value>
   </data>
-  <data name="Options_ExtraGlyphs_Description">
+  <data name="Options_ExtraGlyphs_Description" xml:space="preserve">
     <value>以下のチェックボックスをオンにすることで、 {0}のグローバルフォントに追加することができます。これは、恐らくダライムのフォントアトラスのサイズを増やす必要があるでしょう。</value>
   </data>
-  <data name="ExtraGlyphRanges_ChineseFull_Name">
+  <data name="ExtraGlyphRanges_ChineseFull_Name" xml:space="preserve">
     <value>中国語 (完全)</value>
   </data>
-  <data name="ExtraGlyphRanges_ChineseSimplifiedCommon_Name">
+  <data name="ExtraGlyphRanges_ChineseSimplifiedCommon_Name" xml:space="preserve">
     <value>中国語（簡体字）</value>
   </data>
-  <data name="ExtraGlyphRanges_Cyrillic_Name">
+  <data name="ExtraGlyphRanges_Cyrillic_Name" xml:space="preserve">
     <value>キリル語</value>
   </data>
-  <data name="ExtraGlyphRanges_Japanese_Name">
+  <data name="ExtraGlyphRanges_Japanese_Name" xml:space="preserve">
     <value>日本語</value>
   </data>
-  <data name="ExtraGlyphRanges_Korean_Name">
+  <data name="ExtraGlyphRanges_Korean_Name" xml:space="preserve">
     <value>韓国語</value>
   </data>
-  <data name="ExtraGlyphRanges_Thai_Name">
+  <data name="ExtraGlyphRanges_Thai_Name" xml:space="preserve">
     <value>タイ語</value>
   </data>
-  <data name="ExtraGlyphRanges_Vietnamese_Name">
+  <data name="ExtraGlyphRanges_Vietnamese_Name" xml:space="preserve">
     <value>ベトナム語</value>
   </data>
-  <data name="Context_Integrations">
+  <data name="Context_Integrations" xml:space="preserve">
     <value>Integrations</value>
   </data>
-  <data name="Context_ScreenshotMode">
+  <data name="Context_ScreenshotMode" xml:space="preserve">
     <value>スクリーンショットモード</value>
   </data>
-  <data name="Context_HideChat">
+  <data name="Context_HideChat" xml:space="preserve">
     <value>ログウィンドウを隠す</value>
   </data>
-  <data name="Context_Copy">
+  <data name="Context_Copy" xml:space="preserve">
     <value>コピーする</value>
   </data>
-  <data name="Context_TryOn">
+  <data name="Context_TryOn" xml:space="preserve">
     <value>装備試着</value>
   </data>
-  <data name="Context_ItemComparison">
+  <data name="Context_ItemComparison" xml:space="preserve">
     <value>装備詳細を比較</value>
   </data>
-  <data name="Context_SearchRecipes">
+  <data name="Context_SearchRecipes" xml:space="preserve">
     <value>この素材から作れるものを確認</value>
   </data>
-  <data name="Context_SearchForItem">
+  <data name="Context_SearchForItem" xml:space="preserve">
     <value>所持状況を確認</value>
   </data>
-  <data name="Context_Link">
+  <data name="Context_Link" xml:space="preserve">
     <value>基本性能を伝える</value>
   </data>
-  <data name="Context_CopyItemName">
+  <data name="Context_CopyItemName" xml:space="preserve">
     <value>アイテム名をコピーする</value>
   </data>
-  <data name="Context_SendTell">
+  <data name="Context_SendTell" xml:space="preserve">
     <value>Tellする</value>
   </data>
-  <data name="Context_InviteToParty">
+  <data name="Context_InviteToParty" xml:space="preserve">
     <value>パーティに誘う</value>
   </data>
-  <data name="Context_BlockFunctions">
+  <data name="Context_BlockFunctions" xml:space="preserve">
     <value>Block Functions</value>
   </data>
-  <data name="Context_InviteToParty_SameWorld">
+  <data name="Context_InviteToParty_SameWorld" xml:space="preserve">
     <value>Same world</value>
   </data>
-  <data name="Context_InviteToParty_DifferentWorld">
+  <data name="Context_InviteToParty_DifferentWorld" xml:space="preserve">
     <value>Different world</value>
   </data>
-  <data name="Context_Promote">
+  <data name="Context_Promote" xml:space="preserve">
     <value>パーティリーダーを委譲する</value>
   </data>
-  <data name="Context_KickFromParty">
+  <data name="Context_KickFromParty" xml:space="preserve">
     <value>パーティから除外する</value>
   </data>
-  <data name="Context_SendFriendRequest">
+  <data name="Context_SendFriendRequest" xml:space="preserve">
     <value>フレンド申請をする</value>
   </data>
-  <data name="Context_AddToBlacklist">
+  <data name="Context_AddToBlacklist" xml:space="preserve">
     <value>ブラックリストに登録する</value>
   </data>
-  <data name="Context_AddToMuteList">
+  <data name="Context_AddToMuteList" xml:space="preserve">
     <value>ミュートリストに登録</value>
   </data>
-  <data name="Context_AddToTermsFilter">
+  <data name="Context_AddToTermsFilter" xml:space="preserve">
     <value>用語フィルタに追加</value>
   </data>
-  <data name="Context_InviteToNoviceNetwork">
+  <data name="Context_InviteToNoviceNetwork" xml:space="preserve">
     <value>ビギナーチャンネルに招待する</value>
   </data>
-  <data name="Context_ReplyInSelectedChatMode">
+  <data name="Context_ReplyInSelectedChatMode" xml:space="preserve">
     <value>選択した会話モードに返信する</value>
   </data>
-  <data name="Context_Target">
+  <data name="Context_Target" xml:space="preserve">
     <value>ターゲットする</value>
   </data>
-  <data name="ChatType_Debug">
+  <data name="ChatType_Debug" xml:space="preserve">
     <value>デバッグ</value>
   </data>
-  <data name="ChatType_Urgent">
+  <data name="ChatType_Urgent" xml:space="preserve">
     <value>緊急</value>
   </data>
-  <data name="ChatType_Notice">
+  <data name="ChatType_Notice" xml:space="preserve">
     <value>通知</value>
   </data>
-  <data name="ChatType_Say">
+  <data name="ChatType_Say" xml:space="preserve">
     <value>Say</value>
   </data>
-  <data name="ChatType_Shout">
+  <data name="ChatType_Shout" xml:space="preserve">
     <value>Shout</value>
   </data>
-  <data name="ChatType_TellOutgoing">
+  <data name="ChatType_TellOutgoing" xml:space="preserve">
     <value>Tell (Outgoing)</value>
   </data>
-  <data name="ChatType_TellIncoming">
+  <data name="ChatType_TellIncoming" xml:space="preserve">
     <value>Tell (Incoming)</value>
   </data>
-  <data name="ChatType_Party">
+  <data name="ChatType_Party" xml:space="preserve">
     <value>Party</value>
   </data>
-  <data name="ChatType_Alliance">
+  <data name="ChatType_Alliance" xml:space="preserve">
     <value>アライアンス</value>
   </data>
-  <data name="ChatType_Linkshell1">
+  <data name="ChatType_Linkshell1" xml:space="preserve">
     <value>リンクシェル[1]</value>
   </data>
-  <data name="ChatType_Linkshell2">
+  <data name="ChatType_Linkshell2" xml:space="preserve">
     <value>リンクシェル[2]</value>
   </data>
-  <data name="ChatType_Linkshell3">
+  <data name="ChatType_Linkshell3" xml:space="preserve">
     <value>リンクシェル[3]</value>
   </data>
-  <data name="ChatType_Linkshell4">
+  <data name="ChatType_Linkshell4" xml:space="preserve">
     <value>リンクシェル[4]</value>
   </data>
-  <data name="ChatType_Linkshell5">
+  <data name="ChatType_Linkshell5" xml:space="preserve">
     <value>リンクシェル[5]</value>
   </data>
-  <data name="ChatType_Linkshell6">
+  <data name="ChatType_Linkshell6" xml:space="preserve">
     <value>リンクシェル[6]</value>
   </data>
-  <data name="ChatType_Linkshell7">
+  <data name="ChatType_Linkshell7" xml:space="preserve">
     <value>リンクシェル[7]</value>
   </data>
-  <data name="ChatType_Linkshell8">
+  <data name="ChatType_Linkshell8" xml:space="preserve">
     <value>リンクシェル[8]</value>
   </data>
-  <data name="ChatType_FreeCompany">
+  <data name="ChatType_FreeCompany" xml:space="preserve">
     <value>フリーカンパニー</value>
   </data>
-  <data name="ChatType_NoviceNetwork">
+  <data name="ChatType_NoviceNetwork" xml:space="preserve">
     <value>ビギナーチャンネル</value>
   </data>
-  <data name="ChatType_CustomEmotes">
+  <data name="ChatType_CustomEmotes" xml:space="preserve">
     <value>カスタムエモート</value>
   </data>
-  <data name="ChatType_StandardEmotes">
+  <data name="ChatType_StandardEmotes" xml:space="preserve">
     <value>標準のエモート</value>
   </data>
-  <data name="ChatType_Yell">
+  <data name="ChatType_Yell" xml:space="preserve">
     <value>Yell</value>
   </data>
-  <data name="ChatType_CrossWorldParty">
+  <data name="ChatType_CrossWorldParty" xml:space="preserve">
     <value>クロスワールドパーティー</value>
   </data>
-  <data name="ChatType_PvpTeam">
+  <data name="ChatType_PvpTeam" xml:space="preserve">
     <value>PvPチーム</value>
   </data>
-  <data name="ChatType_CrossLinkshell1">
+  <data name="ChatType_CrossLinkshell1" xml:space="preserve">
     <value>クロスワールドリンクシェル：チャンネル1</value>
   </data>
-  <data name="ChatType_CrossLinkshell2">
+  <data name="ChatType_CrossLinkshell2" xml:space="preserve">
     <value>クロスワールドリンクシェル：チャンネル2</value>
   </data>
-  <data name="ChatType_CrossLinkshell3">
+  <data name="ChatType_CrossLinkshell3" xml:space="preserve">
     <value>クロスワールドリンクシェル：チャンネル3</value>
   </data>
-  <data name="ChatType_CrossLinkshell4">
+  <data name="ChatType_CrossLinkshell4" xml:space="preserve">
     <value>クロスワールドリンクシェル：チャンネル4</value>
   </data>
-  <data name="ChatType_CrossLinkshell5">
+  <data name="ChatType_CrossLinkshell5" xml:space="preserve">
     <value>クロスワールドリンクシェル：チャンネル5</value>
   </data>
-  <data name="ChatType_CrossLinkshell6">
+  <data name="ChatType_CrossLinkshell6" xml:space="preserve">
     <value>クロスワールドリンクシェル：チャンネル6</value>
   </data>
-  <data name="ChatType_CrossLinkshell7">
+  <data name="ChatType_CrossLinkshell7" xml:space="preserve">
     <value>クロスワールドリンクシェル：チャンネル7</value>
   </data>
-  <data name="ChatType_CrossLinkshell8">
+  <data name="ChatType_CrossLinkshell8" xml:space="preserve">
     <value>クロスワールドリンクシェル：チャンネル8</value>
   </data>
-  <data name="ChatType_Damage">
+  <data name="ChatType_Damage" xml:space="preserve">
     <value>ダメージを与えた</value>
   </data>
-  <data name="ChatType_Miss">
+  <data name="ChatType_Miss" xml:space="preserve">
     <value>失敗した攻撃</value>
   </data>
-  <data name="ChatType_Action">
+  <data name="ChatType_Action" xml:space="preserve">
     <value>使用されたアクション</value>
   </data>
-  <data name="ChatType_Item">
+  <data name="ChatType_Item" xml:space="preserve">
     <value>使用されたアイテム</value>
   </data>
-  <data name="ChatType_Healing">
+  <data name="ChatType_Healing" xml:space="preserve">
     <value>回復</value>
   </data>
-  <data name="ChatType_GainBuff">
-    <value></value>
+  <data name="ChatType_GainBuff" xml:space="preserve">
+    <value />
   </data>
-  <data name="ChatType_GainDebuff">
+  <data name="ChatType_GainDebuff" xml:space="preserve">
     <value>Detrimental effects inflicted</value>
   </data>
-  <data name="ChatType_LoseBuff">
+  <data name="ChatType_LoseBuff" xml:space="preserve">
     <value>Beneficial effects lost</value>
   </data>
-  <data name="ChatType_LoseDebuff">
+  <data name="ChatType_LoseDebuff" xml:space="preserve">
     <value>Detrimental effects cured</value>
   </data>
-  <data name="ChatType_Alarm">
+  <data name="ChatType_Alarm" xml:space="preserve">
     <value>アラーム通知</value>
   </data>
-  <data name="ChatType_Glamour">
+  <data name="ChatType_Glamour" xml:space="preserve">
     <value>装備変更通知</value>
   </data>
-  <data name="ChatType_Echo">
+  <data name="ChatType_Echo" xml:space="preserve">
     <value>/echoで出力するテキスト</value>
   </data>
-  <data name="ChatType_System">
+  <data name="ChatType_System" xml:space="preserve">
     <value>システムメッセージ</value>
   </data>
-  <data name="ChatType_BattleSystem">
+  <data name="ChatType_BattleSystem" xml:space="preserve">
     <value>戦闘に関するシステムメッセージ</value>
   </data>
-  <data name="ChatType_GatheringSystem">
+  <data name="ChatType_GatheringSystem" xml:space="preserve">
     <value>採集に関するシステムメッセージ</value>
   </data>
-  <data name="ChatType_Error">
+  <data name="ChatType_Error" xml:space="preserve">
     <value>エラーメッセージ</value>
   </data>
-  <data name="ChatType_NpcDialogue">
+  <data name="ChatType_NpcDialogue" xml:space="preserve">
     <value>NPC会話</value>
   </data>
-  <data name="ChatType_LootNotice">
+  <data name="ChatType_LootNotice" xml:space="preserve">
     <value>戦利品通知</value>
   </data>
-  <data name="ChatType_Progress">
+  <data name="ChatType_Progress" xml:space="preserve">
     <value>進捗メッセージ</value>
   </data>
-  <data name="ChatType_LootRoll">
+  <data name="ChatType_LootRoll" xml:space="preserve">
     <value>戦利品メッセージ</value>
   </data>
-  <data name="ChatType_Crafting">
+  <data name="ChatType_Crafting" xml:space="preserve">
     <value>Synthesis Messages</value>
   </data>
-  <data name="ChatType_Gathering">
+  <data name="ChatType_Gathering" xml:space="preserve">
     <value>収集メッセージ</value>
   </data>
-  <data name="ChatType_NpcAnnouncement">
+  <data name="ChatType_NpcAnnouncement" xml:space="preserve">
     <value>NPCダイアログ (お知らせ)</value>
   </data>
-  <data name="ChatType_FreeCompanyAnnouncement">
+  <data name="ChatType_FreeCompanyAnnouncement" xml:space="preserve">
     <value>フリーカンパニーアナウンス</value>
   </data>
-  <data name="ChatType_FreeCompanyLoginLogout">
+  <data name="ChatType_FreeCompanyLoginLogout" xml:space="preserve">
     <value>フリーカンパニーログイン通知</value>
   </data>
-  <data name="ChatType_RetainerSale">
+  <data name="ChatType_RetainerSale" xml:space="preserve">
     <value>リテイナー売却通知</value>
   </data>
-  <data name="ChatType_PeriodicRecruitmentNotification">
+  <data name="ChatType_PeriodicRecruitmentNotification" xml:space="preserve">
     <value>PT募集通知</value>
   </data>
-  <data name="ChatType_Sign">
-    <value></value>
+  <data name="ChatType_Sign" xml:space="preserve">
+    <value />
   </data>
-  <data name="ChatType_RandomNumber">
-    <value></value>
+  <data name="ChatType_RandomNumber" xml:space="preserve">
+    <value />
   </data>
-  <data name="ChatType_NoviceNetworkSystem">
+  <data name="ChatType_NoviceNetworkSystem" xml:space="preserve">
     <value>ビギナーチャンネルアナウンス</value>
   </data>
-  <data name="ChatType_Orchestrion">
+  <data name="ChatType_Orchestrion" xml:space="preserve">
     <value>Current Orchestrion Track Messages</value>
   </data>
-  <data name="ChatType_PvpTeamAnnouncement">
+  <data name="ChatType_PvpTeamAnnouncement" xml:space="preserve">
     <value>PvPチームアナウンス</value>
   </data>
-  <data name="ChatType_PvpTeamLoginLogout">
+  <data name="ChatType_PvpTeamLoginLogout" xml:space="preserve">
     <value>PvP Team Member Login Notifications</value>
   </data>
-  <data name="ChatType_MessageBook">
+  <data name="ChatType_MessageBook" xml:space="preserve">
     <value>Message Book Alert</value>
   </data>
-  <data name="ChatType_GmTell">
+  <data name="ChatType_GmTell" xml:space="preserve">
     <value>Tell (GM)</value>
   </data>
-  <data name="ChatType_GmSay">
+  <data name="ChatType_GmSay" xml:space="preserve">
     <value>Say (GM)</value>
   </data>
-  <data name="ChatType_GmShout">
+  <data name="ChatType_GmShout" xml:space="preserve">
     <value>Shout (GM)</value>
   </data>
-  <data name="ChatType_GmYell">
+  <data name="ChatType_GmYell" xml:space="preserve">
     <value>Yell (GM)</value>
   </data>
-  <data name="ChatType_GmParty">
+  <data name="ChatType_GmParty" xml:space="preserve">
     <value>Party (GM)</value>
   </data>
-  <data name="ChatType_GmFreeCompany">
+  <data name="ChatType_GmFreeCompany" xml:space="preserve">
     <value>Free Company (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell1">
+  <data name="ChatType_GmLinkshell1" xml:space="preserve">
     <value>Linkshell [1] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell2">
+  <data name="ChatType_GmLinkshell2" xml:space="preserve">
     <value>Linkshell [2] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell3">
+  <data name="ChatType_GmLinkshell3" xml:space="preserve">
     <value>Linkshell [3] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell4">
+  <data name="ChatType_GmLinkshell4" xml:space="preserve">
     <value>Linkshell [4] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell5">
+  <data name="ChatType_GmLinkshell5" xml:space="preserve">
     <value>Linkshell [5] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell6">
+  <data name="ChatType_GmLinkshell6" xml:space="preserve">
     <value>Linkshell [6] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell7">
+  <data name="ChatType_GmLinkshell7" xml:space="preserve">
     <value>Linkshell [7] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell8">
+  <data name="ChatType_GmLinkshell8" xml:space="preserve">
     <value>Linkshell [8] (GM)</value>
   </data>
-  <data name="ChatType_GmNoviceNetwork">
+  <data name="ChatType_GmNoviceNetwork" xml:space="preserve">
     <value>Novice Network (GM)</value>
   </data>
-  <data name="Options_CollapseDuplicateMessages_Name">
+  <data name="Options_CollapseDuplicateMessages_Name" xml:space="preserve">
     <value>Collapse duplicate messages</value>
   </data>
-  <data name="Options_CollapseDuplicateMessages_Description">
+  <data name="Options_CollapseDuplicateMessages_Description" xml:space="preserve">
     <value>連続した重複したメッセージを、最初のメッセージインスタンスに追加されたカウンタに置き換えます。</value>
   </data>
-  <data name="Options_CollapseDuplicateMsgUniqueLink_Name">
+  <data name="Options_CollapseDuplicateMsgUniqueLink_Name" xml:space="preserve">
     <value>ユニークなリンクを分離する</value>
   </data>
-  <data name="Options_CollapseDuplicateMsgUniqueLink_Description">
+  <data name="Options_CollapseDuplicateMsgUniqueLink_Description" xml:space="preserve">
     <value>同じテキストで異なるものにリンクしている場合、メッセージを折りたたまないでください。</value>
   </data>
-  <data name="Options_Tabs_ExtraChatChannels">
+  <data name="Options_Tabs_ExtraChatChannels" xml:space="preserve">
     <value>ExtraChat channels</value>
   </data>
-  <data name="Options_Tabs_ExtraChatAll">
+  <data name="Options_Tabs_ExtraChatAll" xml:space="preserve">
     <value>All</value>
   </data>
-  <data name="Context_AdventurerPlate">
+  <data name="Context_AdventurerPlate" xml:space="preserve">
     <value>アドベンチャープレート表示</value>
   </data>
-  <data name="Context_AdventurerPlateError">
+  <data name="Context_AdventurerPlateError" xml:space="preserve">
     <value>アドベンチャープレートを表示できません</value>
   </data>
-  <data name="Options_TooltipOffset_Name">
+  <data name="Options_TooltipOffset_Name" xml:space="preserve">
     <value>ツールチップオフセット </value>
   </data>
-  <data name="Options_TooltipOffset_Desc">
+  <data name="Options_TooltipOffset_Desc" xml:space="preserve">
     <value>カットオフツールチップが発生した場合は、このオプションを使用します。</value>
   </data>
   <data name="ChatType_ExtraChatLinkshell1" xml:space="preserve">
-        <value>ExtraChat Linkshell [1]</value>
-    </data>
+    <value>ExtraChat Linkshell [1]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell2" xml:space="preserve">
-        <value>ExtraChat Linkshell [2]</value>
-    </data>
+    <value>ExtraChat Linkshell [2]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell3" xml:space="preserve">
-        <value>ExtraChat Linkshell [3]</value>
-    </data>
+    <value>ExtraChat Linkshell [3]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell4" xml:space="preserve">
-        <value>ExtraChat Linkshell [4]</value>
-    </data>
+    <value>ExtraChat Linkshell [4]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell5" xml:space="preserve">
-        <value>ExtraChat Linkshell [5]</value>
-    </data>
+    <value>ExtraChat Linkshell [5]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell6" xml:space="preserve">
-        <value>ExtraChat Linkshell [6]</value>
-    </data>
+    <value>ExtraChat Linkshell [6]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell7" xml:space="preserve">
-        <value>ExtraChat Linkshell [7]</value>
-    </data>
+    <value>ExtraChat Linkshell [7]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell8" xml:space="preserve">
-        <value>ExtraChat Linkshell [8]</value>
-    </data>
-  <data name="Context_CopyContent">
+    <value>ExtraChat Linkshell [8]</value>
+  </data>
+  <data name="Context_CopyContent" xml:space="preserve">
     <value>コンテンツをコピー</value>
   </data>
-  <data name="Context_CopyContentSuccess">
+  <data name="Context_CopyContentSuccess" xml:space="preserve">
     <value>メッセージ内容をクリップボードにコピーしました</value>
   </data>
-  <data name="Context_CopySuccess">
+  <data name="Context_CopySuccess" xml:space="preserve">
     <value>メッセージをクリップボードにコピー</value>
   </data>
-  <data name="PartyInvite_NoId">
+  <data name="PartyInvite_NoId" xml:space="preserve">
     <value>このメッセージの ID が見つかりません。別のものをお試しください。</value>
   </data>
   <data name="Context_CopyLink" xml:space="preserve">
-        <value>リンクをコピー</value>
-    </data>
+    <value>リンクをコピー</value>
+  </data>
   <data name="Context_CopyLinkNotification" xml:space="preserve">
-        <value>リンクをコピーしました</value>
-    </data>
+    <value>リンクをコピーしました</value>
+  </data>
   <data name="Context_OpenInBrowser" xml:space="preserve">
-        <value>リンクをブラウザーで開く</value>
-    </data>
+    <value>リンクをブラウザーで開く</value>
+  </data>
   <data name="Context_OpenInBrowserError" xml:space="preserve">
-        <value>ブラウザーでリンクを開けませんでした。この問題を報告してください</value>
-    </data>
+    <value>ブラウザーでリンクを開けませんでした。この問題を報告してください</value>
+  </data>
   <data name="Context_URLDomain" xml:space="preserve">
-        <value>{0} の URL</value>
-    </data>
+    <value>{0} の URL</value>
+  </data>
   <data name="Context_URLWarning" xml:space="preserve">
-        <value>信頼できるウェブサイトのURLのみ開く</value>
-    </data>
+    <value>信頼できるウェブサイトのURLのみ開く</value>
+  </data>
   <data name="Options_About_Authors" xml:space="preserve">
-        <value>作成者: </value>
-    </data>
+    <value>作成者: </value>
+  </data>
   <data name="Options_About_Discord" xml:space="preserve">
-        <value>Discord: </value>
-    </data>
+    <value>Discord: </value>
+  </data>
   <data name="Options_About_Version" xml:space="preserve">
-        <value>バージョン: </value>
-    </data>
+    <value>バージョン: </value>
+  </data>
   <data name="Options_About_Github_Issues" xml:space="preserve">
-        <value>Githubでヘルプを表示: </value>
-    </data>
+    <value>Githubでヘルプを表示: </value>
+  </data>
   <data name="Options_About_Discord_Thread" xml:space="preserve">
-        <value>Discordスレッドでヘルプを表示： </value>
-    </data>
+    <value>Discordスレッドでヘルプを表示： </value>
+  </data>
   <data name="Options_OverrideStyle_Name_Desc" xml:space="preserve">
-        <value>選択したdalamudスタイルを別のスタイルで上書きする</value>
-    </data>
+    <value>選択したdalamudスタイルを別のスタイルで上書きする</value>
+  </data>
   <data name="Options_HideInLoadingScreens_Name" xml:space="preserve">
-        <value>読み込み中は非表示</value>
-    </data>
+    <value>読み込み中は非表示</value>
+  </data>
   <data name="Options_HideInLoadingScreens_Description" xml:space="preserve">
-        <value>ロード中は {0} を非表示にします。</value>
-    </data>
-  <data name="Options_ClearDatabase_Button">
+    <value>ロード中は {0} を非表示にします。</value>
+  </data>
+  <data name="Options_ClearDatabase_Button" xml:space="preserve">
     <value>メッセージ履歴データベースをクリア</value>
   </data>
-  <data name="Options_ClearDatabase_Success">
+  <data name="Options_ClearDatabase_Success" xml:space="preserve">
     <value>チャットデータベースをクリアしました</value>
   </data>
-  <data name="Options_ClearDatabase_Tooltip">
+  <data name="Options_ClearDatabase_Tooltip" xml:space="preserve">
     <value>すべてのメッセージ履歴を削除します。復元できません。Ctrl+Shiftキーを押しながらクリックしてください。</value>
   </data>
-  <data name="Options_Database_Metadata_CopyConfigPath">
+  <data name="Options_Database_Metadata_CopyConfigPath" xml:space="preserve">
     <value>クリックしてデータベースディレクトリパスをコピー</value>
   </data>
-  <data name="Options_Database_Metadata_CopyConfigPathNotification">
+  <data name="Options_Database_Metadata_CopyConfigPathNotification" xml:space="preserve">
     <value>データベースディレクトリパスをクリップボードにコピーしました</value>
   </data>
-  <data name="Options_Database_Metadata_Heading">
+  <data name="Options_Database_Metadata_Heading" xml:space="preserve">
     <value>データベースの詳細:</value>
   </data>
-  <data name="Options_Database_Metadata_LogSize">
+  <data name="Options_Database_Metadata_LogSize" xml:space="preserve">
     <value>ログサイズ: {0}</value>
   </data>
-  <data name="Options_Database_Metadata_MessageCount">
+  <data name="Options_Database_Metadata_MessageCount" xml:space="preserve">
     <value>保存されたメッセージ: {0:N0}</value>
   </data>
-  <data name="Options_Database_Metadata_Path">
+  <data name="Options_Database_Metadata_Path" xml:space="preserve">
     <value>パス: {0}</value>
   </data>
-  <data name="Options_Database_Metadata_Size">
+  <data name="Options_Database_Metadata_Size" xml:space="preserve">
     <value>サイズ： {0}</value>
   </data>
   <data name="Options_OverrideStyle_NotSelected" xml:space="preserve">
-        <value>未選択</value>
-    </data>
+    <value>未選択</value>
+  </data>
   <data name="Options_OverrideStyle_NotAvailable" xml:space="preserve">
-        <value>Dalamudスタイルは利用できません</value>
-    </data>
+    <value>Dalamudスタイルは利用できません</value>
+  </data>
   <data name="Options_PlaySounds_Name" xml:space="preserve">
-        <value>音を鳴らす</value>
-    </data>
+    <value>音を鳴らす</value>
+  </data>
   <data name="Options_PlaySounds_Description" xml:space="preserve">
-        <value>インタラクション時に音を再生します。</value>
-    </data>
+    <value>インタラクション時に音を再生します。</value>
+  </data>
   <data name="Options_MaxLinesToShow_Name" xml:space="preserve">
-        <value>チャットウィンドウに表示するログの最大数</value>
-    </data>
+    <value>チャットウィンドウに表示するログの最大数</value>
+  </data>
   <data name="Options_MaxLinesToShow_Description" xml:space="preserve">
-        <value>チャットウィンドウに表示するログ行数を制限します。これによりパフォーマンスが若干向上する可能性があります。</value>
-    </data>
+    <value>チャットウィンドウに表示するログ行数を制限します。これによりパフォーマンスが若干向上する可能性があります。</value>
+  </data>
   <data name="Options_WebinterfaceMaxLinesToSend_Name" xml:space="preserve">
-        <value>Webインターフェースのログ行数制限</value>
-    </data>
+    <value>Webインターフェースのログ行数制限</value>
+  </data>
   <data name="Options_WebinterfaceMaxLinesToSend_Description" xml:space="preserve">
-        <value>Webインターフェースに表示するログの数を制限します。これにより読み込みのパフォーマンスが向上します。</value>
-    </data>
+    <value>Webインターフェースに表示するログの数を制限します。これにより読み込みのパフォーマンスが向上します。</value>
+  </data>
   <data name="LoadMessages_Error" xml:space="preserve">
-        <value>チャット履歴の読み込み中にエラーが発生しました。この問題を報告するには、プラグインのログを参照してください。</value>
-    </data>
+    <value>チャット履歴の読み込み中にエラーが発生しました。この問題を報告するには、プラグインのログを参照してください。</value>
+  </data>
   <data name="Options_Database_Old_Heading" xml:space="preserve">
-        <value>古いデータベース:</value>
-    </data>
+    <value>古いデータベース:</value>
+  </data>
   <data name="Options_Database_Old_Delete" xml:space="preserve">
-        <value>Delete</value>
-    </data>
+    <value>Delete</value>
+  </data>
   <data name="Options_Database_Old_Delete_Tooltip" xml:space="preserve">
-        <value>ディスクからデータベースを削除します。これは回復できません。Ctrl+Shiftキーを押したままクリックしてください。</value>
-    </data>
+    <value>ディスクからデータベースを削除します。これは回復できません。Ctrl+Shiftキーを押したままクリックしてください。</value>
+  </data>
   <data name="Options_Database_Old_Delete_Error" xml:space="preserve">
-        <value>古いデータベースを削除できません。詳細は/xllogディレクトリを参照してください。</value>
-    </data>
+    <value>古いデータベースを削除できません。詳細は/xllogディレクトリを参照してください。</value>
+  </data>
   <data name="Options_Database_Old_Delete_Success" xml:space="preserve">
-        <value>古いデータベースは正常に削除されました。</value>
-    </data>
+    <value>古いデータベースは正常に削除されました。</value>
+  </data>
   <data name="Options_Database_Old_Migration" xml:space="preserve">
-        <value>Open migration window</value>
-    </data>
+    <value>Open migration window</value>
+  </data>
   <data name="Options_Tabs_NoInput" xml:space="preserve">
-        <value>このチャンネルの入力を無効にする</value>
-    </data>
+    <value>このチャンネルの入力を無効にする</value>
+  </data>
   <data name="ChatLog_DisabledInput" xml:space="preserve">
-        <value>このタブの入力は無効です</value>
-    </data>
+    <value>このタブの入力は無効です</value>
+  </data>
   <data name="Options_ChatLog_Tab" xml:space="preserve">
-        <value>チャットログ</value>
-    </data>
+    <value>チャットログ</value>
+  </data>
   <data name="Options_AdjustPosition_Name" xml:space="preserve">
-        <value>チャットログの位置を調整</value>
-    </data>
+    <value>チャットログの位置を調整</value>
+  </data>
   <data name="Options_AdjustPosition_Warning" xml:space="preserve">
-        <value>注意、この変更はすぐに適用され、破棄できません!</value>
-    </data>
+    <value>注意、この変更はすぐに適用され、破棄できません!</value>
+  </data>
   <data name="Options_KeepInputFocus_Name" xml:space="preserve">
-        <value>入力フォーカスを維持</value>
-    </data>
+    <value>入力フォーカスを維持</value>
+  </data>
   <data name="Options_KeepInputFocus_Description" xml:space="preserve">
-        <value>戦闘に入ったり、他のアクションを行ったりしても、入力フォーカスを維持します。</value>
-    </data>
+    <value>戦闘に入ったり、他のアクションを行ったりしても、入力フォーカスを維持します。</value>
+  </data>
   <data name="Options_ShowEmotes_Name" xml:space="preserve">
-        <value>エモートを表示</value>
-    </data>
+    <value>エモートを表示</value>
+  </data>
   <data name="Options_ShowEmotes_Desc" xml:space="preserve">
-        <value>単語をエモートバージョンに置き換え、現在BetterTTVをサポートしています。</value>
-    </data>
+    <value>単語をエモートバージョンに置き換え、現在BetterTTVをサポートしています。</value>
+  </data>
   <data name="Options_Emote_Tab" xml:space="preserve">
-        <value>エモート</value>
-    </data>
+    <value>エモート</value>
+  </data>
   <data name="Options_Emote_BlockedEmotes" xml:space="preserve">
-        <value>ブロックされたエモート</value>
-    </data>
+    <value>ブロックされたエモート</value>
+  </data>
   <data name="Options_Emote_EmoteTable" xml:space="preserve">
-        <value>エモート</value>
-    </data>
+    <value>エモート</value>
+  </data>
   <data name="Options_HideInBattle_Name" xml:space="preserve">
-        <value>戦闘中は非表示</value>
-    </data>
+    <value>戦闘中は非表示</value>
+  </data>
   <data name="Options_HideInBattle_Description" xml:space="preserve">
-        <value>戦闘中はチャットを非表示にします。</value>
-    </data>
+    <value>戦闘中はチャットを非表示にします。</value>
+  </data>
   <data name="Options_Emote_EmoteStats" xml:space="preserve">
-        <value>Emote Stats</value>
-    </data>
+    <value>Emote Stats</value>
+  </data>
   <data name="Options_Emote_Ready" xml:space="preserve">
-        <value>準備完了</value>
-    </data>
+    <value>準備完了</value>
+  </data>
   <data name="Options_Emote_NotReady" xml:space="preserve">
-        <value>未準備</value>
-    </data>
+    <value>未準備</value>
+  </data>
   <data name="Options_Emote_Loaded" xml:space="preserve">
-        <value>利用可能なエモート：</value>
-    </data>
+    <value>利用可能なエモート：</value>
+  </data>
   <data name="Options_Preview_Description" xml:space="preserve">
-        <value>emotes や &lt;item&gt; のように、特別なパラメータが評価されたプレビューを表示します。</value>
-    </data>
+    <value>emotes や &lt;item&gt; のように、特別なパラメータが評価されたプレビューを表示します。</value>
+  </data>
   <data name="Options_Preview_Name" xml:space="preserve">
-        <value>ポジション (None = off)</value>
-    </data>
+    <value>ポジション (None = off)</value>
+  </data>
   <data name="Options_Preview_None" xml:space="preserve">
-        <value>なし</value>
-    </data>
+    <value>なし</value>
+  </data>
   <data name="Options_Preview_Inside" xml:space="preserve">
-        <value>Inside</value>
-    </data>
+    <value>Inside</value>
+  </data>
   <data name="Options_Preview_Top" xml:space="preserve">
-        <value>Top</value>
-    </data>
+    <value>Top</value>
+  </data>
   <data name="Options_Preview_Bottom" xml:space="preserve">
-        <value>Bottom</value>
-    </data>
+    <value>Bottom</value>
+  </data>
   <data name="Options_Preview_Header" xml:space="preserve">
-        <value>メッセージのプレビュー</value>
-    </data>
+    <value>メッセージのプレビュー</value>
+  </data>
   <data name="Options_Preview_Tooltip" xml:space="preserve">
-        <value>[Tooltip]</value>
-    </data>
+    <value>[Tooltip]</value>
+  </data>
   <data name="Options_PreviewOnlyIf_Name" xml:space="preserve">
-        <value>パラメータを含める必要があります</value>
-    </data>
+    <value>パラメータを含める必要があります</value>
+  </data>
   <data name="Options_PreviewOnlyIf_Description" xml:space="preserve">
-        <value>テキストに特別なパラメータが含まれている場合にのみ表示します。</value>
-    </data>
+    <value>テキストに特別なパラメータが含まれている場合にのみ表示します。</value>
+  </data>
   <data name="Options_PreviewMinimum_Name" xml:space="preserve">
-        <value>最小入力値</value>
-    </data>
+    <value>最小入力値</value>
+  </data>
   <data name="Options_PreviewMinimum_Description" xml:space="preserve">
-        <value>テキストの長さがより大きいか、等しい場合にのみ表示します。</value>
-    </data>
+    <value>テキストの長さがより大きいか、等しい場合にのみ表示します。</value>
+  </data>
   <data name="Options_Preview_Tab" xml:space="preserve">
-        <value>プレビュー</value>
-    </data>
+    <value>プレビュー</value>
+  </data>
   <data name="Options_Changelog_Tab" xml:space="preserve">
-        <value>変更ログ</value>
-    </data>
+    <value>変更ログ</value>
+  </data>
   <data name="Options_PrintChangelog_Name" xml:space="preserve">
-        <value>変更ログを表示</value>
-    </data>
+    <value>変更ログを表示</value>
+  </data>
   <data name="Options_PrintChangelog_Description" xml:space="preserve">
-        <value>更新後のチャットに更新履歴を表示します。</value>
-    </data>
+    <value>更新後のチャットに更新履歴を表示します。</value>
+  </data>
   <data name="Options_Warning_NotImplemented" xml:space="preserve">
-        <value>この機能はまだ実装されていません</value>
-    </data>
+    <value>この機能はまだ実装されていません</value>
+  </data>
   <data name="Options_Changelog_Header" xml:space="preserve">
-        <value>変更ログ</value>
-    </data>
+    <value>変更ログ</value>
+  </data>
   <data name="DateWidget_InvalidDate" xml:space="preserve">
-        <value>{0} の前の日付は不可能です</value>
-    </data>
+    <value>{0} の前の日付は不可能です</value>
+  </data>
   <data name="DateWidget_Day_Sun" xml:space="preserve">
-        <value>（日）</value>
-    </data>
+    <value>（日）</value>
+  </data>
   <data name="DateWidget_Day_Mon" xml:space="preserve">
-        <value>（月）</value>
-    </data>
+    <value>（月）</value>
+  </data>
   <data name="DateWidget_Day_Tue" xml:space="preserve">
-        <value>（火）</value>
-    </data>
+    <value>（火）</value>
+  </data>
   <data name="DateWidget_Day_Wed" xml:space="preserve">
-        <value>（水）</value>
-    </data>
+    <value>（水）</value>
+  </data>
   <data name="DateWidget_Day_Thu" xml:space="preserve">
-        <value>（木）</value>
-    </data>
+    <value>（木）</value>
+  </data>
   <data name="DateWidget_Day_Fri" xml:space="preserve">
-        <value>（金）</value>
-    </data>
+    <value>（金）</value>
+  </data>
   <data name="DateWidget_Day_Sat" xml:space="preserve">
-        <value>（土）</value>
-    </data>
+    <value>（土）</value>
+  </data>
   <data name="DateWidget_Month_January" xml:space="preserve">
-        <value>1月</value>
-    </data>
+    <value>1月</value>
+  </data>
   <data name="DateWidget_Month_February" xml:space="preserve">
-        <value>2月</value>
-    </data>
+    <value>2月</value>
+  </data>
   <data name="DateWidget_Month_March" xml:space="preserve">
-        <value>3月</value>
-    </data>
+    <value>3月</value>
+  </data>
   <data name="DateWidget_Month_April" xml:space="preserve">
-        <value>4 月</value>
-    </data>
+    <value>4 月</value>
+  </data>
   <data name="DateWidget_Month_May" xml:space="preserve">
-        <value>5月</value>
-    </data>
+    <value>5月</value>
+  </data>
   <data name="DateWidget_Month_June" xml:space="preserve">
-        <value>6月</value>
-    </data>
+    <value>6月</value>
+  </data>
   <data name="DateWidget_Month_July" xml:space="preserve">
-        <value>7月</value>
-    </data>
+    <value>7月</value>
+  </data>
   <data name="DateWidget_Month_August" xml:space="preserve">
-        <value>8月</value>
-    </data>
+    <value>8月</value>
+  </data>
   <data name="DateWidget_Month_September" xml:space="preserve">
-        <value>9月</value>
-    </data>
+    <value>9月</value>
+  </data>
   <data name="DateWidget_Month_October" xml:space="preserve">
-        <value>10月</value>
-    </data>
+    <value>10月</value>
+  </data>
   <data name="DateWidget_Month_November" xml:space="preserve">
-        <value>11月</value>
-    </data>
+    <value>11月</value>
+  </data>
   <data name="DateWidget_Month_December" xml:space="preserve">
-        <value>12月</value>
-    </data>
+    <value>12月</value>
+  </data>
   <data name="DbViewer_TableField_Date" xml:space="preserve">
-        <value>日付</value>
-    </data>
+    <value>日付</value>
+  </data>
   <data name="DbViewer_TableField_Type" xml:space="preserve">
-        <value>チャンネル</value>
-    </data>
+    <value>チャンネル</value>
+  </data>
   <data name="DbViewer_TableField_Sender" xml:space="preserve">
-        <value>差出人</value>
-    </data>
+    <value>差出人</value>
+  </data>
   <data name="DbViewer_TableField_Content" xml:space="preserve">
-        <value>コンテンツ</value>
-    </data>
+    <value>コンテンツ</value>
+  </data>
   <data name="DbViewer_Status_NothingFound" xml:space="preserve">
-        <value>見つかりませんでした。</value>
-    </data>
+    <value>見つかりませんでした。</value>
+  </data>
   <data name="DbViewer_Status_NoSearchResult" xml:space="preserve">
-        <value>検索に一致するものはありませんでした。</value>
-    </data>
+    <value>検索に一致するものはありませんでした。</value>
+  </data>
   <data name="DbViewer_SearcHint" xml:space="preserve">
-        <value>Simple Sender/Content Search</value>
-    </data>
+    <value>Simple Sender/Content Search</value>
+  </data>
   <data name="DbViewer_Page" xml:space="preserve">
-        <value>ページ: {0} / {1} ({2} 行) {3}</value>
-    </data>
+    <value>ページ: {0} / {1} ({2} 行) {3}</value>
+  </data>
   <data name="DbViewer_LoadingIndicator" xml:space="preserve">
-        <value>[読み込み中...]</value>
-    </data>
+    <value>[読み込み中...]</value>
+  </data>
   <data name="DbViewer_CharacterOption" xml:space="preserve">
-        <value>現在のキャラクターのみ</value>
-    </data>
+    <value>現在のキャラクターのみ</value>
+  </data>
   <data name="DbViewer_DatePicker_FromTo" xml:space="preserve">
-        <value>FromTo:</value>
-    </data>
+    <value>FromTo:</value>
+  </data>
   <data name="Chat_SendTell_Error" xml:space="preserve">
-        <value>このメッセージを送信中にエラーが発生しました</value>
-    </data>
+    <value>このメッセージを送信中にエラーが発生しました</value>
+  </data>
   <data name="Webinterface_Stop_Success" xml:space="preserve">
-        <value>Webインターフェースが停止しました。</value>
-    </data>
+    <value>Webインターフェースが停止しました。</value>
+  </data>
   <data name="Webinterface_Stop_Failed" xml:space="preserve">
-        <value>Webインターフェイスの停止に失敗しました。詳細は /xllog を確認してください。</value>
-    </data>
+    <value>Webインターフェイスの停止に失敗しました。詳細は /xllog を確認してください。</value>
+  </data>
   <data name="Webinterface_Button_Stop" xml:space="preserve">
-        <value>Stop</value>
-    </data>
+    <value>Stop</value>
+  </data>
   <data name="Webinterface_Button_Start" xml:space="preserve">
-        <value>Start</value>
-    </data>
+    <value>Start</value>
+  </data>
   <data name="Webinterface_Start_Success" xml:space="preserve">
-        <value>Webインターフェースを開始しました。</value>
-    </data>
+    <value>Webインターフェースを開始しました。</value>
+  </data>
   <data name="Webinterface_Start_Failed" xml:space="preserve">
-        <value>Webインターフェースの起動に失敗しました。詳細は /xllog を確認してください。</value>
-    </data>
+    <value>Webインターフェースの起動に失敗しました。詳細は /xllog を確認してください。</value>
+  </data>
   <data name="Webinterface_Option_Port_Name" xml:space="preserve">
-        <value>ポート</value>
-    </data>
+    <value>ポート</value>
+  </data>
   <data name="Webinterface_Option_Port_Description" xml:space="preserve">
-        <value>このWebインターフェイスのポートは動作します。</value>
-    </data>
+    <value>このWebインターフェイスのポートは動作します。</value>
+  </data>
   <data name="Options_Webinterface_Warning_Header" xml:space="preserve">
-        <value>「有効」にチェックを入れて「開始」をクリックすると、Chat2の内蔵Webインターフェースが読み込まれ、ネットワーク上のデバイスがゲーム内チャットにアクセスできるようになります。 この機能は、電話または別のコンピュータがチャット2アクティビティを表示できるようにするために使用できます。 FFXIV を入力しているかのようにチャネルを切り替え、メッセージを送信します。</value>
-    </data>
+    <value>「有効」にチェックを入れて「開始」をクリックすると、Chat2の内蔵Webインターフェースが読み込まれ、ネットワーク上のデバイスがゲーム内チャットにアクセスできるようになります。 この機能は、電話または別のコンピュータがチャット2アクティビティを表示できるようにするために使用できます。 FFXIV を入力しているかのようにチャネルを切り替え、メッセージを送信します。</value>
+  </data>
   <data name="Options_Webinterface_Warning_Reason" xml:space="preserve">
-        <value>アカウントのセキュリティ上の理由から、この機能はローカルネットワーク外での使用を意図したものではありません。注意してください！</value>
-    </data>
+    <value>アカウントのセキュリティ上の理由から、この機能はローカルネットワーク外での使用を意図したものではありません。注意してください！</value>
+  </data>
   <data name="Options_Webinterface_Warning_DoNot" xml:space="preserve">
-        <value>Do Not:</value>
-    </data>
+    <value>Do Not:</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Port" xml:space="preserve">
-        <value>- 使用するポートを転送 (9000)</value>
-    </data>
+    <value>- 使用するポートを転送 (9000)</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Share" xml:space="preserve">
-        <value>- あなたの認証コードを他の人と共有します</value>
-    </data>
+    <value>- あなたの認証コードを他の人と共有します</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Multibox" xml:space="preserve">
-        <value>- マルチボクシングがこれで動作することを期待します (最初のクライアントのみ)</value>
-    </data>
+    <value>- マルチボクシングがこれで動作することを期待します (最初のクライアントのみ)</value>
+  </data>
   <data name="Options_Webinterface_Warning_Support" xml:space="preserve">
-        <value>「Do Not」条項のいずれかが尊重されず、適切に遵守されていない場合は、サポートは提供されません。</value>
-    </data>
+    <value>「Do Not」条項のいずれかが尊重されず、適切に遵守されていない場合は、サポートは提供されません。</value>
+  </data>
   <data name="Options_Webinterface_Hostname_Fail" xml:space="preserve">
-        <value>ホスト名を解決できません</value>
-    </data>
+    <value>ホスト名を解決できません</value>
+  </data>
   <data name="Options_Webinterface_Note" xml:space="preserve">
-        <value>注意: 正しく機能するためには、少なくとも半最新のブラウザが必要です。</value>
-    </data>
+    <value>注意: 正しく機能するためには、少なくとも半最新のブラウザが必要です。</value>
+  </data>
   <data name="Webinterface_UsageNotice" xml:space="preserve">
-        <value>使用上の注意</value>
-    </data>
+    <value>使用上の注意</value>
+  </data>
+  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
+    <value>Enable Censorship Higlight</value>
+  </data>
 </root>

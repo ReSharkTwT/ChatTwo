@@ -24,6 +24,9 @@ internal sealed class Display : ISettingsTab
         ImGuiUtil.OptionCheckbox(ref Mutable.HideChat, Language.Options_HideChat_Name, Language.Options_HideChat_Description);
         ImGui.Spacing();
 
+        ImGuiUtil.OptionCheckbox(ref Mutable.EnableCensorshipHighlight, Language.Options_EnableCensorshipHighlight_Name, Language.Options_EnableCensorshipHighlight_Description);
+        ImGui.Spacing();
+
         ImGuiUtil.OptionCheckbox(ref Mutable.HideDuringCutscenes, Language.Options_HideDuringCutscenes_Name, string.Format(Language.Options_HideDuringCutscenes_Description, Plugin.PluginName));
         ImGui.Spacing();
 

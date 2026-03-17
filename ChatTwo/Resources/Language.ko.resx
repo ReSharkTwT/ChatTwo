@@ -1,104 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-      Microsoft ResX Schema
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-      Version 2.0
-
-      The primary goals of this format is to allow a simple XML format
-      that is mostly human readable. The generation and parsing of the
-      various data types are done through the TypeConverter classes
-      associated with the data types.
-
-      Example:
-
-      ... ado.net/XML headers & schema ...
-      <resheader name="resmimetype">text/microsoft-resx</resheader>
-      <resheader name="version">2.0</resheader>
-      <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-      <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-      <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-      <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-      <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-          <value>[base64 mime encoded serialized .NET Framework object]</value>
-      </data>
-      <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-          <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-          <comment>This is a comment</comment>
-      </data>
-
-      There are any number of "resheader" rows that contain simple
-      name/value pairs.
-
-      Each data row contains a name, and value. The row also contains a
-      type or mimetype. Type corresponds to a .NET class that support
-      text/value conversion through the TypeConverter architecture.
-      Classes that don't support this are serialized and stored with the
-      mimetype set.
-
-      The mimetype is used for serialized objects, and tells the
-      ResXResourceReader how to depersist the object. This is currently not
-      extensible. For a given mimetype the value must be set accordingly:
-
-      Note - application/x-microsoft.net.object.binary.base64 is the format
-      that the ResXResourceWriter will generate, however the reader can
-      read any of the formats listed below.
-
-      mimetype: application/x-microsoft.net.object.binary.base64
-      value   : The object must be serialized with
-              : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-              : and then encoded with base64 encoding.
-
-      mimetype: application/x-microsoft.net.object.soap.base64
-      value   : The object must be serialized with
-              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-              : and then encoded with base64 encoding.
-
-      mimetype: application/x-microsoft.net.object.bytearray.base64
-      value   : The object must be serialized into a byte array
-              : using a System.ComponentModel.TypeConverter
-              : and then encoded with base64 encoding.
-      -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -112,1291 +112,1293 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Options_HideChat_Name">
+  <data name="Options_HideChat_Name" xml:space="preserve">
     <value>기존 채팅창 숨기기</value>
   </data>
-  <data name="Options_HideChat_Description">
+  <data name="Options_HideChat_Description" xml:space="preserve">
     <value>플러그인이 활성화 상태일 때 기존의 인게임 채팅창을 숨깁니다.</value>
   </data>
-  <data name="Options_HideDuringCutscenes_Name">
+  <data name="Options_EnableCensorshipHighlight_Description" xml:space="preserve">
+    <value>Set Message Highlight on Censorship Words</value>
+  </data>
+  <data name="Options_HideDuringCutscenes_Name" xml:space="preserve">
     <value>컷신이 재생중일 때 숨기기</value>
   </data>
-  <data name="Options_HideDuringCutscenes_Description">
+  <data name="Options_HideDuringCutscenes_Description" xml:space="preserve">
     <value>컷신이 재생중일 때 {0}를 숨깁니다.</value>
   </data>
-  <data name="Options_NativeItemTooltips_Name">
+  <data name="Options_NativeItemTooltips_Name" xml:space="preserve">
     <value>기존의 아이템 설명 창으로 표시하기</value>
   </data>
-  <data name="Options_NativeItemTooltips_Description">
+  <data name="Options_NativeItemTooltips_Description" xml:space="preserve">
     <value>{0}에서 아이템에 커서를 올렸을 때, 기존의 인게임 아이템 설명 창으로 표시합니다.</value>
   </data>
-  <data name="Options_SidebarTabView_Name">
+  <data name="Options_SidebarTabView_Name" xml:space="preserve">
     <value>탭을 사이드바 형식으로 표시하기</value>
   </data>
-  <data name="Options_SidebarTabView_Description">
+  <data name="Options_SidebarTabView_Description" xml:space="preserve">
     <value>{0}의 채팅 탭을 상단에 표시하는 대신, 사이드바 형식으로 표시합니다.</value>
   </data>
-  <data name="Options_PrettierTimestamps_Name">
+  <data name="Options_PrettierTimestamps_Name" xml:space="preserve">
     <value>깔끔한 레이아웃 사용하기</value>
   </data>
-  <data name="Options_PrettierTimestamps_Description">
+  <data name="Options_PrettierTimestamps_Description" xml:space="preserve">
     <value>메시지를 더 깔끔한 스타일로 표시합니다.</value>
   </data>
-  <data name="Options_Use24HourClock_Name">
+  <data name="Options_Use24HourClock_Name" xml:space="preserve">
     <value>24-hour clock</value>
   </data>
-  <data name="Options_Use24HourClock_Description">
+  <data name="Options_Use24HourClock_Description" xml:space="preserve">
     <value>Display timestamps as their 24-hour clock version.</value>
   </data>
-  <data name="Options_MoreCompactPretty_Name">
+  <data name="Options_MoreCompactPretty_Name" xml:space="preserve">
     <value>보다 작고 깔끔한 레이아웃</value>
   </data>
-  <data name="Options_MoreCompactPretty_Description">
+  <data name="Options_MoreCompactPretty_Description" xml:space="preserve">
     <value>메시지간 간격을 줄여줍니다.</value>
   </data>
-  <data name="Options_ShowNoviceNetwork_Name">
+  <data name="Options_ShowNoviceNetwork_Name" xml:space="preserve">
     <value>초보자 채널 입장 버튼 표시하기</value>
   </data>
-  <data name="Options_ShowNoviceNetwork_Description">
+  <data name="Options_ShowNoviceNetwork_Description" xml:space="preserve">
     <value>멘토일 때, 설정 버튼 오른쪽에 초보자 채널 입장 버튼을 표시합니다.</value>
   </data>
   <data name="Options_ShowHideButton_Name" xml:space="preserve">
-        <value>Show hide button</value>
-    </data>
+    <value>Show hide button</value>
+  </data>
   <data name="Options_ShowHideButton_Description" xml:space="preserve">
-        <value>Show a hide button next to the settings button. The chat window can be returned by pressing return or slash to focus it.</value>
-    </data>
-  <data name="Options_FontSize_Name">
+    <value>Show a hide button next to the settings button. The chat window can be returned by pressing return or slash to focus it.</value>
+  </data>
+  <data name="Options_FontSize_Name" xml:space="preserve">
     <value>글꼴 크기</value>
   </data>
-  <data name="Options_WindowOpacity_Name">
+  <data name="Options_WindowOpacity_Name" xml:space="preserve">
     <value>창 불투명도</value>
   </data>
-  <data name="Options_CanMove_Name">
+  <data name="Options_CanMove_Name" xml:space="preserve">
     <value>채팅창 이동 허용</value>
   </data>
-  <data name="Options_CanResize_Name">
+  <data name="Options_CanResize_Name" xml:space="preserve">
     <value>채팅창 크기 조절 허용</value>
   </data>
-  <data name="Popout_CanMove_Name">
+  <data name="Popout_CanMove_Name" xml:space="preserve">
     <value>Allow moving window</value>
   </data>
-  <data name="Popout_CanResize_Name">
+  <data name="Popout_CanResize_Name" xml:space="preserve">
     <value>Allow resizing window</value>
   </data>
-  <data name="Options_ShowTitleBar_Name">
+  <data name="Options_ShowTitleBar_Name" xml:space="preserve">
     <value>채팅창에 타이틀바 표시</value>
   </data>
-  <data name="Options_Display_Tab">
+  <data name="Options_Display_Tab" xml:space="preserve">
     <value>표시</value>
   </data>
-  <data name="Options_ChatColours_Tab">
+  <data name="Options_ChatColours_Tab" xml:space="preserve">
     <value>채팅 색상</value>
   </data>
-  <data name="Options_ChatColours_Reset">
+  <data name="Options_ChatColours_Reset" xml:space="preserve">
     <value>기본값으로 초기화</value>
   </data>
-  <data name="Options_ChatColours_Import">
+  <data name="Options_ChatColours_Import" xml:space="preserve">
     <value>게임으로부터 불러오기</value>
   </data>
-  <data name="Options_Tabs_Tab">
+  <data name="Options_Tabs_Tab" xml:space="preserve">
     <value>탭</value>
   </data>
-  <data name="Options_Tabs_Add">
+  <data name="Options_Tabs_Add" xml:space="preserve">
     <value>추가</value>
   </data>
-  <data name="Options_Tabs_Delete">
+  <data name="Options_Tabs_Delete" xml:space="preserve">
     <value>삭제</value>
   </data>
-  <data name="Options_Tabs_MoveUp">
+  <data name="Options_Tabs_MoveUp" xml:space="preserve">
     <value>위로 옮기기</value>
   </data>
-  <data name="Options_Tabs_MoveDown">
+  <data name="Options_Tabs_MoveDown" xml:space="preserve">
     <value>아래로 옮기기</value>
   </data>
-  <data name="Options_Tabs_Name">
+  <data name="Options_Tabs_Name" xml:space="preserve">
     <value>이름</value>
   </data>
-  <data name="Options_Tabs_ShowTimestamps">
+  <data name="Options_Tabs_ShowTimestamps" xml:space="preserve">
     <value>시간 표시</value>
   </data>
-  <data name="Options_Tabs_UnreadMode">
+  <data name="Options_Tabs_UnreadMode" xml:space="preserve">
     <value>읽지 않은 메시지 표시 방식</value>
   </data>
-  <data name="Options_Tabs_InactivityBehaviour">
+  <data name="Options_Tabs_InactivityBehaviour" xml:space="preserve">
     <value>Unhide the chat window on activity</value>
   </data>
-  <data name="Options_Tabs_NoInputChannel">
+  <data name="Options_Tabs_NoInputChannel" xml:space="preserve">
     <value>&lt;없음&gt;</value>
   </data>
-  <data name="Options_Tabs_InputChannel">
+  <data name="Options_Tabs_InputChannel" xml:space="preserve">
     <value>입력 채널</value>
   </data>
-  <data name="Options_Tabs_Channels">
+  <data name="Options_Tabs_Channels" xml:space="preserve">
     <value>채널</value>
   </data>
-  <data name="UnreadMode_All_Tooltip">
+  <data name="UnreadMode_All_Tooltip" xml:space="preserve">
     <value>모든 메시지 표시하기</value>
   </data>
-  <data name="UnreadMode_Unseen_Tooltip">
+  <data name="UnreadMode_Unseen_Tooltip" xml:space="preserve">
     <value>읽지 않은 메시지만 표시하기</value>
   </data>
-  <data name="UnreadMode_None_Tooltip">
+  <data name="UnreadMode_None_Tooltip" xml:space="preserve">
     <value>표시하지 않기</value>
   </data>
-  <data name="Tab_DefaultName">
+  <data name="Tab_DefaultName" xml:space="preserve">
     <value>새 탭</value>
   </data>
-  <data name="Settings_SaveAndClose">
+  <data name="Settings_SaveAndClose" xml:space="preserve">
     <value>저장하고 닫기</value>
   </data>
-  <data name="Settings_Save">
+  <data name="Settings_Save" xml:space="preserve">
     <value>저장</value>
   </data>
-  <data name="Settings_Discard">
+  <data name="Settings_Discard" xml:space="preserve">
     <value>취소</value>
   </data>
-  <data name="Settings_Title">
+  <data name="Settings_Title" xml:space="preserve">
     <value>{0} 설정</value>
   </data>
-  <data name="ChatLog_SwitcherDisabled">
+  <data name="ChatLog_SwitcherDisabled" xml:space="preserve">
     <value>이 탭에서 비활성화하기</value>
   </data>
-  <data name="ChatLog_HideChat">
+  <data name="ChatLog_HideChat" xml:space="preserve">
     <value>채팅창 숨기기</value>
   </data>
-  <data name="ChatLog_Tabs_MoveUp">
+  <data name="ChatLog_Tabs_MoveUp" xml:space="preserve">
     <value>위로 옮기기</value>
   </data>
-  <data name="ChatLog_Tabs_MoveLeft">
+  <data name="ChatLog_Tabs_MoveLeft" xml:space="preserve">
     <value>왼쪽으로 옮기기</value>
   </data>
-  <data name="ChatLog_Tabs_MoveDown">
+  <data name="ChatLog_Tabs_MoveDown" xml:space="preserve">
     <value>아래로 옮기기</value>
   </data>
-  <data name="ChatLog_Tabs_MoveRight">
+  <data name="ChatLog_Tabs_MoveRight" xml:space="preserve">
     <value>오른쪽으로 옮기기</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Chat">
+  <data name="Options_Tabs_ChannelTypes_Chat" xml:space="preserve">
     <value>대화</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Battle">
+  <data name="Options_Tabs_ChannelTypes_Battle" xml:space="preserve">
     <value>전투</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Announcements">
+  <data name="Options_Tabs_ChannelTypes_Announcements" xml:space="preserve">
     <value>알림</value>
   </data>
-  <data name="UnreadMode_All">
+  <data name="UnreadMode_All" xml:space="preserve">
     <value>모두 표시</value>
   </data>
-  <data name="UnreadMode_Unseen">
+  <data name="UnreadMode_Unseen" xml:space="preserve">
     <value>읽지 않은 메시지만</value>
   </data>
-  <data name="UnreadMode_None">
+  <data name="UnreadMode_None" xml:space="preserve">
     <value>표시하지 않기</value>
   </data>
-  <data name="ChatSource_Self">
+  <data name="ChatSource_Self" xml:space="preserve">
     <value>자신</value>
   </data>
-  <data name="ChatSource_PartyMember">
+  <data name="ChatSource_PartyMember" xml:space="preserve">
     <value>파티원</value>
   </data>
-  <data name="ChatSource_AllianceMember">
+  <data name="ChatSource_AllianceMember" xml:space="preserve">
     <value>연합 파티원</value>
   </data>
-  <data name="ChatSource_Other">
+  <data name="ChatSource_Other" xml:space="preserve">
     <value>기타 플레이어</value>
   </data>
-  <data name="ChatSource_EngagedEnemy">
+  <data name="ChatSource_EngagedEnemy" xml:space="preserve">
     <value>교전 중인 적</value>
   </data>
-  <data name="ChatSource_UnengagedEnemy">
+  <data name="ChatSource_UnengagedEnemy" xml:space="preserve">
     <value>교전 중이 아닌 적</value>
   </data>
-  <data name="ChatSource_FriendlyNpc">
+  <data name="ChatSource_FriendlyNpc" xml:space="preserve">
     <value>우호적인 NPC</value>
   </data>
-  <data name="ChatSource_SelfPet">
+  <data name="ChatSource_SelfPet" xml:space="preserve">
     <value>내 소환수/버디</value>
   </data>
-  <data name="ChatSource_PartyPet">
+  <data name="ChatSource_PartyPet" xml:space="preserve">
     <value>파티원의 소환수/버디</value>
   </data>
-  <data name="ChatSource_AlliancePet">
+  <data name="ChatSource_AlliancePet" xml:space="preserve">
     <value>연합 파티원의 소환수/버디</value>
   </data>
-  <data name="ChatSource_OtherPet">
+  <data name="ChatSource_OtherPet" xml:space="preserve">
     <value>기타 플레이어의 소환수/버디</value>
   </data>
-  <data name="Options_Font_Name">
+  <data name="Options_Font_Name" xml:space="preserve">
     <value>글꼴</value>
   </data>
-  <data name="Options_JapaneseFont_Name">
+  <data name="Options_JapaneseFont_Name" xml:space="preserve">
     <value>일본어 글꼴</value>
   </data>
-  <data name="Options_Font_Description">
+  <data name="Options_Font_Description" xml:space="preserve">
     <value>{0} 글꼴은 일본어가 아닌 글자를 표시할 때 사용됩니다.</value>
   </data>
-  <data name="Options_Font_Warning">
+  <data name="Options_Font_Warning" xml:space="preserve">
     <value>몇몇 글꼴은 게임에 크래시를 일으킵니다. 주의해서 사용하세요.</value>
   </data>
-  <data name="Options_JapaneseFont_Description">
+  <data name="Options_JapaneseFont_Description" xml:space="preserve">
     <value>{0} 폰트는 일본어 글자를 표시할 때 사용됩니다.</value>
   </data>
-  <data name="Options_ItalicFont_Name">
+  <data name="Options_ItalicFont_Name" xml:space="preserve">
     <value>Italic font</value>
   </data>
-  <data name="Options_Italic_Description">
+  <data name="Options_Italic_Description" xml:space="preserve">
     <value>If enabled, uses the italic font in {0}, else it will use the ingame italic font.</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Special">
+  <data name="Options_Tabs_ChannelTypes_Special" xml:space="preserve">
     <value>특수</value>
   </data>
-  <data name="Options_Fonts_Tab">
+  <data name="Options_Fonts_Tab" xml:space="preserve">
     <value>글꼴</value>
   </data>
-  <data name="Options_SymbolsFontSize_Name">
+  <data name="Options_SymbolsFontSize_Name" xml:space="preserve">
     <value>심볼 글꼴 크기</value>
   </data>
-  <data name="Options_JapaneseFontSize_Name">
+  <data name="Options_JapaneseFontSize_Name" xml:space="preserve">
     <value>일본어 글꼴 크기</value>
   </data>
-  <data name="Options_SymbolsFontSize_Description">
+  <data name="Options_SymbolsFontSize_Description" xml:space="preserve">
     <value>게임 심볼에 쓰일 글꼴 크기</value>
   </data>
-  <data name="ChatLog_Tabs_Delete">
+  <data name="ChatLog_Tabs_Delete" xml:space="preserve">
     <value>탭 삭제</value>
   </data>
-  <data name="Options_HideWhenNotLoggedIn_Name">
+  <data name="Options_HideWhenNotLoggedIn_Name" xml:space="preserve">
     <value>접속 중이 아닐 때 숨기기</value>
   </data>
-  <data name="Options_HideWhenNotLoggedIn_Description">
+  <data name="Options_HideWhenNotLoggedIn_Description" xml:space="preserve">
     <value>캐릭터로 접속 중이 아닐 때 {0} 숨기기</value>
   </data>
-  <data name="Tabs_Presets_General">
+  <data name="Tabs_Presets_General" xml:space="preserve">
     <value>일반</value>
   </data>
-  <data name="Options_Tabs_Preset">
+  <data name="Options_Tabs_Preset" xml:space="preserve">
     <value>사전 설정: {0}</value>
   </data>
-  <data name="Tabs_Presets_Event">
+  <data name="Tabs_Presets_Event" xml:space="preserve">
     <value>이벤트</value>
   </data>
-  <data name="Options_Tabs_NewTab">
+  <data name="Options_Tabs_NewTab" xml:space="preserve">
     <value>새 탭</value>
   </data>
-  <data name="Options_About_Tab">
+  <data name="Options_About_Tab" xml:space="preserve">
     <value>정보</value>
   </data>
-  <data name="Options_About_Opening">
+  <data name="Options_About_Opening" xml:space="preserve">
     <value>{0}는 인게임 채팅창을 새로, 더 좋게 만들기 위한 프로젝트입니다.</value>
   </data>
-  <data name="Options_About_CrowdIn">
+  <data name="Options_About_CrowdIn" xml:space="preserve">
     <value>번역에 도움주기: </value>
   </data>
-  <data name="Options_About_Translators">
+  <data name="Options_About_Translators" xml:space="preserve">
     <value>번역에 도움을 주신 분들</value>
   </data>
-  <data name="CommandHelpSide_None">
+  <data name="CommandHelpSide_None" xml:space="preserve">
     <value>표시하지 않기</value>
   </data>
-  <data name="CommandHelpSide_Left">
+  <data name="CommandHelpSide_Left" xml:space="preserve">
     <value>왼쪽</value>
   </data>
-  <data name="CommandHelpSide_Right">
+  <data name="CommandHelpSide_Right" xml:space="preserve">
     <value>오른쪽</value>
   </data>
-  <data name="Options_CommandHelpSide_Name">
+  <data name="Options_CommandHelpSide_Name" xml:space="preserve">
     <value>Command help side (None = off)</value>
   </data>
-  <data name="Options_CommandHelpSide_Description">
+  <data name="Options_CommandHelpSide_Description" xml:space="preserve">
     <value>{0}의 한쪽에 명령어에 대한 도움말이 표시됩니다.</value>
   </data>
-  <data name="Options_HideWhenUiHidden_Name">
+  <data name="Options_HideWhenUiHidden_Name" xml:space="preserve">
     <value>게임 UI를 숨길 때 함께 숨기기</value>
   </data>
-  <data name="Options_HideWhenUiHidden_Description">
+  <data name="Options_HideWhenUiHidden_Description" xml:space="preserve">
     <value>게임 UI를 숨길 때 {0}를 함께 숨깁니다.</value>
   </data>
-  <data name="Options_HideWhenInactive_Name">
+  <data name="Options_HideWhenInactive_Name" xml:space="preserve">
     <value>Hide when inactive</value>
   </data>
-  <data name="Options_HideWhenInactive_Description">
+  <data name="Options_HideWhenInactive_Description" xml:space="preserve">
     <value>Hide the chat after a configurable period of inactivity. The current tab and any other tabs with the setting enabled are considered for activity.</value>
   </data>
-  <data name="Options_InactivityHideTimeout_Name">
+  <data name="Options_InactivityHideTimeout_Name" xml:space="preserve">
     <value>Inactivity timeout</value>
   </data>
-  <data name="Options_InactivityHideTimeout_Description">
+  <data name="Options_InactivityHideTimeout_Description" xml:space="preserve">
     <value>How long to wait (in seconds) before considering the chat log inactive.</value>
   </data>
   <data name="Options_InactivityHideActiveDuringBattle_Name" xml:space="preserve">
-        <value>Enable inactivity hide during battle</value>
-    </data>
+    <value>Enable inactivity hide during battle</value>
+  </data>
   <data name="Options_InactivityHideActiveDuringBattle_Description" xml:space="preserve">
-        <value>When disabled, the chat log will stay active during battle.</value>
-    </data>
-  <data name="Options_InactivityHideChannels_Name">
+    <value>When disabled, the chat log will stay active during battle.</value>
+  </data>
+  <data name="Options_InactivityHideChannels_Name" xml:space="preserve">
     <value>Chat channels considered for activity</value>
   </data>
-  <data name="Options_InactivityHideChannels_Description">
+  <data name="Options_InactivityHideChannels_Description" xml:space="preserve">
     <value>Which chat channels should be considered for activity. Other channels will not restore the chat regardless of which tab they occur in.</value>
   </data>
-  <data name="Options_InactivityHideChannels_All_Label">
+  <data name="Options_InactivityHideChannels_All_Label" xml:space="preserve">
     <value>Select All</value>
   </data>
-  <data name="Options_InactivityHideChannels_None_Label">
+  <data name="Options_InactivityHideChannels_None_Label" xml:space="preserve">
     <value>Unselect All</value>
   </data>
-  <data name="Options_InactivityHideChannels_Button_Tooltip">
+  <data name="Options_InactivityHideChannels_Button_Tooltip" xml:space="preserve">
     <value>Hold Ctrl+Shift to click.</value>
   </data>
-  <data name="Options_KeybindMode_Name">
+  <data name="Options_KeybindMode_Name" xml:space="preserve">
     <value>단축키 모드</value>
   </data>
-  <data name="Options_KeybindMode_Description">
+  <data name="Options_KeybindMode_Description" xml:space="preserve">
     <value>{0}가 단축키를 처리하는 방식을 설정합니다.</value>
   </data>
-  <data name="Options_Miscellaneous_Tab">
+  <data name="Options_Miscellaneous_Tab" xml:space="preserve">
     <value>기타</value>
   </data>
-  <data name="Options_Webinterface_Tab">
+  <data name="Options_Webinterface_Tab" xml:space="preserve">
     <value>Webinterface</value>
   </data>
-  <data name="LanguageOverride_None">
+  <data name="LanguageOverride_None" xml:space="preserve">
     <value>달라무드의 기본 언어를 사용</value>
   </data>
-  <data name="KeybindMode_Flexible_Name">
+  <data name="KeybindMode_Flexible_Name" xml:space="preserve">
     <value>유연하게</value>
   </data>
-  <data name="KeybindMode_Strict_Name">
+  <data name="KeybindMode_Strict_Name" xml:space="preserve">
     <value>엄격하게</value>
   </data>
-  <data name="KeybindMode_Flexible_Tooltip">
+  <data name="KeybindMode_Flexible_Tooltip" xml:space="preserve">
     <value>다른 수식키가 눌렸을 때에도 단축키를 작동합니다.</value>
   </data>
-  <data name="KeybindMode_Strict_Tooltip">
+  <data name="KeybindMode_Strict_Tooltip" xml:space="preserve">
     <value>정해진 수식키가 눌렸을 때만 단축키를 작동합니다.</value>
   </data>
-  <data name="Options_Language_Name">
+  <data name="Options_Language_Name" xml:space="preserve">
     <value>언어</value>
   </data>
-  <data name="Options_Language_Description">
+  <data name="Options_Language_Description" xml:space="preserve">
     <value>{0}에 표시할 언어 설정입니다.</value>
   </data>
-  <data name="Options_DatabaseBattleMessages_Name">
+  <data name="Options_DatabaseBattleMessages_Name" xml:space="preserve">
     <value>전투 메시지를 데이터베이스에 저장하기</value>
   </data>
-  <data name="Options_DatabaseBattleMessages_Description">
+  <data name="Options_DatabaseBattleMessages_Description" xml:space="preserve">
     <value>이 옵션이 활성화되면, 데이터베이스의 크기가 더 빠르게 쌓이고, 저장할 때 렉이 심하게 걸릴 것입니다. 비활성화한 상태로 둘 것을 권장합니다.</value>
   </data>
-  <data name="Options_LoadPreviousSession_Name">
+  <data name="Options_LoadPreviousSession_Name" xml:space="preserve">
     <value>접속할 때 지난 채팅 기록 불러오기</value>
   </data>
-  <data name="Options_LoadPreviousSession_Description">
+  <data name="Options_LoadPreviousSession_Description" xml:space="preserve">
     <value>접속 시, 지난 채팅 기록을 불러옵니다.</value>
   </data>
-  <data name="Options_Database_Tab">
+  <data name="Options_Database_Tab" xml:space="preserve">
     <value>데이터베이스</value>
   </data>
-  <data name="Options_FilterIncludePreviousSessions_Name">
+  <data name="Options_FilterIncludePreviousSessions_Name" xml:space="preserve">
     <value>탭에 지난 채팅 기록 불러오기</value>
   </data>
-  <data name="Options_FilterIncludePreviousSessions_Description">
+  <data name="Options_FilterIncludePreviousSessions_Description" xml:space="preserve">
     <value>탭을 표시할 때 지난 채팅 메시지를 표시합니다. 설정을 저장할 때 탭이 채워집니다.</value>
   </data>
-  <data name="Options_Database_Advanced_Warning">
+  <data name="Options_Database_Advanced_Warning" xml:space="preserve">
     <value>당신이 무엇을 하고 있는지 알지 않는 한 이 버튼들을 클릭하지 마세요.</value>
   </data>
-  <data name="Options_Database_Advanced">
+  <data name="Options_Database_Advanced" xml:space="preserve">
     <value>고급 설정</value>
   </data>
-  <data name="ChatLog_Tabs_PopOut">
+  <data name="ChatLog_Tabs_PopOut" xml:space="preserve">
     <value>새 창으로 열기</value>
   </data>
-  <data name="Options_HideSameTimestamps_Name">
+  <data name="Options_HideSameTimestamps_Name" xml:space="preserve">
     <value>중복된 타임스탬프 숨기기</value>
   </data>
-  <data name="Options_HideSameTimestamps_Description">
+  <data name="Options_HideSameTimestamps_Description" xml:space="preserve">
     <value>같은 시간에 올라온 채팅의 타임스탬프를 숨깁니다.</value>
   </data>
-  <data name="Options_ShowPopOutTitleBar_Name">
+  <data name="Options_ShowPopOutTitleBar_Name" xml:space="preserve">
     <value>분리된 탭의 타이틀바 표시</value>
   </data>
-  <data name="Options_Tabs_PopOut">
+  <data name="Options_Tabs_PopOut" xml:space="preserve">
     <value>새 창에서 표시</value>
   </data>
-  <data name="Options_Tabs_IndependentOpacity">
+  <data name="Options_Tabs_IndependentOpacity" xml:space="preserve">
     <value>메인 채팅창과 다른 불투명도 사용</value>
   </data>
-  <data name="Options_Tabs_Opacity">
+  <data name="Options_Tabs_Opacity" xml:space="preserve">
     <value>불투명도</value>
   </data>
-  <data name="Options_Tabs_IndependentHide">
+  <data name="Options_Tabs_IndependentHide" xml:space="preserve">
     <value>Use different hide condition than main window</value>
   </data>
-  <data name="Options_FontsEnabled">
+  <data name="Options_FontsEnabled" xml:space="preserve">
     <value>사용자 정의 글꼴 사용</value>
   </data>
-  <data name="Options_ItalicEnabled">
+  <data name="Options_ItalicEnabled" xml:space="preserve">
     <value>Use italic font</value>
   </data>
-  <data name="AutoTranslate_Search_Hint">
+  <data name="AutoTranslate_Search_Hint" xml:space="preserve">
     <value>상용구 사전에서 검색...</value>
   </data>
-  <data name="Options_SortAutoTranslate_Name">
+  <data name="Options_SortAutoTranslate_Name" xml:space="preserve">
     <value>상용구 사전 목록 정렬</value>
   </data>
-  <data name="Options_SortAutoTranslate_Description">
+  <data name="Options_SortAutoTranslate_Description" xml:space="preserve">
     <value>이 옵션이 활성화되면, 상용구 사전이 가나다 순서로 정렬됩니다.</value>
   </data>
-  <data name="Options_WebinterfaceEnable_Name">
+  <data name="Options_WebinterfaceEnable_Name" xml:space="preserve">
     <value>Enabled</value>
   </data>
-  <data name="Options_WebinterfaceEnable_Description">
+  <data name="Options_WebinterfaceEnable_Description" xml:space="preserve">
     <value>Enables the webinterface that can be accessed with a browser.</value>
   </data>
-  <data name="Options_WebinterfaceAutoStart_Name">
+  <data name="Options_WebinterfaceAutoStart_Name" xml:space="preserve">
     <value>Start automatically</value>
   </data>
-  <data name="Options_WebinterfaceAutoStart_Description">
+  <data name="Options_WebinterfaceAutoStart_Description" xml:space="preserve">
     <value>Webinterface will start alongside the plugin automatically</value>
   </data>
-  <data name="Options_OverrideStyle_Name">
+  <data name="Options_OverrideStyle_Name" xml:space="preserve">
     <value>스타일 덮어쓰기</value>
   </data>
-  <data name="Options_OverrideStyleDropdown_Name">
+  <data name="Options_OverrideStyleDropdown_Name" xml:space="preserve">
     <value>스타일</value>
   </data>
-  <data name="Options_ChatTabForwardKeybind_Name">
+  <data name="Options_ChatTabForwardKeybind_Name" xml:space="preserve">
     <value>Cycle chat tab forwards keybind</value>
   </data>
-  <data name="Options_ChatTabBackwardKeybind_Name">
+  <data name="Options_ChatTabBackwardKeybind_Name" xml:space="preserve">
     <value>Cycle chat tab backwards keybind</value>
   </data>
-  <data name="Webinterface_CurrentPassword">
+  <data name="Webinterface_CurrentPassword" xml:space="preserve">
     <value>Authcode:</value>
   </data>
-  <data name="Webinterface_PasswordReset_Tooltip">
+  <data name="Webinterface_PasswordReset_Tooltip" xml:space="preserve">
     <value>Reset your password and invalidate all session tokens.</value>
   </data>
-  <data name="Webinterface_Controls">
+  <data name="Webinterface_Controls" xml:space="preserve">
     <value>Control Panel:</value>
   </data>
-  <data name="Webinterface_Controls_Active">
+  <data name="Webinterface_Controls_Active" xml:space="preserve">
     <value>Active:</value>
   </data>
-  <data name="Webinterface_Controls_Url">
+  <data name="Webinterface_Controls_Url" xml:space="preserve">
     <value>URL:</value>
   </data>
-  <data name="Keybind_None">
+  <data name="Keybind_None" xml:space="preserve">
     <value>none set</value>
   </data>
-  <data name="Keybind_EscToClear">
+  <data name="Keybind_EscToClear" xml:space="preserve">
     <value>ESC to clear</value>
   </data>
-  <data name="Keybind_Modifier_Ctrl">
+  <data name="Keybind_Modifier_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
   </data>
-  <data name="Keybind_Modifier_Alt">
+  <data name="Keybind_Modifier_Alt" xml:space="preserve">
     <value>Alt</value>
   </data>
-  <data name="Keybind_Modifier_Shift">
+  <data name="Keybind_Modifier_Shift" xml:space="preserve">
     <value>Shift</value>
   </data>
-  <data name="AutoTranslate_Completion_Key">
+  <data name="AutoTranslate_Completion_Key" xml:space="preserve">
     <value>Ctrl + {0}</value>
   </data>
-  <data name="Options_ExtraGlyphs_Name">
+  <data name="Options_ExtraGlyphs_Name" xml:space="preserve">
     <value>추가 글꼴 및 기호</value>
   </data>
-  <data name="Options_ExtraGlyphs_Description">
+  <data name="Options_ExtraGlyphs_Description" xml:space="preserve">
     <value>아래의 체크박스를 통해 {0}의 전역 글꼴에 추가 글꼴을 추가할 수 있습니다. 이 옵션은 달라무드의 글꼴 확장을 요구할 것입니다.</value>
   </data>
-  <data name="ExtraGlyphRanges_ChineseFull_Name">
+  <data name="ExtraGlyphRanges_ChineseFull_Name" xml:space="preserve">
     <value>중국어 (번체)</value>
   </data>
-  <data name="ExtraGlyphRanges_ChineseSimplifiedCommon_Name">
+  <data name="ExtraGlyphRanges_ChineseSimplifiedCommon_Name" xml:space="preserve">
     <value>중국어 (간체)</value>
   </data>
-  <data name="ExtraGlyphRanges_Cyrillic_Name">
+  <data name="ExtraGlyphRanges_Cyrillic_Name" xml:space="preserve">
     <value>키릴 문자</value>
   </data>
-  <data name="ExtraGlyphRanges_Japanese_Name">
+  <data name="ExtraGlyphRanges_Japanese_Name" xml:space="preserve">
     <value>일본어</value>
   </data>
-  <data name="ExtraGlyphRanges_Korean_Name">
+  <data name="ExtraGlyphRanges_Korean_Name" xml:space="preserve">
     <value>한국어</value>
   </data>
-  <data name="ExtraGlyphRanges_Thai_Name">
+  <data name="ExtraGlyphRanges_Thai_Name" xml:space="preserve">
     <value>태국어</value>
   </data>
-  <data name="ExtraGlyphRanges_Vietnamese_Name">
+  <data name="ExtraGlyphRanges_Vietnamese_Name" xml:space="preserve">
     <value>베트남어</value>
   </data>
-  <data name="Context_Integrations">
+  <data name="Context_Integrations" xml:space="preserve">
     <value>연동 기능</value>
   </data>
-  <data name="Context_ScreenshotMode">
+  <data name="Context_ScreenshotMode" xml:space="preserve">
     <value>스크린샷 모드</value>
   </data>
-  <data name="Context_HideChat">
+  <data name="Context_HideChat" xml:space="preserve">
     <value>채팅창 숨기기</value>
   </data>
-  <data name="Context_Copy">
+  <data name="Context_Copy" xml:space="preserve">
     <value>복사하기</value>
   </data>
-  <data name="Context_TryOn">
+  <data name="Context_TryOn" xml:space="preserve">
     <value>미리 보기</value>
   </data>
-  <data name="Context_ItemComparison">
+  <data name="Context_ItemComparison" xml:space="preserve">
     <value>장비 비교</value>
   </data>
-  <data name="Context_SearchRecipes">
+  <data name="Context_SearchRecipes" xml:space="preserve">
     <value>이 재료로 만들 수 있는 아이템 검색</value>
   </data>
-  <data name="Context_SearchForItem">
+  <data name="Context_SearchForItem" xml:space="preserve">
     <value>보유 상황 확인</value>
   </data>
-  <data name="Context_Link">
+  <data name="Context_Link" xml:space="preserve">
     <value>아이템 링크</value>
   </data>
-  <data name="Context_CopyItemName">
+  <data name="Context_CopyItemName" xml:space="preserve">
     <value>아이템 이름 복사</value>
   </data>
-  <data name="Context_SendTell">
+  <data name="Context_SendTell" xml:space="preserve">
     <value>귓속말</value>
   </data>
-  <data name="Context_InviteToParty">
+  <data name="Context_InviteToParty" xml:space="preserve">
     <value>파티 초대</value>
   </data>
-  <data name="Context_BlockFunctions">
+  <data name="Context_BlockFunctions" xml:space="preserve">
     <value>Block Functions</value>
   </data>
-  <data name="Context_InviteToParty_SameWorld">
+  <data name="Context_InviteToParty_SameWorld" xml:space="preserve">
     <value>같은 서버</value>
   </data>
-  <data name="Context_InviteToParty_DifferentWorld">
+  <data name="Context_InviteToParty_DifferentWorld" xml:space="preserve">
     <value>다른 서버</value>
   </data>
-  <data name="Context_Promote">
+  <data name="Context_Promote" xml:space="preserve">
     <value>파티장으로 임명</value>
   </data>
-  <data name="Context_KickFromParty">
+  <data name="Context_KickFromParty" xml:space="preserve">
     <value>파티에서 추방</value>
   </data>
-  <data name="Context_SendFriendRequest">
+  <data name="Context_SendFriendRequest" xml:space="preserve">
     <value>친구 신청</value>
   </data>
-  <data name="Context_AddToBlacklist">
+  <data name="Context_AddToBlacklist" xml:space="preserve">
     <value>차단 목록에 추가</value>
   </data>
-  <data name="Context_AddToMuteList">
+  <data name="Context_AddToMuteList" xml:space="preserve">
     <value>Register to Mute List</value>
   </data>
-  <data name="Context_AddToTermsFilter">
+  <data name="Context_AddToTermsFilter" xml:space="preserve">
     <value>Add to Term Filters</value>
   </data>
-  <data name="Context_InviteToNoviceNetwork">
+  <data name="Context_InviteToNoviceNetwork" xml:space="preserve">
     <value>초보자 채널로 초대하기</value>
   </data>
-  <data name="Context_ReplyInSelectedChatMode">
+  <data name="Context_ReplyInSelectedChatMode" xml:space="preserve">
     <value>선택한 대화 방식으로 대답</value>
   </data>
-  <data name="Context_Target">
+  <data name="Context_Target" xml:space="preserve">
     <value>대상 지정</value>
   </data>
-  <data name="ChatType_Debug">
+  <data name="ChatType_Debug" xml:space="preserve">
     <value>Debug</value>
   </data>
-  <data name="ChatType_Urgent">
+  <data name="ChatType_Urgent" xml:space="preserve">
     <value>Urgent</value>
   </data>
-  <data name="ChatType_Notice">
+  <data name="ChatType_Notice" xml:space="preserve">
     <value>Notice</value>
   </data>
-  <data name="ChatType_Say">
+  <data name="ChatType_Say" xml:space="preserve">
     <value>말하기</value>
   </data>
-  <data name="ChatType_Shout">
+  <data name="ChatType_Shout" xml:space="preserve">
     <value>외치기</value>
   </data>
-  <data name="ChatType_TellOutgoing">
+  <data name="ChatType_TellOutgoing" xml:space="preserve">
     <value>귓속말 (송신)</value>
   </data>
-  <data name="ChatType_TellIncoming">
+  <data name="ChatType_TellIncoming" xml:space="preserve">
     <value>귓속말 (수신)</value>
   </data>
-  <data name="ChatType_Party">
+  <data name="ChatType_Party" xml:space="preserve">
     <value>파티</value>
   </data>
-  <data name="ChatType_Alliance">
+  <data name="ChatType_Alliance" xml:space="preserve">
     <value>연합 파티</value>
   </data>
-  <data name="ChatType_Linkshell1">
+  <data name="ChatType_Linkshell1" xml:space="preserve">
     <value>링크셸 [1]</value>
   </data>
-  <data name="ChatType_Linkshell2">
+  <data name="ChatType_Linkshell2" xml:space="preserve">
     <value>링크셸 [2]</value>
   </data>
-  <data name="ChatType_Linkshell3">
+  <data name="ChatType_Linkshell3" xml:space="preserve">
     <value>링크셸 [3]</value>
   </data>
-  <data name="ChatType_Linkshell4">
+  <data name="ChatType_Linkshell4" xml:space="preserve">
     <value>링크셸 [4]</value>
   </data>
-  <data name="ChatType_Linkshell5">
+  <data name="ChatType_Linkshell5" xml:space="preserve">
     <value>링크셸 [5]</value>
   </data>
-  <data name="ChatType_Linkshell6">
+  <data name="ChatType_Linkshell6" xml:space="preserve">
     <value>링크셸 [6]</value>
   </data>
-  <data name="ChatType_Linkshell7">
+  <data name="ChatType_Linkshell7" xml:space="preserve">
     <value>링크셸 [7]</value>
   </data>
-  <data name="ChatType_Linkshell8">
+  <data name="ChatType_Linkshell8" xml:space="preserve">
     <value>링크셸 [8]</value>
   </data>
-  <data name="ChatType_FreeCompany">
+  <data name="ChatType_FreeCompany" xml:space="preserve">
     <value>자유부대</value>
   </data>
-  <data name="ChatType_NoviceNetwork">
+  <data name="ChatType_NoviceNetwork" xml:space="preserve">
     <value>초보자 채널</value>
   </data>
-  <data name="ChatType_CustomEmotes">
+  <data name="ChatType_CustomEmotes" xml:space="preserve">
     <value>자기만의 감정 표현</value>
   </data>
-  <data name="ChatType_StandardEmotes">
+  <data name="ChatType_StandardEmotes" xml:space="preserve">
     <value>감정 표현</value>
   </data>
-  <data name="ChatType_Yell">
+  <data name="ChatType_Yell" xml:space="preserve">
     <value>떠들기</value>
   </data>
-  <data name="ChatType_CrossWorldParty">
+  <data name="ChatType_CrossWorldParty" xml:space="preserve">
     <value>서버 초월 파티</value>
   </data>
-  <data name="ChatType_PvpTeam">
+  <data name="ChatType_PvpTeam" xml:space="preserve">
     <value>PvP팀</value>
   </data>
-  <data name="ChatType_CrossLinkshell1">
+  <data name="ChatType_CrossLinkshell1" xml:space="preserve">
     <value>서버 초월 링크셸 [1]</value>
   </data>
-  <data name="ChatType_CrossLinkshell2">
+  <data name="ChatType_CrossLinkshell2" xml:space="preserve">
     <value>서버 초월 링크셸 [2]</value>
   </data>
-  <data name="ChatType_CrossLinkshell3">
+  <data name="ChatType_CrossLinkshell3" xml:space="preserve">
     <value>서버 초월 링크셸 [3]</value>
   </data>
-  <data name="ChatType_CrossLinkshell4">
+  <data name="ChatType_CrossLinkshell4" xml:space="preserve">
     <value>서버 초월 링크셸 [4]</value>
   </data>
-  <data name="ChatType_CrossLinkshell5">
+  <data name="ChatType_CrossLinkshell5" xml:space="preserve">
     <value>서버 초월 링크셸 [5]</value>
   </data>
-  <data name="ChatType_CrossLinkshell6">
+  <data name="ChatType_CrossLinkshell6" xml:space="preserve">
     <value>서버 초월 링크셸 [6]</value>
   </data>
-  <data name="ChatType_CrossLinkshell7">
+  <data name="ChatType_CrossLinkshell7" xml:space="preserve">
     <value>서버 초월 링크셸 [7]</value>
   </data>
-  <data name="ChatType_CrossLinkshell8">
+  <data name="ChatType_CrossLinkshell8" xml:space="preserve">
     <value>서버 초월 링크셸 [8]</value>
   </data>
-  <data name="ChatType_Damage">
+  <data name="ChatType_Damage" xml:space="preserve">
     <value>준 피해</value>
   </data>
-  <data name="ChatType_Miss">
+  <data name="ChatType_Miss" xml:space="preserve">
     <value>실패한 공격</value>
   </data>
-  <data name="ChatType_Action">
+  <data name="ChatType_Action" xml:space="preserve">
     <value>기술 시작 및 중단</value>
   </data>
-  <data name="ChatType_Item">
+  <data name="ChatType_Item" xml:space="preserve">
     <value>아이템 사용 및 중단</value>
   </data>
-  <data name="ChatType_Healing">
+  <data name="ChatType_Healing" xml:space="preserve">
     <value>한 회복</value>
   </data>
-  <data name="ChatType_GainBuff">
+  <data name="ChatType_GainBuff" xml:space="preserve">
     <value>받은 강화 효과</value>
   </data>
-  <data name="ChatType_GainDebuff">
+  <data name="ChatType_GainDebuff" xml:space="preserve">
     <value>받은 약화 효과</value>
   </data>
-  <data name="ChatType_LoseBuff">
+  <data name="ChatType_LoseBuff" xml:space="preserve">
     <value>강화 효과 종료</value>
   </data>
-  <data name="ChatType_LoseDebuff">
+  <data name="ChatType_LoseDebuff" xml:space="preserve">
     <value>약화 효과 종료</value>
   </data>
-  <data name="ChatType_Alarm">
+  <data name="ChatType_Alarm" xml:space="preserve">
     <value>알람 알림 정보</value>
   </data>
-  <data name="ChatType_Glamour">
+  <data name="ChatType_Glamour" xml:space="preserve">
     <value>Glamour Notifications</value>
   </data>
-  <data name="ChatType_Echo">
+  <data name="ChatType_Echo" xml:space="preserve">
     <value>혼잣말</value>
   </data>
-  <data name="ChatType_System">
+  <data name="ChatType_System" xml:space="preserve">
     <value>시스템 메시지</value>
   </data>
-  <data name="ChatType_BattleSystem">
+  <data name="ChatType_BattleSystem" xml:space="preserve">
     <value>전투 관련 시스템 메시지</value>
   </data>
-  <data name="ChatType_GatheringSystem">
+  <data name="ChatType_GatheringSystem" xml:space="preserve">
     <value>채집 관련 시스템 메시지</value>
   </data>
-  <data name="ChatType_Error">
+  <data name="ChatType_Error" xml:space="preserve">
     <value>오류 메시지</value>
   </data>
-  <data name="ChatType_NpcDialogue">
+  <data name="ChatType_NpcDialogue" xml:space="preserve">
     <value>NPC 대화</value>
   </data>
-  <data name="ChatType_LootNotice">
+  <data name="ChatType_LootNotice" xml:space="preserve">
     <value>전리품 알림</value>
   </data>
-  <data name="ChatType_Progress">
+  <data name="ChatType_Progress" xml:space="preserve">
     <value>레벨 업 및 아이템 획득</value>
   </data>
-  <data name="ChatType_LootRoll">
+  <data name="ChatType_LootRoll" xml:space="preserve">
     <value>아이템 입찰 정보</value>
   </data>
-  <data name="ChatType_Crafting">
+  <data name="ChatType_Crafting" xml:space="preserve">
     <value>제작 과정 및 결과</value>
   </data>
-  <data name="ChatType_Gathering">
+  <data name="ChatType_Gathering" xml:space="preserve">
     <value>채집 과정 및 결과</value>
   </data>
-  <data name="ChatType_NpcAnnouncement">
+  <data name="ChatType_NpcAnnouncement" xml:space="preserve">
     <value>NPC 대화(알림)</value>
   </data>
-  <data name="ChatType_FreeCompanyAnnouncement">
+  <data name="ChatType_FreeCompanyAnnouncement" xml:space="preserve">
     <value>자유부대 알림</value>
   </data>
-  <data name="ChatType_FreeCompanyLoginLogout">
+  <data name="ChatType_FreeCompanyLoginLogout" xml:space="preserve">
     <value>자유부대 부대원 로그인 알림</value>
   </data>
-  <data name="ChatType_RetainerSale">
+  <data name="ChatType_RetainerSale" xml:space="preserve">
     <value>장터 판매 알림</value>
   </data>
-  <data name="ChatType_PeriodicRecruitmentNotification">
+  <data name="ChatType_PeriodicRecruitmentNotification" xml:space="preserve">
     <value>새 파티 찾기 정보</value>
   </data>
-  <data name="ChatType_Sign">
+  <data name="ChatType_Sign" xml:space="preserve">
     <value>표식 설정 정보</value>
   </data>
-  <data name="ChatType_RandomNumber">
+  <data name="ChatType_RandomNumber" xml:space="preserve">
     <value>주사위 메시지</value>
   </data>
-  <data name="ChatType_NoviceNetworkSystem">
+  <data name="ChatType_NoviceNetworkSystem" xml:space="preserve">
     <value>초보자 채널 알림</value>
   </data>
-  <data name="ChatType_Orchestrion">
+  <data name="ChatType_Orchestrion" xml:space="preserve">
     <value>오케스트리온 재생 정보</value>
   </data>
-  <data name="ChatType_PvpTeamAnnouncement">
+  <data name="ChatType_PvpTeamAnnouncement" xml:space="preserve">
     <value>PvP팀 알림</value>
   </data>
-  <data name="ChatType_PvpTeamLoginLogout">
+  <data name="ChatType_PvpTeamLoginLogout" xml:space="preserve">
     <value>PvP팀 접속 알림</value>
   </data>
-  <data name="ChatType_MessageBook">
+  <data name="ChatType_MessageBook" xml:space="preserve">
     <value>방명록 신규 메시지</value>
   </data>
-  <data name="ChatType_GmTell">
+  <data name="ChatType_GmTell" xml:space="preserve">
     <value>귓속말 (운영자)</value>
   </data>
-  <data name="ChatType_GmSay">
+  <data name="ChatType_GmSay" xml:space="preserve">
     <value>말하기 (운영자)</value>
   </data>
-  <data name="ChatType_GmShout">
+  <data name="ChatType_GmShout" xml:space="preserve">
     <value>외치기 (운영자)</value>
   </data>
-  <data name="ChatType_GmYell">
+  <data name="ChatType_GmYell" xml:space="preserve">
     <value>떠들기 (운영자)</value>
   </data>
-  <data name="ChatType_GmParty">
+  <data name="ChatType_GmParty" xml:space="preserve">
     <value>파티 (운영자)</value>
   </data>
-  <data name="ChatType_GmFreeCompany">
+  <data name="ChatType_GmFreeCompany" xml:space="preserve">
     <value>자유부대 (운영자)</value>
   </data>
-  <data name="ChatType_GmLinkshell1">
+  <data name="ChatType_GmLinkshell1" xml:space="preserve">
     <value>링크셸 [1] (운영자)</value>
   </data>
-  <data name="ChatType_GmLinkshell2">
+  <data name="ChatType_GmLinkshell2" xml:space="preserve">
     <value>링크셸 [2] (운영자)</value>
   </data>
-  <data name="ChatType_GmLinkshell3">
+  <data name="ChatType_GmLinkshell3" xml:space="preserve">
     <value>링크셸 [3] (운영자)</value>
   </data>
-  <data name="ChatType_GmLinkshell4">
+  <data name="ChatType_GmLinkshell4" xml:space="preserve">
     <value>링크셸 [4] (운영자)</value>
   </data>
-  <data name="ChatType_GmLinkshell5">
+  <data name="ChatType_GmLinkshell5" xml:space="preserve">
     <value>링크셸 [5] (운영자)</value>
   </data>
-  <data name="ChatType_GmLinkshell6">
+  <data name="ChatType_GmLinkshell6" xml:space="preserve">
     <value>링크셸 [6] (운영자)</value>
   </data>
-  <data name="ChatType_GmLinkshell7">
+  <data name="ChatType_GmLinkshell7" xml:space="preserve">
     <value>링크셸 [7] (운영자)</value>
   </data>
-  <data name="ChatType_GmLinkshell8">
+  <data name="ChatType_GmLinkshell8" xml:space="preserve">
     <value>링크셸 [8] (운영자)</value>
   </data>
-  <data name="ChatType_GmNoviceNetwork">
+  <data name="ChatType_GmNoviceNetwork" xml:space="preserve">
     <value>초보자 채널 (운영자)</value>
   </data>
-  <data name="Options_CollapseDuplicateMessages_Name">
+  <data name="Options_CollapseDuplicateMessages_Name" xml:space="preserve">
     <value>동일한 메시지 합치기</value>
   </data>
-  <data name="Options_CollapseDuplicateMessages_Description">
+  <data name="Options_CollapseDuplicateMessages_Description" xml:space="preserve">
     <value>동일한 메시지를 한 줄로 합치고, 그 수를 표시합니다.</value>
   </data>
-  <data name="Options_CollapseDuplicateMsgUniqueLink_Name">
+  <data name="Options_CollapseDuplicateMsgUniqueLink_Name" xml:space="preserve">
     <value>Keep unique links seperate</value>
   </data>
-  <data name="Options_CollapseDuplicateMsgUniqueLink_Description">
+  <data name="Options_CollapseDuplicateMsgUniqueLink_Description" xml:space="preserve">
     <value>Don't collapse messages if they link to different things with the same text.</value>
   </data>
-  <data name="Options_Tabs_ExtraChatChannels">
+  <data name="Options_Tabs_ExtraChatChannels" xml:space="preserve">
     <value>ExtraChat 플러그인 전용 채널</value>
   </data>
-  <data name="Options_Tabs_ExtraChatAll">
+  <data name="Options_Tabs_ExtraChatAll" xml:space="preserve">
     <value>전체</value>
   </data>
-  <data name="Context_AdventurerPlate">
+  <data name="Context_AdventurerPlate" xml:space="preserve">
     <value>모험가 카드 보기</value>
   </data>
-  <data name="Context_AdventurerPlateError">
+  <data name="Context_AdventurerPlateError" xml:space="preserve">
     <value>모험가 카드를 표시할 수 없습니다.</value>
   </data>
-  <data name="Options_TooltipOffset_Name">
+  <data name="Options_TooltipOffset_Name" xml:space="preserve">
     <value>툴팁 오프셋 </value>
   </data>
-  <data name="Options_TooltipOffset_Desc">
+  <data name="Options_TooltipOffset_Desc" xml:space="preserve">
     <value>툴팁이 잘려보인다면 이 옵션을 사용하세요.</value>
   </data>
   <data name="ChatType_ExtraChatLinkshell1" xml:space="preserve">
-        <value>ExtraChat 링크셸 [1]</value>
-    </data>
+    <value>ExtraChat 링크셸 [1]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell2" xml:space="preserve">
-        <value>ExtraChat 링크셸 [2]</value>
-    </data>
+    <value>ExtraChat 링크셸 [2]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell3" xml:space="preserve">
-        <value>ExtraChat 링크셸 [3]</value>
-    </data>
+    <value>ExtraChat 링크셸 [3]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell4" xml:space="preserve">
-        <value>ExtraChat 링크셸 [4]</value>
-    </data>
+    <value>ExtraChat 링크셸 [4]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell5" xml:space="preserve">
-        <value>ExtraChat 링크셸 [5]</value>
-    </data>
+    <value>ExtraChat 링크셸 [5]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell6" xml:space="preserve">
-        <value>ExtraChat 링크셸 [6]</value>
-    </data>
+    <value>ExtraChat 링크셸 [6]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell7" xml:space="preserve">
-        <value>ExtraChat 링크셸 [7]</value>
-    </data>
+    <value>ExtraChat 링크셸 [7]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell8" xml:space="preserve">
-        <value>ExtraChat 링크셸 [8]</value>
-    </data>
-  <data name="Context_CopyContent">
+    <value>ExtraChat 링크셸 [8]</value>
+  </data>
+  <data name="Context_CopyContent" xml:space="preserve">
     <value>내용 복사</value>
   </data>
-  <data name="Context_CopyContentSuccess">
+  <data name="Context_CopyContentSuccess" xml:space="preserve">
     <value>메시지를 클립보드로 복사했습니다.</value>
   </data>
-  <data name="Context_CopySuccess">
+  <data name="Context_CopySuccess" xml:space="preserve">
     <value>메시지를 클립보드로 복사했습니다.</value>
   </data>
-  <data name="PartyInvite_NoId">
+  <data name="PartyInvite_NoId" xml:space="preserve">
     <value>Unable to find ID for this message, please try another one.</value>
   </data>
   <data name="Context_CopyLink" xml:space="preserve">
-        <value>링크 복사</value>
-    </data>
+    <value>링크 복사</value>
+  </data>
   <data name="Context_CopyLinkNotification" xml:space="preserve">
-        <value>링크를 클립보드로 복사했습니다.</value>
-    </data>
+    <value>링크를 클립보드로 복사했습니다.</value>
+  </data>
   <data name="Context_OpenInBrowser" xml:space="preserve">
-        <value>브라우저로 열기</value>
-    </data>
+    <value>브라우저로 열기</value>
+  </data>
   <data name="Context_OpenInBrowserError" xml:space="preserve">
-        <value>브라우저로 열지 못했습니다. 이 문제를 보고해주세요.</value>
-    </data>
+    <value>브라우저로 열지 못했습니다. 이 문제를 보고해주세요.</value>
+  </data>
   <data name="Context_URLDomain" xml:space="preserve">
-        <value>URL at {0}</value>
-    </data>
+    <value>URL at {0}</value>
+  </data>
   <data name="Context_URLWarning" xml:space="preserve">
-        <value>신뢰할 수 있는 웹 사이트의 URL만 여세요.</value>
-    </data>
+    <value>신뢰할 수 있는 웹 사이트의 URL만 여세요.</value>
+  </data>
   <data name="Options_About_Authors" xml:space="preserve">
-        <value>제작자: </value>
-    </data>
+    <value>제작자: </value>
+  </data>
   <data name="Options_About_Discord" xml:space="preserve">
-        <value>디스코드: </value>
-    </data>
+    <value>디스코드: </value>
+  </data>
   <data name="Options_About_Version" xml:space="preserve">
-        <value>버전: </value>
-    </data>
+    <value>버전: </value>
+  </data>
   <data name="Options_About_Github_Issues" xml:space="preserve">
-        <value>GitHub issues에서 도움받기: </value>
-    </data>
+    <value>GitHub issues에서 도움받기: </value>
+  </data>
   <data name="Options_About_Discord_Thread" xml:space="preserve">
-        <value>디스코드 스레드에서 도움받기: </value>
-    </data>
+    <value>디스코드 스레드에서 도움받기: </value>
+  </data>
   <data name="Options_OverrideStyle_Name_Desc" xml:space="preserve">
-        <value>선택한 달라무드 스타일로 적용합니다.</value>
-    </data>
+    <value>선택한 달라무드 스타일로 적용합니다.</value>
+  </data>
   <data name="Options_HideInLoadingScreens_Name" xml:space="preserve">
-        <value>로딩 화면에서 숨기기</value>
-    </data>
+    <value>로딩 화면에서 숨기기</value>
+  </data>
   <data name="Options_HideInLoadingScreens_Description" xml:space="preserve">
-        <value>로딩 화면에서 {0}를 숨깁니다.</value>
-    </data>
-  <data name="Options_ClearDatabase_Button">
+    <value>로딩 화면에서 {0}를 숨깁니다.</value>
+  </data>
+  <data name="Options_ClearDatabase_Button" xml:space="preserve">
     <value>메시지 데이터베이스 삭제</value>
   </data>
-  <data name="Options_ClearDatabase_Success">
+  <data name="Options_ClearDatabase_Success" xml:space="preserve">
     <value>메시지 데이터베이스 삭제 성공</value>
   </data>
-  <data name="Options_ClearDatabase_Tooltip">
+  <data name="Options_ClearDatabase_Tooltip" xml:space="preserve">
     <value>모든 메시지 기록을 삭제합니다. 이 작업은 복구할 수 없습니다. Ctrl + Shift를 누른 상태로 클릭하세요.</value>
   </data>
-  <data name="Options_Database_Metadata_CopyConfigPath">
+  <data name="Options_Database_Metadata_CopyConfigPath" xml:space="preserve">
     <value>클릭하여 데이터베이스 파일 경로 복사</value>
   </data>
-  <data name="Options_Database_Metadata_CopyConfigPathNotification">
+  <data name="Options_Database_Metadata_CopyConfigPathNotification" xml:space="preserve">
     <value>데이터베이스 파일 경로를 클립보드로 복사했습니다.</value>
   </data>
-  <data name="Options_Database_Metadata_Heading">
+  <data name="Options_Database_Metadata_Heading" xml:space="preserve">
     <value>데이터베이스 세부 정보:</value>
   </data>
-  <data name="Options_Database_Metadata_LogSize">
+  <data name="Options_Database_Metadata_LogSize" xml:space="preserve">
     <value>로그 크기: {0}</value>
   </data>
-  <data name="Options_Database_Metadata_MessageCount">
+  <data name="Options_Database_Metadata_MessageCount" xml:space="preserve">
     <value>저장된 메시지: {0:N0}</value>
   </data>
-  <data name="Options_Database_Metadata_Path">
+  <data name="Options_Database_Metadata_Path" xml:space="preserve">
     <value>경로: {0}</value>
   </data>
-  <data name="Options_Database_Metadata_Size">
+  <data name="Options_Database_Metadata_Size" xml:space="preserve">
     <value>크기: {0}</value>
   </data>
   <data name="Options_OverrideStyle_NotSelected" xml:space="preserve">
-        <value>선택되지 않음</value>
-    </data>
+    <value>선택되지 않음</value>
+  </data>
   <data name="Options_OverrideStyle_NotAvailable" xml:space="preserve">
-        <value>사용 가능한 달라무드 스타일이 없습니다.</value>
-    </data>
+    <value>사용 가능한 달라무드 스타일이 없습니다.</value>
+  </data>
   <data name="Options_PlaySounds_Name" xml:space="preserve">
-        <value>효과음 재생</value>
-    </data>
+    <value>효과음 재생</value>
+  </data>
   <data name="Options_PlaySounds_Description" xml:space="preserve">
-        <value>상호작용 시 효과음을 재생합니다.</value>
-    </data>
+    <value>상호작용 시 효과음을 재생합니다.</value>
+  </data>
   <data name="Options_MaxLinesToShow_Name" xml:space="preserve">
-        <value>채팅창에 표시할 최대 로그 줄 수</value>
-    </data>
+    <value>채팅창에 표시할 최대 로그 줄 수</value>
+  </data>
   <data name="Options_MaxLinesToShow_Description" xml:space="preserve">
-        <value>채팅창에 표시할 로그 줄 수의 양을 제한합니다. 성능을 약간 향상시킬 수 있습니다.</value>
-    </data>
+    <value>채팅창에 표시할 로그 줄 수의 양을 제한합니다. 성능을 약간 향상시킬 수 있습니다.</value>
+  </data>
   <data name="Options_WebinterfaceMaxLinesToSend_Name" xml:space="preserve">
-        <value>Log line limit for the webinterface</value>
-    </data>
+    <value>Log line limit for the webinterface</value>
+  </data>
   <data name="Options_WebinterfaceMaxLinesToSend_Description" xml:space="preserve">
-        <value>Limits the amount of log lines to show in the webinterface. This will improve loading performance.</value>
-    </data>
+    <value>Limits the amount of log lines to show in the webinterface. This will improve loading performance.</value>
+  </data>
   <data name="LoadMessages_Error" xml:space="preserve">
-        <value>채팅 기록을 불러오지 못했습니다. 자세한 정보는 플러그인 로그를 확인해주세요.</value>
-    </data>
+    <value>채팅 기록을 불러오지 못했습니다. 자세한 정보는 플러그인 로그를 확인해주세요.</value>
+  </data>
   <data name="Options_Database_Old_Heading" xml:space="preserve">
-        <value>예전 데이터베이스:</value>
-    </data>
+    <value>예전 데이터베이스:</value>
+  </data>
   <data name="Options_Database_Old_Delete" xml:space="preserve">
-        <value>삭제</value>
-    </data>
+    <value>삭제</value>
+  </data>
   <data name="Options_Database_Old_Delete_Tooltip" xml:space="preserve">
-        <value>컴퓨터에서 데이터베이스를 삭제합니다. 이 작업은 복구할 수 없습니다! Ctrl + Shift를 누른 상태로 클릭하세요.</value>
-    </data>
+    <value>컴퓨터에서 데이터베이스를 삭제합니다. 이 작업은 복구할 수 없습니다! Ctrl + Shift를 누른 상태로 클릭하세요.</value>
+  </data>
   <data name="Options_Database_Old_Delete_Error" xml:space="preserve">
-        <value>예전 데이터베이스를 삭제할 수 없습니다. 자세한 정보는 /xllog 명령어를 통해 확인하세요.</value>
-    </data>
+    <value>예전 데이터베이스를 삭제할 수 없습니다. 자세한 정보는 /xllog 명령어를 통해 확인하세요.</value>
+  </data>
   <data name="Options_Database_Old_Delete_Success" xml:space="preserve">
-        <value>예전 데이터베이스를 성공적으로 삭제했습니다.</value>
-    </data>
+    <value>예전 데이터베이스를 성공적으로 삭제했습니다.</value>
+  </data>
   <data name="Options_Database_Old_Migration" xml:space="preserve">
-        <value>데이터 마이그레이션 창 열기</value>
-    </data>
+    <value>데이터 마이그레이션 창 열기</value>
+  </data>
   <data name="Options_Tabs_NoInput" xml:space="preserve">
-        <value>이 탭에서 입력 비활성화</value>
-    </data>
+    <value>이 탭에서 입력 비활성화</value>
+  </data>
   <data name="ChatLog_DisabledInput" xml:space="preserve">
-        <value>이 탭에서 입력이 비활성화된 상태입니다.</value>
-    </data>
+    <value>이 탭에서 입력이 비활성화된 상태입니다.</value>
+  </data>
   <data name="Options_ChatLog_Tab" xml:space="preserve">
-        <value>대화 내역</value>
-    </data>
+    <value>대화 내역</value>
+  </data>
   <data name="Options_AdjustPosition_Name" xml:space="preserve">
-        <value>대화 내역 위치 조정</value>
-    </data>
+    <value>대화 내역 위치 조정</value>
+  </data>
   <data name="Options_AdjustPosition_Warning" xml:space="preserve">
-        <value>주의, 이 옵션은 즉시 적용되며, 취소할 수 없습니다!</value>
-    </data>
+    <value>주의, 이 옵션은 즉시 적용되며, 취소할 수 없습니다!</value>
+  </data>
   <data name="Options_KeepInputFocus_Name" xml:space="preserve">
-        <value>Keep input focus</value>
-    </data>
+    <value>Keep input focus</value>
+  </data>
   <data name="Options_KeepInputFocus_Description" xml:space="preserve">
-        <value>Keeps the input focus, even if you enter battle or do other actions.</value>
-    </data>
+    <value>Keeps the input focus, even if you enter battle or do other actions.</value>
+  </data>
   <data name="Options_ShowEmotes_Name" xml:space="preserve">
-        <value>Show emotes</value>
-    </data>
+    <value>Show emotes</value>
+  </data>
   <data name="Options_ShowEmotes_Desc" xml:space="preserve">
-        <value>Replaces words with their emote version, currently supports BetterTTV.</value>
-    </data>
+    <value>Replaces words with their emote version, currently supports BetterTTV.</value>
+  </data>
   <data name="Options_Emote_Tab" xml:space="preserve">
-        <value>Emotes</value>
-    </data>
+    <value>Emotes</value>
+  </data>
   <data name="Options_Emote_BlockedEmotes" xml:space="preserve">
-        <value>Blocked emotes</value>
-    </data>
+    <value>Blocked emotes</value>
+  </data>
   <data name="Options_Emote_EmoteTable" xml:space="preserve">
-        <value>Emote</value>
-    </data>
+    <value>Emote</value>
+  </data>
   <data name="Options_HideInBattle_Name" xml:space="preserve">
-        <value>Hide during battle</value>
-    </data>
+    <value>Hide during battle</value>
+  </data>
   <data name="Options_HideInBattle_Description" xml:space="preserve">
-        <value>Hide the chat during battles.</value>
-    </data>
+    <value>Hide the chat during battles.</value>
+  </data>
   <data name="Options_Emote_EmoteStats" xml:space="preserve">
-        <value>Emote Stats</value>
-    </data>
+    <value>Emote Stats</value>
+  </data>
   <data name="Options_Emote_Ready" xml:space="preserve">
-        <value>Ready</value>
-    </data>
+    <value>Ready</value>
+  </data>
   <data name="Options_Emote_NotReady" xml:space="preserve">
-        <value>Not Ready</value>
-    </data>
+    <value>Not Ready</value>
+  </data>
   <data name="Options_Emote_Loaded" xml:space="preserve">
-        <value>Emotes available:</value>
-    </data>
+    <value>Emotes available:</value>
+  </data>
   <data name="Options_Preview_Description" xml:space="preserve">
-        <value>Displays a preview with special parameter evaluated, like emotes and &lt;item&gt;.</value>
-    </data>
+    <value>Displays a preview with special parameter evaluated, like emotes and &lt;item&gt;.</value>
+  </data>
   <data name="Options_Preview_Name" xml:space="preserve">
-        <value>Position (None = off)</value>
-    </data>
+    <value>Position (None = off)</value>
+  </data>
   <data name="Options_Preview_None" xml:space="preserve">
-        <value>None</value>
-    </data>
+    <value>None</value>
+  </data>
   <data name="Options_Preview_Inside" xml:space="preserve">
-        <value>Inside</value>
-    </data>
+    <value>Inside</value>
+  </data>
   <data name="Options_Preview_Top" xml:space="preserve">
-        <value>Top</value>
-    </data>
+    <value>Top</value>
+  </data>
   <data name="Options_Preview_Bottom" xml:space="preserve">
-        <value>Bottom</value>
-    </data>
+    <value>Bottom</value>
+  </data>
   <data name="Options_Preview_Header" xml:space="preserve">
-        <value>Message Preview:</value>
-    </data>
+    <value>Message Preview:</value>
+  </data>
   <data name="Options_Preview_Tooltip" xml:space="preserve">
-        <value>Tooltip</value>
-    </data>
+    <value>Tooltip</value>
+  </data>
   <data name="Options_PreviewOnlyIf_Name" xml:space="preserve">
-        <value>Must contain parameter</value>
-    </data>
+    <value>Must contain parameter</value>
+  </data>
   <data name="Options_PreviewOnlyIf_Description" xml:space="preserve">
-        <value>Only show if the text contains special parameter.</value>
-    </data>
+    <value>Only show if the text contains special parameter.</value>
+  </data>
   <data name="Options_PreviewMinimum_Name" xml:space="preserve">
-        <value>Minimum input length</value>
-    </data>
+    <value>Minimum input length</value>
+  </data>
   <data name="Options_PreviewMinimum_Description" xml:space="preserve">
-        <value>Only show if the text length is greater-than or equal.</value>
-    </data>
+    <value>Only show if the text length is greater-than or equal.</value>
+  </data>
   <data name="Options_Preview_Tab" xml:space="preserve">
-        <value>Preview</value>
-    </data>
+    <value>Preview</value>
+  </data>
   <data name="Options_Changelog_Tab" xml:space="preserve">
-        <value>Changelog</value>
-    </data>
+    <value>Changelog</value>
+  </data>
   <data name="Options_PrintChangelog_Name" xml:space="preserve">
-        <value>Print changelog</value>
-    </data>
+    <value>Print changelog</value>
+  </data>
   <data name="Options_PrintChangelog_Description" xml:space="preserve">
-        <value>Print the changelog to chat after an update.</value>
-    </data>
+    <value>Print the changelog to chat after an update.</value>
+  </data>
   <data name="Options_Warning_NotImplemented" xml:space="preserve">
-        <value>This feature isn't implemented yet</value>
-    </data>
+    <value>This feature isn't implemented yet</value>
+  </data>
   <data name="Options_Changelog_Header" xml:space="preserve">
-        <value>Changelog:</value>
-    </data>
+    <value>Changelog:</value>
+  </data>
   <data name="DateWidget_InvalidDate" xml:space="preserve">
-        <value>Date before {0} is not possible</value>
-    </data>
+    <value>Date before {0} is not possible</value>
+  </data>
   <data name="DateWidget_Day_Sun" xml:space="preserve">
-        <value>Sun</value>
-    </data>
+    <value>Sun</value>
+  </data>
   <data name="DateWidget_Day_Mon" xml:space="preserve">
-        <value>Mon</value>
-    </data>
+    <value>Mon</value>
+  </data>
   <data name="DateWidget_Day_Tue" xml:space="preserve">
-        <value>Tue</value>
-    </data>
+    <value>Tue</value>
+  </data>
   <data name="DateWidget_Day_Wed" xml:space="preserve">
-        <value>Wed</value>
-    </data>
+    <value>Wed</value>
+  </data>
   <data name="DateWidget_Day_Thu" xml:space="preserve">
-        <value>Thu</value>
-    </data>
+    <value>Thu</value>
+  </data>
   <data name="DateWidget_Day_Fri" xml:space="preserve">
-        <value>Fri</value>
-    </data>
+    <value>Fri</value>
+  </data>
   <data name="DateWidget_Day_Sat" xml:space="preserve">
-        <value>Sat</value>
-    </data>
+    <value>Sat</value>
+  </data>
   <data name="DateWidget_Month_January" xml:space="preserve">
-        <value>January</value>
-    </data>
+    <value>January</value>
+  </data>
   <data name="DateWidget_Month_February" xml:space="preserve">
-        <value>February</value>
-    </data>
+    <value>February</value>
+  </data>
   <data name="DateWidget_Month_March" xml:space="preserve">
-        <value>March</value>
-    </data>
+    <value>March</value>
+  </data>
   <data name="DateWidget_Month_April" xml:space="preserve">
-        <value>April</value>
-    </data>
+    <value>April</value>
+  </data>
   <data name="DateWidget_Month_May" xml:space="preserve">
-        <value>May</value>
-    </data>
+    <value>May</value>
+  </data>
   <data name="DateWidget_Month_June" xml:space="preserve">
-        <value>June</value>
-    </data>
+    <value>June</value>
+  </data>
   <data name="DateWidget_Month_July" xml:space="preserve">
-        <value>July</value>
-    </data>
+    <value>July</value>
+  </data>
   <data name="DateWidget_Month_August" xml:space="preserve">
-        <value>August</value>
-    </data>
+    <value>August</value>
+  </data>
   <data name="DateWidget_Month_September" xml:space="preserve">
-        <value>September</value>
-    </data>
+    <value>September</value>
+  </data>
   <data name="DateWidget_Month_October" xml:space="preserve">
-        <value>October</value>
-    </data>
+    <value>October</value>
+  </data>
   <data name="DateWidget_Month_November" xml:space="preserve">
-        <value>November</value>
-    </data>
+    <value>November</value>
+  </data>
   <data name="DateWidget_Month_December" xml:space="preserve">
-        <value>December</value>
-    </data>
+    <value>December</value>
+  </data>
   <data name="DbViewer_TableField_Date" xml:space="preserve">
-        <value>Date</value>
-    </data>
+    <value>Date</value>
+  </data>
   <data name="DbViewer_TableField_Type" xml:space="preserve">
-        <value>Channel</value>
-    </data>
+    <value>Channel</value>
+  </data>
   <data name="DbViewer_TableField_Sender" xml:space="preserve">
-        <value>Sender</value>
-    </data>
+    <value>Sender</value>
+  </data>
   <data name="DbViewer_TableField_Content" xml:space="preserve">
-        <value>Content</value>
-    </data>
+    <value>Content</value>
+  </data>
   <data name="DbViewer_Status_NothingFound" xml:space="preserve">
-        <value>Nothing Found.</value>
-    </data>
+    <value>Nothing Found.</value>
+  </data>
   <data name="DbViewer_Status_NoSearchResult" xml:space="preserve">
-        <value>Search had no match on this page.</value>
-    </data>
+    <value>Search had no match on this page.</value>
+  </data>
   <data name="DbViewer_SearcHint" xml:space="preserve">
-        <value>Simple Sender/Content Search</value>
-    </data>
+    <value>Simple Sender/Content Search</value>
+  </data>
   <data name="DbViewer_Page" xml:space="preserve">
-        <value>Page: {0} / {1} ({2} Rows) {3}</value>
-    </data>
+    <value>Page: {0} / {1} ({2} Rows) {3}</value>
+  </data>
   <data name="DbViewer_LoadingIndicator" xml:space="preserve">
-        <value>[Loading...]</value>
-    </data>
+    <value>[Loading...]</value>
+  </data>
   <data name="DbViewer_CharacterOption" xml:space="preserve">
-        <value>Only current character</value>
-    </data>
+    <value>Only current character</value>
+  </data>
   <data name="DbViewer_DatePicker_FromTo" xml:space="preserve">
-        <value>FromTo:</value>
-    </data>
+    <value>FromTo:</value>
+  </data>
   <data name="Chat_SendTell_Error" xml:space="preserve">
-        <value>An error occured while sending this tell message</value>
-    </data>
+    <value>An error occured while sending this tell message</value>
+  </data>
   <data name="Webinterface_Stop_Success" xml:space="preserve">
-        <value>Webinterface was stopped.</value>
-    </data>
+    <value>Webinterface was stopped.</value>
+  </data>
   <data name="Webinterface_Stop_Failed" xml:space="preserve">
-        <value>Webinterface failed to stop. Check /xllog for more information.</value>
-    </data>
+    <value>Webinterface failed to stop. Check /xllog for more information.</value>
+  </data>
   <data name="Webinterface_Button_Stop" xml:space="preserve">
-        <value>Stop</value>
-    </data>
+    <value>Stop</value>
+  </data>
   <data name="Webinterface_Button_Start" xml:space="preserve">
-        <value>Start</value>
-    </data>
+    <value>Start</value>
+  </data>
   <data name="Webinterface_Start_Success" xml:space="preserve">
-        <value>Webinterface was started.</value>
-    </data>
+    <value>Webinterface was started.</value>
+  </data>
   <data name="Webinterface_Start_Failed" xml:space="preserve">
-        <value>Webinterface failed to start. Check /xllog for more information.</value>
-    </data>
+    <value>Webinterface failed to start. Check /xllog for more information.</value>
+  </data>
   <data name="Webinterface_Option_Port_Name" xml:space="preserve">
-        <value>Port</value>
-    </data>
+    <value>Port</value>
+  </data>
   <data name="Webinterface_Option_Port_Description" xml:space="preserve">
-        <value>The port this webinterface will be running on.</value>
-    </data>
+    <value>The port this webinterface will be running on.</value>
+  </data>
   <data name="Options_Webinterface_Warning_Header" xml:space="preserve">
-        <value>After checking 'Enabled' and clicking 'Start' this will load up Chat2's built-in web interface, which will allow devices on your network to access in-game chat. This feature may be used to allow a phone or another computer to see Chat2 activity, switch channels, and send messages as though you were typing in FFXIV itself.</value>
-    </data>
+    <value>After checking 'Enabled' and clicking 'Start' this will load up Chat2's built-in web interface, which will allow devices on your network to access in-game chat. This feature may be used to allow a phone or another computer to see Chat2 activity, switch channels, and send messages as though you were typing in FFXIV itself.</value>
+  </data>
   <data name="Options_Webinterface_Warning_Reason" xml:space="preserve">
-        <value>For reasons of account security, this feature is not intended for use outside of your local network, you have been warned!</value>
-    </data>
+    <value>For reasons of account security, this feature is not intended for use outside of your local network, you have been warned!</value>
+  </data>
   <data name="Options_Webinterface_Warning_DoNot" xml:space="preserve">
-        <value>Do Not:</value>
-    </data>
+    <value>Do Not:</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Port" xml:space="preserve">
-        <value>- Forward the port used (9000)</value>
-    </data>
+    <value>- Forward the port used (9000)</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Share" xml:space="preserve">
-        <value>- Share your authentication code with anyone else</value>
-    </data>
+    <value>- Share your authentication code with anyone else</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Multibox" xml:space="preserve">
-        <value>- Expect multi-boxing to work with this (only first client works)</value>
-    </data>
+    <value>- Expect multi-boxing to work with this (only first client works)</value>
+  </data>
   <data name="Options_Webinterface_Warning_Support" xml:space="preserve">
-        <value>No support will be provided if any of the 'Do Not' clauses aren't respected and adhered to appropriately.</value>
-    </data>
+    <value>No support will be provided if any of the 'Do Not' clauses aren't respected and adhered to appropriately.</value>
+  </data>
   <data name="Options_Webinterface_Hostname_Fail" xml:space="preserve">
-        <value>Unable to resolve hostname.</value>
-    </data>
+    <value>Unable to resolve hostname.</value>
+  </data>
   <data name="Options_Webinterface_Note" xml:space="preserve">
-        <value>Note: This will require at least a semi-modern browser in order to function correctly.</value>
-    </data>
+    <value>Note: This will require at least a semi-modern browser in order to function correctly.</value>
+  </data>
   <data name="Webinterface_UsageNotice" xml:space="preserve">
-        <value>Usage Notice</value>
-    </data>
+    <value>Usage Notice</value>
+  </data>
+  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
+    <value>Enable Censorship Higlight</value>
+  </data>
 </root>

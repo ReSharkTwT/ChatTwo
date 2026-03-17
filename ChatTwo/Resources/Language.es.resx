@@ -1,104 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-      Microsoft ResX Schema
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-      Version 2.0
-
-      The primary goals of this format is to allow a simple XML format
-      that is mostly human readable. The generation and parsing of the
-      various data types are done through the TypeConverter classes
-      associated with the data types.
-
-      Example:
-
-      ... ado.net/XML headers & schema ...
-      <resheader name="resmimetype">text/microsoft-resx</resheader>
-      <resheader name="version">2.0</resheader>
-      <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-      <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-      <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-      <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-      <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-          <value>[base64 mime encoded serialized .NET Framework object]</value>
-      </data>
-      <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-          <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-          <comment>This is a comment</comment>
-      </data>
-
-      There are any number of "resheader" rows that contain simple
-      name/value pairs.
-
-      Each data row contains a name, and value. The row also contains a
-      type or mimetype. Type corresponds to a .NET class that support
-      text/value conversion through the TypeConverter architecture.
-      Classes that don't support this are serialized and stored with the
-      mimetype set.
-
-      The mimetype is used for serialized objects, and tells the
-      ResXResourceReader how to depersist the object. This is currently not
-      extensible. For a given mimetype the value must be set accordingly:
-
-      Note - application/x-microsoft.net.object.binary.base64 is the format
-      that the ResXResourceWriter will generate, however the reader can
-      read any of the formats listed below.
-
-      mimetype: application/x-microsoft.net.object.binary.base64
-      value   : The object must be serialized with
-              : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-              : and then encoded with base64 encoding.
-
-      mimetype: application/x-microsoft.net.object.soap.base64
-      value   : The object must be serialized with
-              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-              : and then encoded with base64 encoding.
-
-      mimetype: application/x-microsoft.net.object.bytearray.base64
-      value   : The object must be serialized into a byte array
-              : using a System.ComponentModel.TypeConverter
-              : and then encoded with base64 encoding.
-      -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -112,1291 +112,1293 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Options_HideChat_Name">
+  <data name="Options_HideChat_Name" xml:space="preserve">
     <value>Ocultar chat del juego por defecto</value>
   </data>
-  <data name="Options_HideChat_Description">
+  <data name="Options_HideChat_Description" xml:space="preserve">
     <value>Oculta la ventana de chat del juego cuando el plug-in está activo.</value>
   </data>
-  <data name="Options_HideDuringCutscenes_Name">
+  <data name="Options_EnableCensorshipHighlight_Description" xml:space="preserve">
+    <value>Set Message Highlight on Censorship Words</value>
+  </data>
+  <data name="Options_HideDuringCutscenes_Name" xml:space="preserve">
     <value>Ocultar la interfaz del plug-in durante las cinemáticas</value>
   </data>
-  <data name="Options_HideDuringCutscenes_Description">
+  <data name="Options_HideDuringCutscenes_Description" xml:space="preserve">
     <value>Ocultar {0} durante las cinemáticas.</value>
   </data>
-  <data name="Options_NativeItemTooltips_Name">
+  <data name="Options_NativeItemTooltips_Name" xml:space="preserve">
     <value>Mostrar descripción del ítem</value>
   </data>
-  <data name="Options_NativeItemTooltips_Description">
+  <data name="Options_NativeItemTooltips_Description" xml:space="preserve">
     <value>Mostrar información emergente de los objetos del juego al pasar el cursor sobre ellos en {0}.</value>
   </data>
-  <data name="Options_SidebarTabView_Name">
+  <data name="Options_SidebarTabView_Name" xml:space="preserve">
     <value>Mostrar pestañas en la barra lateral</value>
   </data>
-  <data name="Options_SidebarTabView_Description">
+  <data name="Options_SidebarTabView_Description" xml:space="preserve">
     <value>Mostrar pestañas en {0} como barra lateral en lugar de una barra en la parte superior.</value>
   </data>
-  <data name="Options_PrettierTimestamps_Name">
+  <data name="Options_PrettierTimestamps_Name" xml:space="preserve">
     <value>Usar diseño moderno</value>
   </data>
-  <data name="Options_PrettierTimestamps_Description">
+  <data name="Options_PrettierTimestamps_Description" xml:space="preserve">
     <value>Mostrar mensajes con un estilo más moderno.</value>
   </data>
-  <data name="Options_Use24HourClock_Name">
+  <data name="Options_Use24HourClock_Name" xml:space="preserve">
     <value>Reloj 24 horas</value>
   </data>
-  <data name="Options_Use24HourClock_Description">
+  <data name="Options_Use24HourClock_Description" xml:space="preserve">
     <value>Mostrar las marcas de tiempo en formato de reloj de 24 horas.</value>
   </data>
-  <data name="Options_MoreCompactPretty_Name">
+  <data name="Options_MoreCompactPretty_Name" xml:space="preserve">
     <value>Diseño más moderno y compacto</value>
   </data>
-  <data name="Options_MoreCompactPretty_Description">
+  <data name="Options_MoreCompactPretty_Description" xml:space="preserve">
     <value>Reduce el espacio entre mensajes.</value>
   </data>
-  <data name="Options_ShowNoviceNetwork_Name">
+  <data name="Options_ShowNoviceNetwork_Name" xml:space="preserve">
     <value>Mostrar botón de unirse a la Red de Novatos</value>
   </data>
-  <data name="Options_ShowNoviceNetwork_Description">
+  <data name="Options_ShowNoviceNetwork_Description" xml:space="preserve">
     <value>Mostrar el botón de unirse a la Red de Novatos junto al botón de configuración si se conecta como mentor.</value>
   </data>
   <data name="Options_ShowHideButton_Name" xml:space="preserve">
-        <value>Mostrar botón ocultar</value>
-    </data>
+    <value>Mostrar botón ocultar</value>
+  </data>
   <data name="Options_ShowHideButton_Description" xml:space="preserve">
-        <value>Mostrar botón ocultar al lado del botón ajustes. La ventana de chat se puede volver a mostrar presionando retroceder o barra oblicua.</value>
-    </data>
-  <data name="Options_FontSize_Name">
+    <value>Mostrar botón ocultar al lado del botón ajustes. La ventana de chat se puede volver a mostrar presionando retroceder o barra oblicua.</value>
+  </data>
+  <data name="Options_FontSize_Name" xml:space="preserve">
     <value>Tamaño de fuente</value>
   </data>
-  <data name="Options_WindowOpacity_Name">
+  <data name="Options_WindowOpacity_Name" xml:space="preserve">
     <value>Opacidad de la ventana</value>
   </data>
-  <data name="Options_CanMove_Name">
+  <data name="Options_CanMove_Name" xml:space="preserve">
     <value>Permitir mover chat</value>
   </data>
-  <data name="Options_CanResize_Name">
+  <data name="Options_CanResize_Name" xml:space="preserve">
     <value>Permitir cambiar el tamaño del chat</value>
   </data>
-  <data name="Popout_CanMove_Name">
+  <data name="Popout_CanMove_Name" xml:space="preserve">
     <value>Allow moving window</value>
   </data>
-  <data name="Popout_CanResize_Name">
+  <data name="Popout_CanResize_Name" xml:space="preserve">
     <value>Allow resizing window</value>
   </data>
-  <data name="Options_ShowTitleBar_Name">
+  <data name="Options_ShowTitleBar_Name" xml:space="preserve">
     <value>Mostrar la barra de título en la parte superior izquierda del chat</value>
   </data>
-  <data name="Options_Display_Tab">
+  <data name="Options_Display_Tab" xml:space="preserve">
     <value>Mostrar</value>
   </data>
-  <data name="Options_ChatColours_Tab">
+  <data name="Options_ChatColours_Tab" xml:space="preserve">
     <value>Colores del chat</value>
   </data>
-  <data name="Options_ChatColours_Reset">
+  <data name="Options_ChatColours_Reset" xml:space="preserve">
     <value>Restablecer por defecto</value>
   </data>
-  <data name="Options_ChatColours_Import">
+  <data name="Options_ChatColours_Import" xml:space="preserve">
     <value>Importar desde el juego</value>
   </data>
-  <data name="Options_Tabs_Tab">
+  <data name="Options_Tabs_Tab" xml:space="preserve">
     <value>Pestañas</value>
   </data>
-  <data name="Options_Tabs_Add">
+  <data name="Options_Tabs_Add" xml:space="preserve">
     <value>Añadir</value>
   </data>
-  <data name="Options_Tabs_Delete">
+  <data name="Options_Tabs_Delete" xml:space="preserve">
     <value>Borrar</value>
   </data>
-  <data name="Options_Tabs_MoveUp">
+  <data name="Options_Tabs_MoveUp" xml:space="preserve">
     <value>Mover hacia arriba</value>
   </data>
-  <data name="Options_Tabs_MoveDown">
+  <data name="Options_Tabs_MoveDown" xml:space="preserve">
     <value>Mover hacia abajo</value>
   </data>
-  <data name="Options_Tabs_Name">
+  <data name="Options_Tabs_Name" xml:space="preserve">
     <value>Nombre</value>
   </data>
-  <data name="Options_Tabs_ShowTimestamps">
+  <data name="Options_Tabs_ShowTimestamps" xml:space="preserve">
     <value>Mostrar hora</value>
   </data>
-  <data name="Options_Tabs_UnreadMode">
+  <data name="Options_Tabs_UnreadMode" xml:space="preserve">
     <value>Modo no leído</value>
   </data>
-  <data name="Options_Tabs_InactivityBehaviour">
+  <data name="Options_Tabs_InactivityBehaviour" xml:space="preserve">
     <value>Mostrar la ventana de chat en la actividad</value>
   </data>
-  <data name="Options_Tabs_NoInputChannel">
+  <data name="Options_Tabs_NoInputChannel" xml:space="preserve">
     <value>&lt;Ninguno&gt;</value>
   </data>
-  <data name="Options_Tabs_InputChannel">
+  <data name="Options_Tabs_InputChannel" xml:space="preserve">
     <value>Canal de entrada</value>
   </data>
-  <data name="Options_Tabs_Channels">
+  <data name="Options_Tabs_Channels" xml:space="preserve">
     <value>Canales</value>
   </data>
-  <data name="UnreadMode_All_Tooltip">
+  <data name="UnreadMode_All_Tooltip" xml:space="preserve">
     <value>Siempre mostrar indicadores no leídos.</value>
   </data>
-  <data name="UnreadMode_Unseen_Tooltip">
+  <data name="UnreadMode_Unseen_Tooltip" xml:space="preserve">
     <value>Mostrar solo los indicadores no leídos para los mensajes que no ha visto.</value>
   </data>
-  <data name="UnreadMode_None_Tooltip">
+  <data name="UnreadMode_None_Tooltip" xml:space="preserve">
     <value>No mostrar nunca indicadores no leídos.</value>
   </data>
-  <data name="Tab_DefaultName">
+  <data name="Tab_DefaultName" xml:space="preserve">
     <value>Nueva pestaña</value>
   </data>
-  <data name="Settings_SaveAndClose">
+  <data name="Settings_SaveAndClose" xml:space="preserve">
     <value>Guardar y cerrar</value>
   </data>
-  <data name="Settings_Save">
+  <data name="Settings_Save" xml:space="preserve">
     <value>Guardar</value>
   </data>
-  <data name="Settings_Discard">
+  <data name="Settings_Discard" xml:space="preserve">
     <value>Descartar</value>
   </data>
-  <data name="Settings_Title">
+  <data name="Settings_Title" xml:space="preserve">
     <value>Configuración de {0}</value>
   </data>
-  <data name="ChatLog_SwitcherDisabled">
+  <data name="ChatLog_SwitcherDisabled" xml:space="preserve">
     <value>Desactivado para esta pestaña.</value>
   </data>
-  <data name="ChatLog_HideChat">
+  <data name="ChatLog_HideChat" xml:space="preserve">
     <value>Ocultar chat</value>
   </data>
-  <data name="ChatLog_Tabs_MoveUp">
+  <data name="ChatLog_Tabs_MoveUp" xml:space="preserve">
     <value>Mover hacia arriba</value>
   </data>
-  <data name="ChatLog_Tabs_MoveLeft">
+  <data name="ChatLog_Tabs_MoveLeft" xml:space="preserve">
     <value>Mover a la izquierda</value>
   </data>
-  <data name="ChatLog_Tabs_MoveDown">
+  <data name="ChatLog_Tabs_MoveDown" xml:space="preserve">
     <value>Mover hacia abajo</value>
   </data>
-  <data name="ChatLog_Tabs_MoveRight">
+  <data name="ChatLog_Tabs_MoveRight" xml:space="preserve">
     <value>Mover a la derecha</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Chat">
+  <data name="Options_Tabs_ChannelTypes_Chat" xml:space="preserve">
     <value>Chat</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Battle">
+  <data name="Options_Tabs_ChannelTypes_Battle" xml:space="preserve">
     <value>Combate</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Announcements">
+  <data name="Options_Tabs_ChannelTypes_Announcements" xml:space="preserve">
     <value>Anuncios</value>
   </data>
-  <data name="UnreadMode_All">
+  <data name="UnreadMode_All" xml:space="preserve">
     <value>Todos</value>
   </data>
-  <data name="UnreadMode_Unseen">
+  <data name="UnreadMode_Unseen" xml:space="preserve">
     <value>No vistos</value>
   </data>
-  <data name="UnreadMode_None">
+  <data name="UnreadMode_None" xml:space="preserve">
     <value>Ninguno</value>
   </data>
-  <data name="ChatSource_Self">
+  <data name="ChatSource_Self" xml:space="preserve">
     <value>Uno mismo</value>
   </data>
-  <data name="ChatSource_PartyMember">
+  <data name="ChatSource_PartyMember" xml:space="preserve">
     <value>Miembros de grupo</value>
   </data>
-  <data name="ChatSource_AllianceMember">
+  <data name="ChatSource_AllianceMember" xml:space="preserve">
     <value>Miembros de la alianza</value>
   </data>
-  <data name="ChatSource_Other">
+  <data name="ChatSource_Other" xml:space="preserve">
     <value>Otros</value>
   </data>
-  <data name="ChatSource_EngagedEnemy">
+  <data name="ChatSource_EngagedEnemy" xml:space="preserve">
     <value>Enemigo Atraido</value>
   </data>
-  <data name="ChatSource_UnengagedEnemy">
+  <data name="ChatSource_UnengagedEnemy" xml:space="preserve">
     <value>Enemigo sin atraer</value>
   </data>
-  <data name="ChatSource_FriendlyNpc">
+  <data name="ChatSource_FriendlyNpc" xml:space="preserve">
     <value>NPC amistoso</value>
   </data>
-  <data name="ChatSource_SelfPet">
+  <data name="ChatSource_SelfPet" xml:space="preserve">
     <value>Mascota (Yo)</value>
   </data>
-  <data name="ChatSource_PartyPet">
+  <data name="ChatSource_PartyPet" xml:space="preserve">
     <value>Mascota (Grupo)</value>
   </data>
-  <data name="ChatSource_AlliancePet">
+  <data name="ChatSource_AlliancePet" xml:space="preserve">
     <value>Mascota (Miembro de la Alianza)</value>
   </data>
-  <data name="ChatSource_OtherPet">
+  <data name="ChatSource_OtherPet" xml:space="preserve">
     <value>Mascota (Otros)</value>
   </data>
-  <data name="Options_Font_Name">
+  <data name="Options_Font_Name" xml:space="preserve">
     <value>Tipo de fuente</value>
   </data>
-  <data name="Options_JapaneseFont_Name">
+  <data name="Options_JapaneseFont_Name" xml:space="preserve">
     <value>Fuente japonesa</value>
   </data>
-  <data name="Options_Font_Description">
+  <data name="Options_Font_Description" xml:space="preserve">
     <value>La fuente {0} se utilizará para mostrar texto no japonés.</value>
   </data>
-  <data name="Options_Font_Warning">
+  <data name="Options_Font_Warning" xml:space="preserve">
     <value>El uso de ciertas fuentes del sistema puede fallar en su juego. Se le ha advertido.</value>
   </data>
-  <data name="Options_JapaneseFont_Description">
+  <data name="Options_JapaneseFont_Description" xml:space="preserve">
     <value>La fuente {0} se utilizará para mostrar el texto japonés.</value>
   </data>
-  <data name="Options_ItalicFont_Name">
+  <data name="Options_ItalicFont_Name" xml:space="preserve">
     <value>Fuente en cursiva</value>
   </data>
-  <data name="Options_Italic_Description">
+  <data name="Options_Italic_Description" xml:space="preserve">
     <value>Si está activado, utiliza la fuente cursiva en {0}, de lo contrario usará la fuente cursiva del juego.</value>
   </data>
-  <data name="Options_Tabs_ChannelTypes_Special">
+  <data name="Options_Tabs_ChannelTypes_Special" xml:space="preserve">
     <value>Especiales</value>
   </data>
-  <data name="Options_Fonts_Tab">
+  <data name="Options_Fonts_Tab" xml:space="preserve">
     <value>Fuentes</value>
   </data>
-  <data name="Options_SymbolsFontSize_Name">
+  <data name="Options_SymbolsFontSize_Name" xml:space="preserve">
     <value>Tamaño de Símbolos</value>
   </data>
-  <data name="Options_JapaneseFontSize_Name">
+  <data name="Options_JapaneseFontSize_Name" xml:space="preserve">
     <value>Tamaño de la fuente japonesa</value>
   </data>
-  <data name="Options_SymbolsFontSize_Description">
+  <data name="Options_SymbolsFontSize_Description" xml:space="preserve">
     <value>El tamaño de fuente a usar para símbolos del juego.</value>
   </data>
-  <data name="ChatLog_Tabs_Delete">
+  <data name="ChatLog_Tabs_Delete" xml:space="preserve">
     <value>Eliminar Pestaña</value>
   </data>
-  <data name="Options_HideWhenNotLoggedIn_Name">
+  <data name="Options_HideWhenNotLoggedIn_Name" xml:space="preserve">
     <value>Ocultar cuando no se inicie sesión</value>
   </data>
-  <data name="Options_HideWhenNotLoggedIn_Description">
+  <data name="Options_HideWhenNotLoggedIn_Description" xml:space="preserve">
     <value>Ocultar {0} cuando no haya iniciado sesión en un personaje.</value>
   </data>
-  <data name="Tabs_Presets_General">
+  <data name="Tabs_Presets_General" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="Options_Tabs_Preset">
+  <data name="Options_Tabs_Preset" xml:space="preserve">
     <value>Preestablecido: {0}</value>
   </data>
-  <data name="Tabs_Presets_Event">
+  <data name="Tabs_Presets_Event" xml:space="preserve">
     <value>Evento</value>
   </data>
-  <data name="Options_Tabs_NewTab">
+  <data name="Options_Tabs_NewTab" xml:space="preserve">
     <value>Nueva pestaña</value>
   </data>
-  <data name="Options_About_Tab">
+  <data name="Options_About_Tab" xml:space="preserve">
     <value>Acerca de</value>
   </data>
-  <data name="Options_About_Opening">
+  <data name="Options_About_Opening" xml:space="preserve">
     <value>{0} es un proyecto para recrear por completo el chat del juego y hacerlo incluso mejor.</value>
   </data>
-  <data name="Options_About_CrowdIn">
+  <data name="Options_About_CrowdIn" xml:space="preserve">
     <value>Ayuda para traducir: </value>
   </data>
-  <data name="Options_About_Translators">
+  <data name="Options_About_Translators" xml:space="preserve">
     <value>Traductores</value>
   </data>
-  <data name="CommandHelpSide_None">
+  <data name="CommandHelpSide_None" xml:space="preserve">
     <value>Ninguno</value>
   </data>
-  <data name="CommandHelpSide_Left">
+  <data name="CommandHelpSide_Left" xml:space="preserve">
     <value>Izquierda</value>
   </data>
-  <data name="CommandHelpSide_Right">
+  <data name="CommandHelpSide_Right" xml:space="preserve">
     <value>Derecha</value>
   </data>
-  <data name="Options_CommandHelpSide_Name">
+  <data name="Options_CommandHelpSide_Name" xml:space="preserve">
     <value>Comando de ayuda lateral (Ninguno = apagado)</value>
   </data>
-  <data name="Options_CommandHelpSide_Description">
+  <data name="Options_CommandHelpSide_Description" xml:space="preserve">
     <value>El lado de {0} donde se mostrará la ayuda para comandos.</value>
   </data>
-  <data name="Options_HideWhenUiHidden_Name">
+  <data name="Options_HideWhenUiHidden_Name" xml:space="preserve">
     <value>Ocultar cuando la interfaz de juego está oculta</value>
   </data>
-  <data name="Options_HideWhenUiHidden_Description">
+  <data name="Options_HideWhenUiHidden_Description" xml:space="preserve">
     <value>Ocultar {0} cuando la UI del juego está oculta.</value>
   </data>
-  <data name="Options_HideWhenInactive_Name">
+  <data name="Options_HideWhenInactive_Name" xml:space="preserve">
     <value>Ocultar cuando esté inactivo</value>
   </data>
-  <data name="Options_HideWhenInactive_Description">
+  <data name="Options_HideWhenInactive_Description" xml:space="preserve">
     <value>Ocultar el chat después de un período configurable de inactividad. La pestaña actual y cualquier otra pestaña con la configuración habilitada se consideran para la actividad.</value>
   </data>
-  <data name="Options_InactivityHideTimeout_Name">
+  <data name="Options_InactivityHideTimeout_Name" xml:space="preserve">
     <value>Tiempo de espera por inactividad</value>
   </data>
-  <data name="Options_InactivityHideTimeout_Description">
+  <data name="Options_InactivityHideTimeout_Description" xml:space="preserve">
     <value>Cuánto tiempo esperar (en segundos) antes de considerar el registro de chat inactivo.</value>
   </data>
   <data name="Options_InactivityHideActiveDuringBattle_Name" xml:space="preserve">
-        <value>Activar ocultación de inactividad durante la batalla</value>
-    </data>
+    <value>Activar ocultación de inactividad durante la batalla</value>
+  </data>
   <data name="Options_InactivityHideActiveDuringBattle_Description" xml:space="preserve">
-        <value>Cuando esté deshabilitado, el registro de chat permanecerá activo durante la batalla.</value>
-    </data>
-  <data name="Options_InactivityHideChannels_Name">
+    <value>Cuando esté deshabilitado, el registro de chat permanecerá activo durante la batalla.</value>
+  </data>
+  <data name="Options_InactivityHideChannels_Name" xml:space="preserve">
     <value>Canales de chat considerados para la actividad</value>
   </data>
-  <data name="Options_InactivityHideChannels_Description">
+  <data name="Options_InactivityHideChannels_Description" xml:space="preserve">
     <value>Qué canales de chat deben ser considerados para la actividad. Otros canales no restaurarán el chat sin importar en qué pestaña se encuentren.</value>
   </data>
-  <data name="Options_InactivityHideChannels_All_Label">
+  <data name="Options_InactivityHideChannels_All_Label" xml:space="preserve">
     <value>Seleccionar Todo</value>
   </data>
-  <data name="Options_InactivityHideChannels_None_Label">
+  <data name="Options_InactivityHideChannels_None_Label" xml:space="preserve">
     <value>Deseleccionar todo</value>
   </data>
-  <data name="Options_InactivityHideChannels_Button_Tooltip">
+  <data name="Options_InactivityHideChannels_Button_Tooltip" xml:space="preserve">
     <value>Mantenga Ctrl+Shift para hacer clic.</value>
   </data>
-  <data name="Options_KeybindMode_Name">
+  <data name="Options_KeybindMode_Name" xml:space="preserve">
     <value>Combinacion de Teclas</value>
   </data>
-  <data name="Options_KeybindMode_Description">
+  <data name="Options_KeybindMode_Description" xml:space="preserve">
     <value>La forma en la que {0} debe manejar los atajos.</value>
   </data>
-  <data name="Options_Miscellaneous_Tab">
+  <data name="Options_Miscellaneous_Tab" xml:space="preserve">
     <value>Otros</value>
   </data>
-  <data name="Options_Webinterface_Tab">
+  <data name="Options_Webinterface_Tab" xml:space="preserve">
     <value>Interfaz Web</value>
   </data>
-  <data name="LanguageOverride_None">
+  <data name="LanguageOverride_None" xml:space="preserve">
     <value>Usar el idioma por defecto de Dalamud</value>
   </data>
-  <data name="KeybindMode_Flexible_Name">
+  <data name="KeybindMode_Flexible_Name" xml:space="preserve">
     <value>Flexible</value>
   </data>
-  <data name="KeybindMode_Strict_Name">
+  <data name="KeybindMode_Strict_Name" xml:space="preserve">
     <value>Estricto</value>
   </data>
-  <data name="KeybindMode_Flexible_Tooltip">
+  <data name="KeybindMode_Flexible_Tooltip" xml:space="preserve">
     <value>Procesar teclas con modificadores incluso si se presionan otros modificadores.</value>
   </data>
-  <data name="KeybindMode_Strict_Tooltip">
+  <data name="KeybindMode_Strict_Tooltip" xml:space="preserve">
     <value>Procesar teclas con modificadores incluso si se presionan otros modificadores.</value>
   </data>
-  <data name="Options_Language_Name">
+  <data name="Options_Language_Name" xml:space="preserve">
     <value>Idioma</value>
   </data>
-  <data name="Options_Language_Description">
+  <data name="Options_Language_Description" xml:space="preserve">
     <value>El idioma en el que se mostrará {0}.</value>
   </data>
-  <data name="Options_DatabaseBattleMessages_Name">
+  <data name="Options_DatabaseBattleMessages_Name" xml:space="preserve">
     <value>Guardar mensajes de batalla en la base de datos</value>
   </data>
-  <data name="Options_DatabaseBattleMessages_Description">
+  <data name="Options_DatabaseBattleMessages_Description" xml:space="preserve">
     <value>Si los mensajes de la batalla se guardan en la base de datos, el tamaño de la base de datos crecerá mucho más rápido, y habrá una congelación notable al guardar los ajustes. Se recomienda dejar esto desactivado.</value>
   </data>
-  <data name="Options_LoadPreviousSession_Name">
+  <data name="Options_LoadPreviousSession_Name" xml:space="preserve">
     <value>Mostrar sesión de chat previa al iniciar sesión</value>
   </data>
-  <data name="Options_LoadPreviousSession_Description">
+  <data name="Options_LoadPreviousSession_Description" xml:space="preserve">
     <value>Después de iniciar sesión, rellene el chat con los mensajes desde la última vez que se desconectó.</value>
   </data>
-  <data name="Options_Database_Tab">
+  <data name="Options_Database_Tab" xml:space="preserve">
     <value>Base de datos</value>
   </data>
-  <data name="Options_FilterIncludePreviousSessions_Name">
+  <data name="Options_FilterIncludePreviousSessions_Name" xml:space="preserve">
     <value>Incluir sesiones anteriores al llenar pestañas</value>
   </data>
-  <data name="Options_FilterIncludePreviousSessions_Description">
+  <data name="Options_FilterIncludePreviousSessions_Description" xml:space="preserve">
     <value>Incluye mensajes anteriores al lanzamiento del juego cuando se llenan las pestañas. Las pestañas se llenan cuando se guardan los ajustes.</value>
   </data>
-  <data name="Options_Database_Advanced_Warning">
+  <data name="Options_Database_Advanced_Warning" xml:space="preserve">
     <value>No haga clic en estos botones a menos que sepa lo que está haciendo.</value>
   </data>
-  <data name="Options_Database_Advanced">
+  <data name="Options_Database_Advanced" xml:space="preserve">
     <value>Avanzado</value>
   </data>
-  <data name="ChatLog_Tabs_PopOut">
+  <data name="ChatLog_Tabs_PopOut" xml:space="preserve">
     <value>Nueva pestaña</value>
   </data>
-  <data name="Options_HideSameTimestamps_Name">
+  <data name="Options_HideSameTimestamps_Name" xml:space="preserve">
     <value>Ocultar marcas de tiempo cuando existan múltiples</value>
   </data>
-  <data name="Options_HideSameTimestamps_Description">
+  <data name="Options_HideSameTimestamps_Description" xml:space="preserve">
     <value>Ocultar marcas de tiempo cuando mensajes anteriores tengan la misma marca de tiempo.</value>
   </data>
-  <data name="Options_ShowPopOutTitleBar_Name">
+  <data name="Options_ShowPopOutTitleBar_Name" xml:space="preserve">
     <value>Mostrar barra de título en las pestañas desplegadas</value>
   </data>
-  <data name="Options_Tabs_PopOut">
+  <data name="Options_Tabs_PopOut" xml:space="preserve">
     <value>Mostrar en ventana separada</value>
   </data>
-  <data name="Options_Tabs_IndependentOpacity">
+  <data name="Options_Tabs_IndependentOpacity" xml:space="preserve">
     <value>Usar opacidad distinta a la ventana principal</value>
   </data>
-  <data name="Options_Tabs_Opacity">
+  <data name="Options_Tabs_Opacity" xml:space="preserve">
     <value>Opacidad</value>
   </data>
-  <data name="Options_Tabs_IndependentHide">
+  <data name="Options_Tabs_IndependentHide" xml:space="preserve">
     <value>Use different hide condition than main window</value>
   </data>
-  <data name="Options_FontsEnabled">
+  <data name="Options_FontsEnabled" xml:space="preserve">
     <value>Habilitar fuentes personalizadas</value>
   </data>
-  <data name="Options_ItalicEnabled">
+  <data name="Options_ItalicEnabled" xml:space="preserve">
     <value>Utilizar cursiva</value>
   </data>
-  <data name="AutoTranslate_Search_Hint">
+  <data name="AutoTranslate_Search_Hint" xml:space="preserve">
     <value>Buscar en el Traductor Automático...</value>
   </data>
-  <data name="Options_SortAutoTranslate_Name">
+  <data name="Options_SortAutoTranslate_Name" xml:space="preserve">
     <value>Ordenar la lista del Traductor Automático</value>
   </data>
-  <data name="Options_SortAutoTranslate_Description">
+  <data name="Options_SortAutoTranslate_Description" xml:space="preserve">
     <value>Si esto está habilitado, la lista del Traductor Automático se ordenará alfabéticamente.</value>
   </data>
-  <data name="Options_WebinterfaceEnable_Name">
+  <data name="Options_WebinterfaceEnable_Name" xml:space="preserve">
     <value>Habilitado</value>
   </data>
-  <data name="Options_WebinterfaceEnable_Description">
+  <data name="Options_WebinterfaceEnable_Description" xml:space="preserve">
     <value>Habilita la interfaz web a la que se puede acceder con un navegador.</value>
   </data>
-  <data name="Options_WebinterfaceAutoStart_Name">
+  <data name="Options_WebinterfaceAutoStart_Name" xml:space="preserve">
     <value>Iniciar automáticamente</value>
   </data>
-  <data name="Options_WebinterfaceAutoStart_Description">
+  <data name="Options_WebinterfaceAutoStart_Description" xml:space="preserve">
     <value>La interfaz web comenzará junto al plugin automáticamente</value>
   </data>
-  <data name="Options_OverrideStyle_Name">
+  <data name="Options_OverrideStyle_Name" xml:space="preserve">
     <value>Sobrescribir estilo</value>
   </data>
-  <data name="Options_OverrideStyleDropdown_Name">
+  <data name="Options_OverrideStyleDropdown_Name" xml:space="preserve">
     <value>Estilos</value>
   </data>
-  <data name="Options_ChatTabForwardKeybind_Name">
+  <data name="Options_ChatTabForwardKeybind_Name" xml:space="preserve">
     <value>Ciclo de la pestaña de chat hacia adelante</value>
   </data>
-  <data name="Options_ChatTabBackwardKeybind_Name">
+  <data name="Options_ChatTabBackwardKeybind_Name" xml:space="preserve">
     <value>Ciclo de la pestaña de chat hacia atrás</value>
   </data>
-  <data name="Webinterface_CurrentPassword">
+  <data name="Webinterface_CurrentPassword" xml:space="preserve">
     <value>Código de autor:</value>
   </data>
-  <data name="Webinterface_PasswordReset_Tooltip">
+  <data name="Webinterface_PasswordReset_Tooltip" xml:space="preserve">
     <value>Restablecer su contraseña e invalidar todos los tokens de sesión.</value>
   </data>
-  <data name="Webinterface_Controls">
+  <data name="Webinterface_Controls" xml:space="preserve">
     <value>Panel de control:</value>
   </data>
-  <data name="Webinterface_Controls_Active">
+  <data name="Webinterface_Controls_Active" xml:space="preserve">
     <value>Activo:</value>
   </data>
-  <data name="Webinterface_Controls_Url">
+  <data name="Webinterface_Controls_Url" xml:space="preserve">
     <value>URL:</value>
   </data>
-  <data name="Keybind_None">
+  <data name="Keybind_None" xml:space="preserve">
     <value>ninguno establecido</value>
   </data>
-  <data name="Keybind_EscToClear">
+  <data name="Keybind_EscToClear" xml:space="preserve">
     <value>ESC a limpiar</value>
   </data>
-  <data name="Keybind_Modifier_Ctrl">
+  <data name="Keybind_Modifier_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
   </data>
-  <data name="Keybind_Modifier_Alt">
+  <data name="Keybind_Modifier_Alt" xml:space="preserve">
     <value>Alt</value>
   </data>
-  <data name="Keybind_Modifier_Shift">
+  <data name="Keybind_Modifier_Shift" xml:space="preserve">
     <value>Mayús</value>
   </data>
-  <data name="AutoTranslate_Completion_Key">
+  <data name="AutoTranslate_Completion_Key" xml:space="preserve">
     <value>Ctrl + {0}</value>
   </data>
-  <data name="Options_ExtraGlyphs_Name">
+  <data name="Options_ExtraGlyphs_Name" xml:space="preserve">
     <value>Glifos de fuente adicionales</value>
   </data>
-  <data name="Options_ExtraGlyphs_Description">
+  <data name="Options_ExtraGlyphs_Description" xml:space="preserve">
     <value>Se pueden añadir glifos adicionales a la fuente global de {0} habilitando la casilla inferior. Esto probablemente incremente el tamaño del atlas de la fuente de Dalamud.</value>
   </data>
-  <data name="ExtraGlyphRanges_ChineseFull_Name">
+  <data name="ExtraGlyphRanges_ChineseFull_Name" xml:space="preserve">
     <value>Chino (completo)</value>
   </data>
-  <data name="ExtraGlyphRanges_ChineseSimplifiedCommon_Name">
+  <data name="ExtraGlyphRanges_ChineseSimplifiedCommon_Name" xml:space="preserve">
     <value>Chino (común simplificado)</value>
   </data>
-  <data name="ExtraGlyphRanges_Cyrillic_Name">
+  <data name="ExtraGlyphRanges_Cyrillic_Name" xml:space="preserve">
     <value>Cirílico</value>
   </data>
-  <data name="ExtraGlyphRanges_Japanese_Name">
+  <data name="ExtraGlyphRanges_Japanese_Name" xml:space="preserve">
     <value>Japonés</value>
   </data>
-  <data name="ExtraGlyphRanges_Korean_Name">
+  <data name="ExtraGlyphRanges_Korean_Name" xml:space="preserve">
     <value>Coreano</value>
   </data>
-  <data name="ExtraGlyphRanges_Thai_Name">
+  <data name="ExtraGlyphRanges_Thai_Name" xml:space="preserve">
     <value>Tailandés</value>
   </data>
-  <data name="ExtraGlyphRanges_Vietnamese_Name">
+  <data name="ExtraGlyphRanges_Vietnamese_Name" xml:space="preserve">
     <value>Vietnamita</value>
   </data>
-  <data name="Context_Integrations">
+  <data name="Context_Integrations" xml:space="preserve">
     <value>Integraciones</value>
   </data>
-  <data name="Context_ScreenshotMode">
+  <data name="Context_ScreenshotMode" xml:space="preserve">
     <value>Modo pantallazo</value>
   </data>
-  <data name="Context_HideChat">
+  <data name="Context_HideChat" xml:space="preserve">
     <value>Ocultar chat</value>
   </data>
-  <data name="Context_Copy">
+  <data name="Context_Copy" xml:space="preserve">
     <value>Copiar</value>
   </data>
-  <data name="Context_TryOn">
+  <data name="Context_TryOn" xml:space="preserve">
     <value>Probar</value>
   </data>
-  <data name="Context_ItemComparison">
+  <data name="Context_ItemComparison" xml:space="preserve">
     <value>Comparar Objetos</value>
   </data>
-  <data name="Context_SearchRecipes">
+  <data name="Context_SearchRecipes" xml:space="preserve">
     <value>Buscar Recetas Usando Este Material</value>
   </data>
-  <data name="Context_SearchForItem">
+  <data name="Context_SearchForItem" xml:space="preserve">
     <value>Buscar Objeto</value>
   </data>
-  <data name="Context_Link">
+  <data name="Context_Link" xml:space="preserve">
     <value>Enlazar</value>
   </data>
-  <data name="Context_CopyItemName">
+  <data name="Context_CopyItemName" xml:space="preserve">
     <value>Copiar Nombre de Objeto</value>
   </data>
-  <data name="Context_SendTell">
+  <data name="Context_SendTell" xml:space="preserve">
     <value>Mandar Tell</value>
   </data>
-  <data name="Context_InviteToParty">
+  <data name="Context_InviteToParty" xml:space="preserve">
     <value>Invitar a Party</value>
   </data>
-  <data name="Context_BlockFunctions">
+  <data name="Context_BlockFunctions" xml:space="preserve">
     <value>Block Functions</value>
   </data>
-  <data name="Context_InviteToParty_SameWorld">
+  <data name="Context_InviteToParty_SameWorld" xml:space="preserve">
     <value>Mismo mundo</value>
   </data>
-  <data name="Context_InviteToParty_DifferentWorld">
+  <data name="Context_InviteToParty_DifferentWorld" xml:space="preserve">
     <value>Diferente mundo</value>
   </data>
-  <data name="Context_Promote">
+  <data name="Context_Promote" xml:space="preserve">
     <value>Ascender</value>
   </data>
-  <data name="Context_KickFromParty">
+  <data name="Context_KickFromParty" xml:space="preserve">
     <value>Echar de Party</value>
   </data>
-  <data name="Context_SendFriendRequest">
+  <data name="Context_SendFriendRequest" xml:space="preserve">
     <value>Mandar Petición de Amistad</value>
   </data>
-  <data name="Context_AddToBlacklist">
+  <data name="Context_AddToBlacklist" xml:space="preserve">
     <value>Añadir a Blacklist</value>
   </data>
-  <data name="Context_AddToMuteList">
+  <data name="Context_AddToMuteList" xml:space="preserve">
     <value>Register to Mute List</value>
   </data>
-  <data name="Context_AddToTermsFilter">
+  <data name="Context_AddToTermsFilter" xml:space="preserve">
     <value>Add to Term Filters</value>
   </data>
-  <data name="Context_InviteToNoviceNetwork">
+  <data name="Context_InviteToNoviceNetwork" xml:space="preserve">
     <value>Invitar a la Novice Network</value>
   </data>
-  <data name="Context_ReplyInSelectedChatMode">
+  <data name="Context_ReplyInSelectedChatMode" xml:space="preserve">
     <value>Responder en Modo de Chat Seleccionado</value>
   </data>
-  <data name="Context_Target">
+  <data name="Context_Target" xml:space="preserve">
     <value>Seleccionar</value>
   </data>
-  <data name="ChatType_Debug">
+  <data name="ChatType_Debug" xml:space="preserve">
     <value>Depurar</value>
   </data>
-  <data name="ChatType_Urgent">
+  <data name="ChatType_Urgent" xml:space="preserve">
     <value>Urgente</value>
   </data>
-  <data name="ChatType_Notice">
+  <data name="ChatType_Notice" xml:space="preserve">
     <value>Avisos</value>
   </data>
-  <data name="ChatType_Say">
+  <data name="ChatType_Say" xml:space="preserve">
     <value>Decir</value>
   </data>
-  <data name="ChatType_Shout">
+  <data name="ChatType_Shout" xml:space="preserve">
     <value>Shout</value>
   </data>
-  <data name="ChatType_TellOutgoing">
+  <data name="ChatType_TellOutgoing" xml:space="preserve">
     <value>Tell (saliente)</value>
   </data>
-  <data name="ChatType_TellIncoming">
+  <data name="ChatType_TellIncoming" xml:space="preserve">
     <value>Tell (entrante)</value>
   </data>
-  <data name="ChatType_Party">
+  <data name="ChatType_Party" xml:space="preserve">
     <value>Escuadrón</value>
   </data>
-  <data name="ChatType_Alliance">
+  <data name="ChatType_Alliance" xml:space="preserve">
     <value>Alianza</value>
   </data>
-  <data name="ChatType_Linkshell1">
+  <data name="ChatType_Linkshell1" xml:space="preserve">
     <value>Linkshell [1]</value>
   </data>
-  <data name="ChatType_Linkshell2">
+  <data name="ChatType_Linkshell2" xml:space="preserve">
     <value>Linkshell [2]</value>
   </data>
-  <data name="ChatType_Linkshell3">
+  <data name="ChatType_Linkshell3" xml:space="preserve">
     <value>Linkshell [3]</value>
   </data>
-  <data name="ChatType_Linkshell4">
+  <data name="ChatType_Linkshell4" xml:space="preserve">
     <value>Linkshell [4]</value>
   </data>
-  <data name="ChatType_Linkshell5">
+  <data name="ChatType_Linkshell5" xml:space="preserve">
     <value>Linkshell [5]</value>
   </data>
-  <data name="ChatType_Linkshell6">
+  <data name="ChatType_Linkshell6" xml:space="preserve">
     <value>Linkshell [6]</value>
   </data>
-  <data name="ChatType_Linkshell7">
+  <data name="ChatType_Linkshell7" xml:space="preserve">
     <value>Linkshell [7]</value>
   </data>
-  <data name="ChatType_Linkshell8">
+  <data name="ChatType_Linkshell8" xml:space="preserve">
     <value>Linkshell [8]</value>
   </data>
-  <data name="ChatType_FreeCompany">
+  <data name="ChatType_FreeCompany" xml:space="preserve">
     <value>Compañía (FC)</value>
   </data>
-  <data name="ChatType_NoviceNetwork">
+  <data name="ChatType_NoviceNetwork" xml:space="preserve">
     <value>Red de novatos</value>
   </data>
-  <data name="ChatType_CustomEmotes">
+  <data name="ChatType_CustomEmotes" xml:space="preserve">
     <value>Emotes Personalizados</value>
   </data>
-  <data name="ChatType_StandardEmotes">
+  <data name="ChatType_StandardEmotes" xml:space="preserve">
     <value>Emotes estándar</value>
   </data>
-  <data name="ChatType_Yell">
+  <data name="ChatType_Yell" xml:space="preserve">
     <value>Gritar</value>
   </data>
-  <data name="ChatType_CrossWorldParty">
+  <data name="ChatType_CrossWorldParty" xml:space="preserve">
     <value>Party Cross-world</value>
   </data>
-  <data name="ChatType_PvpTeam">
+  <data name="ChatType_PvpTeam" xml:space="preserve">
     <value>Equipo PvP</value>
   </data>
-  <data name="ChatType_CrossLinkshell1">
+  <data name="ChatType_CrossLinkshell1" xml:space="preserve">
     <value>Linkshell Cross-world [1]</value>
   </data>
-  <data name="ChatType_CrossLinkshell2">
+  <data name="ChatType_CrossLinkshell2" xml:space="preserve">
     <value>Linkshell Cross-world [2]</value>
   </data>
-  <data name="ChatType_CrossLinkshell3">
+  <data name="ChatType_CrossLinkshell3" xml:space="preserve">
     <value>Linkshell Cross-world [3]</value>
   </data>
-  <data name="ChatType_CrossLinkshell4">
+  <data name="ChatType_CrossLinkshell4" xml:space="preserve">
     <value>Linkshell Cross-world [4]</value>
   </data>
-  <data name="ChatType_CrossLinkshell5">
+  <data name="ChatType_CrossLinkshell5" xml:space="preserve">
     <value>Linkshell Cross-world [5]</value>
   </data>
-  <data name="ChatType_CrossLinkshell6">
+  <data name="ChatType_CrossLinkshell6" xml:space="preserve">
     <value>Linkshell Cross-world [6]</value>
   </data>
-  <data name="ChatType_CrossLinkshell7">
+  <data name="ChatType_CrossLinkshell7" xml:space="preserve">
     <value>Linkshell Cross-world [7]</value>
   </data>
-  <data name="ChatType_CrossLinkshell8">
+  <data name="ChatType_CrossLinkshell8" xml:space="preserve">
     <value>Linkshell Cross-world [8]</value>
   </data>
-  <data name="ChatType_Damage">
+  <data name="ChatType_Damage" xml:space="preserve">
     <value>Daño inflingido</value>
   </data>
-  <data name="ChatType_Miss">
+  <data name="ChatType_Miss" xml:space="preserve">
     <value>Ataques fallidos</value>
   </data>
-  <data name="ChatType_Action">
+  <data name="ChatType_Action" xml:space="preserve">
     <value>Acciones usadas</value>
   </data>
-  <data name="ChatType_Item">
+  <data name="ChatType_Item" xml:space="preserve">
     <value>Objetos usados</value>
   </data>
-  <data name="ChatType_Healing">
+  <data name="ChatType_Healing" xml:space="preserve">
     <value>Sanación</value>
   </data>
-  <data name="ChatType_GainBuff">
+  <data name="ChatType_GainBuff" xml:space="preserve">
     <value>Efectos beneficiosos concedidos</value>
   </data>
-  <data name="ChatType_GainDebuff">
+  <data name="ChatType_GainDebuff" xml:space="preserve">
     <value>Efectos perjudiciales infligidos</value>
   </data>
-  <data name="ChatType_LoseBuff">
+  <data name="ChatType_LoseBuff" xml:space="preserve">
     <value>Efectos beneficiosos perdidos</value>
   </data>
-  <data name="ChatType_LoseDebuff">
+  <data name="ChatType_LoseDebuff" xml:space="preserve">
     <value>Efectos perjudiciales sanados</value>
   </data>
-  <data name="ChatType_Alarm">
+  <data name="ChatType_Alarm" xml:space="preserve">
     <value>Notificaciones de Alarma</value>
   </data>
-  <data name="ChatType_Glamour">
+  <data name="ChatType_Glamour" xml:space="preserve">
     <value>Glamour Notifications</value>
   </data>
-  <data name="ChatType_Echo">
+  <data name="ChatType_Echo" xml:space="preserve">
     <value>Eco</value>
   </data>
-  <data name="ChatType_System">
+  <data name="ChatType_System" xml:space="preserve">
     <value>Mensajes de Sistema</value>
   </data>
-  <data name="ChatType_BattleSystem">
+  <data name="ChatType_BattleSystem" xml:space="preserve">
     <value>Mensajes del Sistema de Batalla</value>
   </data>
-  <data name="ChatType_GatheringSystem">
+  <data name="ChatType_GatheringSystem" xml:space="preserve">
     <value>Mensajes de Sistema de Gathering</value>
   </data>
-  <data name="ChatType_Error">
+  <data name="ChatType_Error" xml:space="preserve">
     <value>Mensajes de Error</value>
   </data>
-  <data name="ChatType_NpcDialogue">
+  <data name="ChatType_NpcDialogue" xml:space="preserve">
     <value>Diálogo de NPC</value>
   </data>
-  <data name="ChatType_LootNotice">
+  <data name="ChatType_LootNotice" xml:space="preserve">
     <value>Avisos de Loot</value>
   </data>
-  <data name="ChatType_Progress">
+  <data name="ChatType_Progress" xml:space="preserve">
     <value>Mensajes de Progresión</value>
   </data>
-  <data name="ChatType_LootRoll">
+  <data name="ChatType_LootRoll" xml:space="preserve">
     <value>Mensajes de Loot</value>
   </data>
-  <data name="ChatType_Crafting">
+  <data name="ChatType_Crafting" xml:space="preserve">
     <value>Mensajes de Síntesis</value>
   </data>
-  <data name="ChatType_Gathering">
+  <data name="ChatType_Gathering" xml:space="preserve">
     <value>Mensajes de Gathering</value>
   </data>
-  <data name="ChatType_NpcAnnouncement">
+  <data name="ChatType_NpcAnnouncement" xml:space="preserve">
     <value>Diálogo de NPC (Anuncios)</value>
   </data>
-  <data name="ChatType_FreeCompanyAnnouncement">
+  <data name="ChatType_FreeCompanyAnnouncement" xml:space="preserve">
     <value>Anuncios de Free Company</value>
   </data>
-  <data name="ChatType_FreeCompanyLoginLogout">
+  <data name="ChatType_FreeCompanyLoginLogout" xml:space="preserve">
     <value>Notificaciones de Inicio de Sesión de Miembro de Free Company</value>
   </data>
-  <data name="ChatType_RetainerSale">
+  <data name="ChatType_RetainerSale" xml:space="preserve">
     <value>Notificaciones de Venta de Retainer</value>
   </data>
-  <data name="ChatType_PeriodicRecruitmentNotification">
+  <data name="ChatType_PeriodicRecruitmentNotification" xml:space="preserve">
     <value>Notificaciones Periódicas de Reclutamiento</value>
   </data>
-  <data name="ChatType_Sign">
+  <data name="ChatType_Sign" xml:space="preserve">
     <value>Mensajes al Marcar a Jugadores</value>
   </data>
-  <data name="ChatType_RandomNumber">
+  <data name="ChatType_RandomNumber" xml:space="preserve">
     <value>Mensajes de Números al Azar</value>
   </data>
-  <data name="ChatType_NoviceNetworkSystem">
+  <data name="ChatType_NoviceNetworkSystem" xml:space="preserve">
     <value>Anuncios de la Novice Network</value>
   </data>
-  <data name="ChatType_Orchestrion">
+  <data name="ChatType_Orchestrion" xml:space="preserve">
     <value>Mensajes de Canción Actual</value>
   </data>
-  <data name="ChatType_PvpTeamAnnouncement">
+  <data name="ChatType_PvpTeamAnnouncement" xml:space="preserve">
     <value>Anuncios de Equipo de PvP</value>
   </data>
-  <data name="ChatType_PvpTeamLoginLogout">
+  <data name="ChatType_PvpTeamLoginLogout" xml:space="preserve">
     <value>Notificaciones de Inicio de Sesión de Miembro de Equipo de PvP</value>
   </data>
-  <data name="ChatType_MessageBook">
+  <data name="ChatType_MessageBook" xml:space="preserve">
     <value>Alerta de Libro de Visitas</value>
   </data>
-  <data name="ChatType_GmTell">
+  <data name="ChatType_GmTell" xml:space="preserve">
     <value>Susurrar (GM)</value>
   </data>
-  <data name="ChatType_GmSay">
+  <data name="ChatType_GmSay" xml:space="preserve">
     <value>Decir (GM)</value>
   </data>
-  <data name="ChatType_GmShout">
+  <data name="ChatType_GmShout" xml:space="preserve">
     <value>Gritar (GM)</value>
   </data>
-  <data name="ChatType_GmYell">
+  <data name="ChatType_GmYell" xml:space="preserve">
     <value>Hablar alto (GM)</value>
   </data>
-  <data name="ChatType_GmParty">
+  <data name="ChatType_GmParty" xml:space="preserve">
     <value>Grupo (GM)</value>
   </data>
-  <data name="ChatType_GmFreeCompany">
+  <data name="ChatType_GmFreeCompany" xml:space="preserve">
     <value>Free Company (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell1">
+  <data name="ChatType_GmLinkshell1" xml:space="preserve">
     <value>Linkshell [1] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell2">
+  <data name="ChatType_GmLinkshell2" xml:space="preserve">
     <value>Linkshell [2] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell3">
+  <data name="ChatType_GmLinkshell3" xml:space="preserve">
     <value>Linkshell [3] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell4">
+  <data name="ChatType_GmLinkshell4" xml:space="preserve">
     <value>Linkshell [4] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell5">
+  <data name="ChatType_GmLinkshell5" xml:space="preserve">
     <value>Linkshell [5] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell6">
+  <data name="ChatType_GmLinkshell6" xml:space="preserve">
     <value>Linkshell [6] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell7">
+  <data name="ChatType_GmLinkshell7" xml:space="preserve">
     <value>Linkshell [7] (GM)</value>
   </data>
-  <data name="ChatType_GmLinkshell8">
+  <data name="ChatType_GmLinkshell8" xml:space="preserve">
     <value>Linkshell [8] (GM)</value>
   </data>
-  <data name="ChatType_GmNoviceNetwork">
+  <data name="ChatType_GmNoviceNetwork" xml:space="preserve">
     <value>Red de novatos (GM)</value>
   </data>
-  <data name="Options_CollapseDuplicateMessages_Name">
+  <data name="Options_CollapseDuplicateMessages_Name" xml:space="preserve">
     <value>Colapsar mensajes duplicados</value>
   </data>
-  <data name="Options_CollapseDuplicateMessages_Description">
+  <data name="Options_CollapseDuplicateMessages_Description" xml:space="preserve">
     <value>Reemplaza los mensajes duplicados consecutivos con un contador anexado a la primera instancia del mensaje.</value>
   </data>
-  <data name="Options_CollapseDuplicateMsgUniqueLink_Name">
+  <data name="Options_CollapseDuplicateMsgUniqueLink_Name" xml:space="preserve">
     <value>Keep unique links seperate</value>
   </data>
-  <data name="Options_CollapseDuplicateMsgUniqueLink_Description">
+  <data name="Options_CollapseDuplicateMsgUniqueLink_Description" xml:space="preserve">
     <value>Don't collapse messages if they link to different things with the same text.</value>
   </data>
-  <data name="Options_Tabs_ExtraChatChannels">
+  <data name="Options_Tabs_ExtraChatChannels" xml:space="preserve">
     <value>Canales extra de chat</value>
   </data>
-  <data name="Options_Tabs_ExtraChatAll">
+  <data name="Options_Tabs_ExtraChatAll" xml:space="preserve">
     <value>Todos</value>
   </data>
-  <data name="Context_AdventurerPlate">
+  <data name="Context_AdventurerPlate" xml:space="preserve">
     <value>Ver Adventurer Plate</value>
   </data>
-  <data name="Context_AdventurerPlateError">
+  <data name="Context_AdventurerPlateError" xml:space="preserve">
     <value>No se puede abrir el Adventurer Plate en este momento</value>
   </data>
-  <data name="Options_TooltipOffset_Name">
+  <data name="Options_TooltipOffset_Name" xml:space="preserve">
     <value>Distancia respecto al cursor </value>
   </data>
-  <data name="Options_TooltipOffset_Desc">
+  <data name="Options_TooltipOffset_Desc" xml:space="preserve">
     <value>Utilice esta opción si experimenta cortes en los consejos.</value>
   </data>
   <data name="ChatType_ExtraChatLinkshell1" xml:space="preserve">
-        <value>ExtraChat Linkshell [1]</value>
-    </data>
+    <value>ExtraChat Linkshell [1]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell2" xml:space="preserve">
-        <value>ExtraChat Linkshell [2]</value>
-    </data>
+    <value>ExtraChat Linkshell [2]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell3" xml:space="preserve">
-        <value>ExtraChat Linkshell [3]</value>
-    </data>
+    <value>ExtraChat Linkshell [3]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell4" xml:space="preserve">
-        <value>ExtraChat Linkshell [4]</value>
-    </data>
+    <value>ExtraChat Linkshell [4]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell5" xml:space="preserve">
-        <value>ExtraChat Linkshell [5]</value>
-    </data>
+    <value>ExtraChat Linkshell [5]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell6" xml:space="preserve">
-        <value>ExtraChat Linkshell [6]</value>
-    </data>
+    <value>ExtraChat Linkshell [6]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell7" xml:space="preserve">
-        <value>ExtraChat Linkshell [7]</value>
-    </data>
+    <value>ExtraChat Linkshell [7]</value>
+  </data>
   <data name="ChatType_ExtraChatLinkshell8" xml:space="preserve">
-        <value>ExtraChat Linkshell [8]</value>
-    </data>
-  <data name="Context_CopyContent">
+    <value>ExtraChat Linkshell [8]</value>
+  </data>
+  <data name="Context_CopyContent" xml:space="preserve">
     <value>Copiar contenido</value>
   </data>
-  <data name="Context_CopyContentSuccess">
+  <data name="Context_CopyContentSuccess" xml:space="preserve">
     <value>Contenido del mensaje copiado al portapapeles</value>
   </data>
-  <data name="Context_CopySuccess">
+  <data name="Context_CopySuccess" xml:space="preserve">
     <value>Mensaje copiado al portapapeles</value>
   </data>
-  <data name="PartyInvite_NoId">
+  <data name="PartyInvite_NoId" xml:space="preserve">
     <value>No se puede encontrar el ID de este mensaje, por favor prueba con otro.</value>
   </data>
   <data name="Context_CopyLink" xml:space="preserve">
-        <value>Copiar enlace al portapapeles</value>
-    </data>
+    <value>Copiar enlace al portapapeles</value>
+  </data>
   <data name="Context_CopyLinkNotification" xml:space="preserve">
-        <value>Enlace copiado al portapapeles</value>
-    </data>
+    <value>Enlace copiado al portapapeles</value>
+  </data>
   <data name="Context_OpenInBrowser" xml:space="preserve">
-        <value>Abrir enlace en el navegador</value>
-    </data>
+    <value>Abrir enlace en el navegador</value>
+  </data>
   <data name="Context_OpenInBrowserError" xml:space="preserve">
-        <value>Error al abrir el enlace en el navegador, por favor reporta este problema</value>
-    </data>
+    <value>Error al abrir el enlace en el navegador, por favor reporta este problema</value>
+  </data>
   <data name="Context_URLDomain" xml:space="preserve">
-        <value>URL en {0}</value>
-    </data>
+    <value>URL en {0}</value>
+  </data>
   <data name="Context_URLWarning" xml:space="preserve">
-        <value>Sólo abrir URLs de sitios web en los que confíes</value>
-    </data>
+    <value>Sólo abrir URLs de sitios web en los que confíes</value>
+  </data>
   <data name="Options_About_Authors" xml:space="preserve">
-        <value>Autores: </value>
-    </data>
+    <value>Autores: </value>
+  </data>
   <data name="Options_About_Discord" xml:space="preserve">
-        <value>Discord: </value>
-    </data>
+    <value>Discord: </value>
+  </data>
   <data name="Options_About_Version" xml:space="preserve">
-        <value>Versión: </value>
-    </data>
+    <value>Versión: </value>
+  </data>
   <data name="Options_About_Github_Issues" xml:space="preserve">
-        <value>Obtén ayuda a través de GitHub: </value>
-    </data>
+    <value>Obtén ayuda a través de GitHub: </value>
+  </data>
   <data name="Options_About_Discord_Thread" xml:space="preserve">
-        <value>Obtén ayuda en el hilo de discord: </value>
-    </data>
+    <value>Obtén ayuda en el hilo de discord: </value>
+  </data>
   <data name="Options_OverrideStyle_Name_Desc" xml:space="preserve">
-        <value>Reemplaza el estilo de dalamud seleccionado con uno diferente</value>
-    </data>
+    <value>Reemplaza el estilo de dalamud seleccionado con uno diferente</value>
+  </data>
   <data name="Options_HideInLoadingScreens_Name" xml:space="preserve">
-        <value>Ocultar durante las pantallas de carga</value>
-    </data>
+    <value>Ocultar durante las pantallas de carga</value>
+  </data>
   <data name="Options_HideInLoadingScreens_Description" xml:space="preserve">
-        <value>Ocultar {0} durante las pantallas de carga.</value>
-    </data>
-  <data name="Options_ClearDatabase_Button">
+    <value>Ocultar {0} durante las pantallas de carga.</value>
+  </data>
+  <data name="Options_ClearDatabase_Button" xml:space="preserve">
     <value>Borrar la base de datos de historial de mensajes</value>
   </data>
-  <data name="Options_ClearDatabase_Success">
+  <data name="Options_ClearDatabase_Success" xml:space="preserve">
     <value>Se ha borrado con éxito la base de datos de chat</value>
   </data>
-  <data name="Options_ClearDatabase_Tooltip">
+  <data name="Options_ClearDatabase_Tooltip" xml:space="preserve">
     <value>Elimina todo el historial de mensajes. No se puede recuperar. Mantén Cntr+Shift para hacer click.</value>
   </data>
-  <data name="Options_Database_Metadata_CopyConfigPath">
+  <data name="Options_Database_Metadata_CopyConfigPath" xml:space="preserve">
     <value>Haz click para copiar el directorio de la base de datos</value>
   </data>
-  <data name="Options_Database_Metadata_CopyConfigPathNotification">
+  <data name="Options_Database_Metadata_CopyConfigPathNotification" xml:space="preserve">
     <value>Directorio de la base de datos copiada</value>
   </data>
-  <data name="Options_Database_Metadata_Heading">
+  <data name="Options_Database_Metadata_Heading" xml:space="preserve">
     <value>Detalle de base de datos:</value>
   </data>
-  <data name="Options_Database_Metadata_LogSize">
+  <data name="Options_Database_Metadata_LogSize" xml:space="preserve">
     <value>Tamaño del registro: {0}</value>
   </data>
-  <data name="Options_Database_Metadata_MessageCount">
+  <data name="Options_Database_Metadata_MessageCount" xml:space="preserve">
     <value>Mensajes guardados: {0:N0}</value>
   </data>
-  <data name="Options_Database_Metadata_Path">
+  <data name="Options_Database_Metadata_Path" xml:space="preserve">
     <value>Ruta: {0}</value>
   </data>
-  <data name="Options_Database_Metadata_Size">
+  <data name="Options_Database_Metadata_Size" xml:space="preserve">
     <value>Tamaño: {0}</value>
   </data>
   <data name="Options_OverrideStyle_NotSelected" xml:space="preserve">
-        <value>No seleccionado</value>
-    </data>
+    <value>No seleccionado</value>
+  </data>
   <data name="Options_OverrideStyle_NotAvailable" xml:space="preserve">
-        <value>No hay estilos de Dalamud disponibles</value>
-    </data>
+    <value>No hay estilos de Dalamud disponibles</value>
+  </data>
   <data name="Options_PlaySounds_Name" xml:space="preserve">
-        <value>Reproducir sonidos</value>
-    </data>
+    <value>Reproducir sonidos</value>
+  </data>
   <data name="Options_PlaySounds_Description" xml:space="preserve">
-        <value>Reproducir sonidos al interactuar.</value>
-    </data>
+    <value>Reproducir sonidos al interactuar.</value>
+  </data>
   <data name="Options_MaxLinesToShow_Name" xml:space="preserve">
-        <value>Cantidad máxima de líneas de registro que se pueden mostrar en la ventana de chat</value>
-    </data>
+    <value>Cantidad máxima de líneas de registro que se pueden mostrar en la ventana de chat</value>
+  </data>
   <data name="Options_MaxLinesToShow_Description" xml:space="preserve">
-        <value>Limita la cantidad de líneas de registro que se pueden mostrar en la ventana de chat. Esto puede mejorar ligeramente el rendimiento.</value>
-    </data>
+    <value>Limita la cantidad de líneas de registro que se pueden mostrar en la ventana de chat. Esto puede mejorar ligeramente el rendimiento.</value>
+  </data>
   <data name="Options_WebinterfaceMaxLinesToSend_Name" xml:space="preserve">
-        <value>Límite de líneas de registro para la interfaz web</value>
-    </data>
+    <value>Límite de líneas de registro para la interfaz web</value>
+  </data>
   <data name="Options_WebinterfaceMaxLinesToSend_Description" xml:space="preserve">
-        <value>Limita la cantidad de líneas de registro a mostrar en la interfaz web. Esto mejorará el rendimiento de la carga.</value>
-    </data>
+    <value>Limita la cantidad de líneas de registro a mostrar en la interfaz web. Esto mejorará el rendimiento de la carga.</value>
+  </data>
   <data name="LoadMessages_Error" xml:space="preserve">
-        <value>Ha ocurrido un error al cargar el historial del chat. Por favor comprueba los registros del plugin para más informacion para reportar este problema.</value>
-    </data>
+    <value>Ha ocurrido un error al cargar el historial del chat. Por favor comprueba los registros del plugin para más informacion para reportar este problema.</value>
+  </data>
   <data name="Options_Database_Old_Heading" xml:space="preserve">
-        <value>Base de datos antigua:</value>
-    </data>
+    <value>Base de datos antigua:</value>
+  </data>
   <data name="Options_Database_Old_Delete" xml:space="preserve">
-        <value>Borrar</value>
-    </data>
+    <value>Borrar</value>
+  </data>
   <data name="Options_Database_Old_Delete_Tooltip" xml:space="preserve">
-        <value>Elimina la base de datos de tu disco. ¡Esto no es recuperable! Mantén Cntr+Shift para hacer click.</value>
-    </data>
+    <value>Elimina la base de datos de tu disco. ¡Esto no es recuperable! Mantén Cntr+Shift para hacer click.</value>
+  </data>
   <data name="Options_Database_Old_Delete_Error" xml:space="preserve">
-        <value>No se puede eliminar la base de datos antigua, más información en /xllog.</value>
-    </data>
+    <value>No se puede eliminar la base de datos antigua, más información en /xllog.</value>
+  </data>
   <data name="Options_Database_Old_Delete_Success" xml:space="preserve">
-        <value>Se eliminó correctamente la base de datos antigua.</value>
-    </data>
+    <value>Se eliminó correctamente la base de datos antigua.</value>
+  </data>
   <data name="Options_Database_Old_Migration" xml:space="preserve">
-        <value>Abrir ventana de migración</value>
-    </data>
+    <value>Abrir ventana de migración</value>
+  </data>
   <data name="Options_Tabs_NoInput" xml:space="preserve">
-        <value>Deshabilitar entrada para este canal</value>
-    </data>
+    <value>Deshabilitar entrada para este canal</value>
+  </data>
   <data name="ChatLog_DisabledInput" xml:space="preserve">
-        <value>La entrada está deshabilitada para esta pestaña</value>
-    </data>
+    <value>La entrada está deshabilitada para esta pestaña</value>
+  </data>
   <data name="Options_ChatLog_Tab" xml:space="preserve">
-        <value>Registro del chat</value>
-    </data>
+    <value>Registro del chat</value>
+  </data>
   <data name="Options_AdjustPosition_Name" xml:space="preserve">
-        <value>Ajustar la posición del registro del chat</value>
-    </data>
+    <value>Ajustar la posición del registro del chat</value>
+  </data>
   <data name="Options_AdjustPosition_Warning" xml:space="preserve">
-        <value>Atención, ¡este cambio se aplica inmediatamente y no se puede descartar!</value>
-    </data>
+    <value>Atención, ¡este cambio se aplica inmediatamente y no se puede descartar!</value>
+  </data>
   <data name="Options_KeepInputFocus_Name" xml:space="preserve">
-        <value>Mantener el foco de entrada</value>
-    </data>
+    <value>Mantener el foco de entrada</value>
+  </data>
   <data name="Options_KeepInputFocus_Description" xml:space="preserve">
-        <value>Mantiene el foco de entrada, incluso si entras en combate o realizas otras acciones.</value>
-    </data>
+    <value>Mantiene el foco de entrada, incluso si entras en combate o realizas otras acciones.</value>
+  </data>
   <data name="Options_ShowEmotes_Name" xml:space="preserve">
-        <value>Mostrar emotes</value>
-    </data>
+    <value>Mostrar emotes</value>
+  </data>
   <data name="Options_ShowEmotes_Desc" xml:space="preserve">
-        <value>Reemplaza las palabras por su versión de emote, actualmente soporta BetterTTV.</value>
-    </data>
+    <value>Reemplaza las palabras por su versión de emote, actualmente soporta BetterTTV.</value>
+  </data>
   <data name="Options_Emote_Tab" xml:space="preserve">
-        <value>Gestos</value>
-    </data>
+    <value>Gestos</value>
+  </data>
   <data name="Options_Emote_BlockedEmotes" xml:space="preserve">
-        <value>Emotes bloqueados</value>
-    </data>
+    <value>Emotes bloqueados</value>
+  </data>
   <data name="Options_Emote_EmoteTable" xml:space="preserve">
-        <value>Gesto</value>
-    </data>
+    <value>Gesto</value>
+  </data>
   <data name="Options_HideInBattle_Name" xml:space="preserve">
-        <value>Ocultar durante el combate</value>
-    </data>
+    <value>Ocultar durante el combate</value>
+  </data>
   <data name="Options_HideInBattle_Description" xml:space="preserve">
-        <value>Ocultar el chat durante combates.</value>
-    </data>
+    <value>Ocultar el chat durante combates.</value>
+  </data>
   <data name="Options_Emote_EmoteStats" xml:space="preserve">
-        <value>Estadísticas de gestos</value>
-    </data>
+    <value>Estadísticas de gestos</value>
+  </data>
   <data name="Options_Emote_Ready" xml:space="preserve">
-        <value>Listo</value>
-    </data>
+    <value>Listo</value>
+  </data>
   <data name="Options_Emote_NotReady" xml:space="preserve">
-        <value>No listo</value>
-    </data>
+    <value>No listo</value>
+  </data>
   <data name="Options_Emote_Loaded" xml:space="preserve">
-        <value>Gestos disponibles:</value>
-    </data>
+    <value>Gestos disponibles:</value>
+  </data>
   <data name="Options_Preview_Description" xml:space="preserve">
-        <value>Muestra una vista previa con un parámetro especial evaluado, como emotes o &lt;item&gt;.</value>
-    </data>
+    <value>Muestra una vista previa con un parámetro especial evaluado, como emotes o &lt;item&gt;.</value>
+  </data>
   <data name="Options_Preview_Name" xml:space="preserve">
-        <value>Posición (Ninguno = apagado)</value>
-    </data>
+    <value>Posición (Ninguno = apagado)</value>
+  </data>
   <data name="Options_Preview_None" xml:space="preserve">
-        <value>Ninguno</value>
-    </data>
+    <value>Ninguno</value>
+  </data>
   <data name="Options_Preview_Inside" xml:space="preserve">
-        <value>Dentro</value>
-    </data>
+    <value>Dentro</value>
+  </data>
   <data name="Options_Preview_Top" xml:space="preserve">
-        <value>Arriba</value>
-    </data>
+    <value>Arriba</value>
+  </data>
   <data name="Options_Preview_Bottom" xml:space="preserve">
-        <value>Abajo</value>
-    </data>
+    <value>Abajo</value>
+  </data>
   <data name="Options_Preview_Header" xml:space="preserve">
-        <value>Vista previa de mensaje:</value>
-    </data>
+    <value>Vista previa de mensaje:</value>
+  </data>
   <data name="Options_Preview_Tooltip" xml:space="preserve">
-        <value>Consejos</value>
-    </data>
+    <value>Consejos</value>
+  </data>
   <data name="Options_PreviewOnlyIf_Name" xml:space="preserve">
-        <value>Debe contener un parámetro</value>
-    </data>
+    <value>Debe contener un parámetro</value>
+  </data>
   <data name="Options_PreviewOnlyIf_Description" xml:space="preserve">
-        <value>Mostrar solo si el texto contiene un parámetro especial.</value>
-    </data>
+    <value>Mostrar solo si el texto contiene un parámetro especial.</value>
+  </data>
   <data name="Options_PreviewMinimum_Name" xml:space="preserve">
-        <value>Longitud mínima de entrada</value>
-    </data>
+    <value>Longitud mínima de entrada</value>
+  </data>
   <data name="Options_PreviewMinimum_Description" xml:space="preserve">
-        <value>Mostrar solo si la longitud del texto es mayor o igual.</value>
-    </data>
+    <value>Mostrar solo si la longitud del texto es mayor o igual.</value>
+  </data>
   <data name="Options_Preview_Tab" xml:space="preserve">
-        <value>Vista previa</value>
-    </data>
+    <value>Vista previa</value>
+  </data>
   <data name="Options_Changelog_Tab" xml:space="preserve">
-        <value>Registro de cambios</value>
-    </data>
+    <value>Registro de cambios</value>
+  </data>
   <data name="Options_PrintChangelog_Name" xml:space="preserve">
-        <value>Crear registro de cambios</value>
-    </data>
+    <value>Crear registro de cambios</value>
+  </data>
   <data name="Options_PrintChangelog_Description" xml:space="preserve">
-        <value>Crea el registro de cambios en el chat después de una actualización.</value>
-    </data>
+    <value>Crea el registro de cambios en el chat después de una actualización.</value>
+  </data>
   <data name="Options_Warning_NotImplemented" xml:space="preserve">
-        <value>Esta característica no está implementada todavía</value>
-    </data>
+    <value>Esta característica no está implementada todavía</value>
+  </data>
   <data name="Options_Changelog_Header" xml:space="preserve">
-        <value>Registro de cambios:</value>
-    </data>
+    <value>Registro de cambios:</value>
+  </data>
   <data name="DateWidget_InvalidDate" xml:space="preserve">
-        <value>La fecha previa a {0} no es posible</value>
-    </data>
+    <value>La fecha previa a {0} no es posible</value>
+  </data>
   <data name="DateWidget_Day_Sun" xml:space="preserve">
-        <value>Dom</value>
-    </data>
+    <value>Dom</value>
+  </data>
   <data name="DateWidget_Day_Mon" xml:space="preserve">
-        <value>Lun</value>
-    </data>
+    <value>Lun</value>
+  </data>
   <data name="DateWidget_Day_Tue" xml:space="preserve">
-        <value>Mar</value>
-    </data>
+    <value>Mar</value>
+  </data>
   <data name="DateWidget_Day_Wed" xml:space="preserve">
-        <value>Mié</value>
-    </data>
+    <value>Mié</value>
+  </data>
   <data name="DateWidget_Day_Thu" xml:space="preserve">
-        <value>Jue</value>
-    </data>
+    <value>Jue</value>
+  </data>
   <data name="DateWidget_Day_Fri" xml:space="preserve">
-        <value>Vie</value>
-    </data>
+    <value>Vie</value>
+  </data>
   <data name="DateWidget_Day_Sat" xml:space="preserve">
-        <value>Sáb</value>
-    </data>
+    <value>Sáb</value>
+  </data>
   <data name="DateWidget_Month_January" xml:space="preserve">
-        <value>Enero</value>
-    </data>
+    <value>Enero</value>
+  </data>
   <data name="DateWidget_Month_February" xml:space="preserve">
-        <value>Febrero</value>
-    </data>
+    <value>Febrero</value>
+  </data>
   <data name="DateWidget_Month_March" xml:space="preserve">
-        <value>Marzo</value>
-    </data>
+    <value>Marzo</value>
+  </data>
   <data name="DateWidget_Month_April" xml:space="preserve">
-        <value>Abril</value>
-    </data>
+    <value>Abril</value>
+  </data>
   <data name="DateWidget_Month_May" xml:space="preserve">
-        <value>Mayo</value>
-    </data>
+    <value>Mayo</value>
+  </data>
   <data name="DateWidget_Month_June" xml:space="preserve">
-        <value>Junio</value>
-    </data>
+    <value>Junio</value>
+  </data>
   <data name="DateWidget_Month_July" xml:space="preserve">
-        <value>Julio</value>
-    </data>
+    <value>Julio</value>
+  </data>
   <data name="DateWidget_Month_August" xml:space="preserve">
-        <value>Agosto</value>
-    </data>
+    <value>Agosto</value>
+  </data>
   <data name="DateWidget_Month_September" xml:space="preserve">
-        <value>Septiembre</value>
-    </data>
+    <value>Septiembre</value>
+  </data>
   <data name="DateWidget_Month_October" xml:space="preserve">
-        <value>Octubre</value>
-    </data>
+    <value>Octubre</value>
+  </data>
   <data name="DateWidget_Month_November" xml:space="preserve">
-        <value>Noviembre</value>
-    </data>
+    <value>Noviembre</value>
+  </data>
   <data name="DateWidget_Month_December" xml:space="preserve">
-        <value>Diciembre</value>
-    </data>
+    <value>Diciembre</value>
+  </data>
   <data name="DbViewer_TableField_Date" xml:space="preserve">
-        <value>Fecha</value>
-    </data>
+    <value>Fecha</value>
+  </data>
   <data name="DbViewer_TableField_Type" xml:space="preserve">
-        <value>Channel</value>
-    </data>
+    <value>Channel</value>
+  </data>
   <data name="DbViewer_TableField_Sender" xml:space="preserve">
-        <value>Remitente</value>
-    </data>
+    <value>Remitente</value>
+  </data>
   <data name="DbViewer_TableField_Content" xml:space="preserve">
-        <value>Contenido</value>
-    </data>
+    <value>Contenido</value>
+  </data>
   <data name="DbViewer_Status_NothingFound" xml:space="preserve">
-        <value>No se ha encontrado nada.</value>
-    </data>
+    <value>No se ha encontrado nada.</value>
+  </data>
   <data name="DbViewer_Status_NoSearchResult" xml:space="preserve">
-        <value>No hay coincidencia de búsqueda en esta página.</value>
-    </data>
+    <value>No hay coincidencia de búsqueda en esta página.</value>
+  </data>
   <data name="DbViewer_SearcHint" xml:space="preserve">
-        <value>Búsqueda simple de remitentes/contenido</value>
-    </data>
+    <value>Búsqueda simple de remitentes/contenido</value>
+  </data>
   <data name="DbViewer_Page" xml:space="preserve">
-        <value>Página: {0} /{1} ({2} Líneas) {3}</value>
-    </data>
+    <value>Página: {0} /{1} ({2} Líneas) {3}</value>
+  </data>
   <data name="DbViewer_LoadingIndicator" xml:space="preserve">
-        <value>[Cargando...]</value>
-    </data>
+    <value>[Cargando...]</value>
+  </data>
   <data name="DbViewer_CharacterOption" xml:space="preserve">
-        <value>Sólo personaje actual</value>
-    </data>
+    <value>Sólo personaje actual</value>
+  </data>
   <data name="DbViewer_DatePicker_FromTo" xml:space="preserve">
-        <value>DePara:</value>
-    </data>
+    <value>DePara:</value>
+  </data>
   <data name="Chat_SendTell_Error" xml:space="preserve">
-        <value>Se produjo un error al enviar este mensaje privado</value>
-    </data>
+    <value>Se produjo un error al enviar este mensaje privado</value>
+  </data>
   <data name="Webinterface_Stop_Success" xml:space="preserve">
-        <value>Interfaz web detenida.</value>
-    </data>
+    <value>Interfaz web detenida.</value>
+  </data>
   <data name="Webinterface_Stop_Failed" xml:space="preserve">
-        <value>La interfaz web no se ha detenido. Revisa /xllog para más información.</value>
-    </data>
+    <value>La interfaz web no se ha detenido. Revisa /xllog para más información.</value>
+  </data>
   <data name="Webinterface_Button_Stop" xml:space="preserve">
-        <value>Detener</value>
-    </data>
+    <value>Detener</value>
+  </data>
   <data name="Webinterface_Button_Start" xml:space="preserve">
-        <value>Iniciar</value>
-    </data>
+    <value>Iniciar</value>
+  </data>
   <data name="Webinterface_Start_Success" xml:space="preserve">
-        <value>Interfaz web iniciada.</value>
-    </data>
+    <value>Interfaz web iniciada.</value>
+  </data>
   <data name="Webinterface_Start_Failed" xml:space="preserve">
-        <value>La interfaz web no pudo iniciarse. Revisa /xllog para más información.</value>
-    </data>
+    <value>La interfaz web no pudo iniciarse. Revisa /xllog para más información.</value>
+  </data>
   <data name="Webinterface_Option_Port_Name" xml:space="preserve">
-        <value>Puerto</value>
-    </data>
+    <value>Puerto</value>
+  </data>
   <data name="Webinterface_Option_Port_Description" xml:space="preserve">
-        <value>Puerto en el que se ejecutará esta interfaz web.</value>
-    </data>
+    <value>Puerto en el que se ejecutará esta interfaz web.</value>
+  </data>
   <data name="Options_Webinterface_Warning_Header" xml:space="preserve">
-        <value>Después de marcar 'Activado' y hacer clic en 'Iniciar', se cargará la interfaz web integrada de Chat2, que permitirá a los dispositivos de tu red acceder al chat en el juego. Esta función se puede utilizar para permitir que un teléfono u otro equipo vea la actividad de Chat2, cambie de canal, y envíe mensajes como si estuvieras escribiendo en FFXIV.</value>
-    </data>
+    <value>Después de marcar 'Activado' y hacer clic en 'Iniciar', se cargará la interfaz web integrada de Chat2, que permitirá a los dispositivos de tu red acceder al chat en el juego. Esta función se puede utilizar para permitir que un teléfono u otro equipo vea la actividad de Chat2, cambie de canal, y envíe mensajes como si estuvieras escribiendo en FFXIV.</value>
+  </data>
   <data name="Options_Webinterface_Warning_Reason" xml:space="preserve">
-        <value>Por razones de seguridad de la cuenta, esta característica no está pensada para su uso fuera de su red local, ¡usted ha sido advertido!</value>
-    </data>
+    <value>Por razones de seguridad de la cuenta, esta característica no está pensada para su uso fuera de su red local, ¡usted ha sido advertido!</value>
+  </data>
   <data name="Options_Webinterface_Warning_DoNot" xml:space="preserve">
-        <value>No:</value>
-    </data>
+    <value>No:</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Port" xml:space="preserve">
-        <value>Redirijas el puerto usado (9000)</value>
-    </data>
+    <value>Redirijas el puerto usado (9000)</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Share" xml:space="preserve">
-        <value>Compartas tu código con nadie más</value>
-    </data>
+    <value>Compartas tu código con nadie más</value>
+  </data>
   <data name="Options_Webinterface_DoNot_Multibox" xml:space="preserve">
-        <value>Esperes que el multi-Boeing funcione con esto (solo el primer cliente funciona).</value>
-    </data>
+    <value>Esperes que el multi-Boeing funcione con esto (solo el primer cliente funciona).</value>
+  </data>
   <data name="Options_Webinterface_Warning_Support" xml:space="preserve">
-        <value>No se proporcionará ningún soporte a las cláusulas de "NO" que no sean respetadas y adheridas apropiadamente.</value>
-    </data>
+    <value>No se proporcionará ningún soporte a las cláusulas de "NO" que no sean respetadas y adheridas apropiadamente.</value>
+  </data>
   <data name="Options_Webinterface_Hostname_Fail" xml:space="preserve">
-        <value>Incapaz de resolver nombre del host.</value>
-    </data>
+    <value>Incapaz de resolver nombre del host.</value>
+  </data>
   <data name="Options_Webinterface_Note" xml:space="preserve">
-        <value>Nota: Esto requerirá al menos un navegador semi moderno para funcionar correctamente</value>
-    </data>
+    <value>Nota: Esto requerirá al menos un navegador semi moderno para funcionar correctamente</value>
+  </data>
   <data name="Webinterface_UsageNotice" xml:space="preserve">
-        <value>Aviso de Uso</value>
-    </data>
+    <value>Aviso de Uso</value>
+  </data>
+  <data name="Options_EnableCensorshipHighlight_Name" xml:space="preserve">
+    <value>Enable Censorship Higlight</value>
+  </data>
 </root>

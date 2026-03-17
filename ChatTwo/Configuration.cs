@@ -82,13 +82,8 @@ internal class Configuration : IPluginConfiguration
     public bool ShowEmotes = true;
     public HashSet<string> BlockedEmotes = [];
 
-    // ================= 新增代码开始 =================
-    /// <summary>
     /// 是否启用屏蔽词高亮功能
-    /// </summary>
-    public bool EnableCensorshipHighlight = true;
-    // ================= 新增代码结束 =================
-
+    public bool EnableCensorshipHighlight = false;
 
     public bool FontsEnabled = true;
     public ExtraGlyphRanges ExtraGlyphRanges = 0;

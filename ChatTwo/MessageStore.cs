@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Data.Common;
 using ChatTwo.Code;
+using ChatTwo.Resources;
 using ChatTwo.Ui;
 using ChatTwo.Util;
 using Dalamud.Game.Text.SeStringHandling;
+using Dalamud.Interface.ImGuiNotification;
 using MessagePack;
 using MessagePack.Formatters;
 using MessagePack.Resolvers;
@@ -98,11 +100,11 @@ public class PayloadMessagePackFormatter : IMessagePackFormatter<Payload?>
     }
 }
 
-public class SeStringMessagePackFormatter : IMessagePackFormatter<SeString>
+public class SeStringMessagePackFormatter : IMessagePackFormatter<SeString?>
 {
-    public void Serialize(ref MessagePackWriter writer, SeString value, MessagePackSerializerOptions options)
+    public void Serialize(ref MessagePackWriter writer, SeString? value, MessagePackSerializerOptions options)
     {
-        options.Resolver.GetFormatter<List<Payload>>()!.Serialize(ref writer, value.Payloads, options);
+        options.Resolver.GetFormatter<List<Payload>>()!.Serialize(ref writer, value?.Payloads ?? [], options);
     }
 
     public SeString Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
@@ -115,6 +117,7 @@ internal class MessageStore : IDisposable
 {
     private const int MessageQueryLimit = 10_000;
 
+    private Plugin Plugin;
     private string DbPath { get; }
 
     private SqliteConnection Connection { get; set; }
@@ -122,8 +125,9 @@ internal class MessageStore : IDisposable
     internal static readonly MessagePackSerializerOptions MsgPackOptions = MessagePackSerializerOptions.Standard
         .WithResolver(CompositeResolver.Create([new PayloadMessagePackFormatter(), new SeStringMessagePackFormatter()], [StandardResolver.Instance]));
 
-    internal MessageStore(string dbPath)
+    internal MessageStore(Plugin plugin, string dbPath)
     {
+        Plugin = plugin;
         DbPath = dbPath;
         Connection = Connect();
         Migrate();
@@ -169,12 +173,19 @@ internal class MessageStore : IDisposable
         {
             case <= 0:
                 migrationsToDo.Add(Migrate0);
-                // Migration support was only added in version 1. Migrate0 is
+
+                // Migration support was only added in version 1. Migrate 0 is
                 // idempotent.
                 migrationsToDo.Add(Migrate1);
+                migrationsToDo.Add(Migrate2);
+                migrationsToDo.Add(Migrate3);
                 break;
             case 1:
                 migrationsToDo.Add(Migrate2);
+                migrationsToDo.Add(Migrate3);
+                break;
+            case 2:
+                migrationsToDo.Add(Migrate3);
                 break;
         }
 
@@ -184,6 +195,7 @@ internal class MessageStore : IDisposable
 
     private void Migrate0()
     {
+        Plugin.Log.Information("Running migration 0: Creating tables");
         Connection.Execute(@"
             CREATE TABLE IF NOT EXISTS messages (
                 Id BLOB PRIMARY KEY NOT NULL,  -- Guid
@@ -208,6 +220,7 @@ internal class MessageStore : IDisposable
 
     private void Migrate1()
     {
+        Plugin.Log.Information("Running migration 1: Adding Deleted column");
         Connection.Execute(@"
             -- Migration 1: Add Deleted column
             ALTER TABLE messages ADD COLUMN Deleted BOOLEAN NOT NULL DEFAULT false;
@@ -218,6 +231,7 @@ internal class MessageStore : IDisposable
 
     private void Migrate2()
     {
+        Plugin.Log.Information("Running migration 2: Adding Channel generated column");
         Connection.Execute(@"
             -- Migration 2: Add Channel generated column
             ALTER TABLE messages ADD COLUMN Channel INTEGER GENERATED ALWAYS AS (Code & 0x7f) VIRTUAL;
@@ -227,8 +241,95 @@ internal class MessageStore : IDisposable
         SetMigrationVersion(2);
     }
 
+    private void Migrate3()
+    {
+        Plugin.Log.Information("Running migration 3: Fix log kinds to fit the new format");
+
+        // Only set this the first
+        if (Plugin.Config.MigrationStatus == MigrationStatus.NotStarted)
+        {
+            Plugin.Config.MigrationStatus = MigrationStatus.Started;
+            Plugin.SaveConfig();
+        }
+
+        try
+        {
+            // Only backup if this is the first time
+            if (Plugin.Config.MigrationStatus == MigrationStatus.Started)
+            {
+                File.Copy(DbPath, $"{DbPath}-migration-bak");
+
+                Plugin.Config.MigrationStatus = MigrationStatus.Copied;
+                Plugin.SaveConfig();
+            }
+
+            Connection.Execute(@"
+                -- Migration 3: Fix log kinds to fit the new format
+                -- Add new ChatType, SourceKind, TargetKind (byte), SortCodeV2
+                -- Migrate OldChatColumn
+                    -- ChatType = OldChatColumn & 0x7f
+                    -- SourceKind = log2(1 << ((OldChatColumn >> 11) & 0xF))
+                    -- TargetKind = trunc(log2(1 << ((OldChatColumn >> 7) & 0xF)))
+                    -- Virtual SortCodeV2 = ChatType << 16 | SourceKind << 8 | TargetKind
+                -- Delete OldChatColumn, Virtual Channel
+
+                ALTER TABLE messages ADD COLUMN ChatType INTEGER;
+                CREATE INDEX IF NOT EXISTS idx_messages_chat_type ON messages (ChatType);
+                ALTER TABLE messages ADD COLUMN SourceKind INTEGER;
+                ALTER TABLE messages ADD COLUMN TargetKind INTEGER;
+
+                UPDATE messages SET
+                                    ChatType = Code & 0x7f,
+                                    SourceKind = trunc(log2(1 << ((Code >> 11) & 0xF))),
+                                    TargetKind = trunc(log2(1 << ((Code >> 7) & 0xF)))
+                WHERE true;
+
+                DROP INDEX idx_messages_channel;
+                ALTER TABLE messages DROP COLUMN Channel;
+                ALTER TABLE messages DROP COLUMN Code;
+                ALTER TABLE messages DROP COLUMN SortCode;
+            ");
+
+            SetMigrationVersion(3);
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log.Error(ex, "Failed to migrate database");
+            Plugin.Notification.AddNotification(
+                new Notification
+                {
+                    Title = Language.Database_Migration_Error_Title,
+                    Content = Language.Database_Migration_Error_Desc,
+                    Type = NotificationType.Error,
+                    Minimized = false,
+                    UserDismissable = true,
+                    InitialDuration = TimeSpan.FromSeconds(100000),
+                });
+
+            Connection.Close();
+            Connection.Dispose();
+
+            File.Delete(DbPath);
+
+            Plugin.Config.MigrationStatus = MigrationStatus.Failed;
+            Plugin.SaveConfig();
+
+            throw;
+        }
+
+        // Only delete backup if migration has successfully ran the first time
+        if (Plugin.Config.MigrationStatus == MigrationStatus.Copied)
+        {
+            File.Delete($"{DbPath}-migration-bak");
+
+            Plugin.Config.MigrationStatus = MigrationStatus.Finished;
+            Plugin.SaveConfig();
+        }
+    }
+
     private void SetMigrationVersion(int version)
     {
+        Plugin.Log.Information($"Setting version {version}");
         using var cmd = Connection.CreateCommand();
         // Parameters aren't supported for PRAGMA queries, and you can't set the
         // version with a pragma_ function.
@@ -271,12 +372,13 @@ internal class MessageStore : IDisposable
                 Receiver,
                 ContentId,
                 Date,
-                Code,
+                ChatType,
+                SourceKind,
+                TargetKind,
                 Sender,
                 Content,
                 SenderSource,
                 ContentSource,
-                SortCode,
                 ExtraChatChannel,
                 Deleted
             ) VALUES (
@@ -284,12 +386,13 @@ internal class MessageStore : IDisposable
                 $Receiver,
                 $ContentId,
                 $Date,
-                $Code,
+                $ChatType,
+                $SourceKind,
+                $TargetKind,
                 $Sender,
                 $Content,
                 $SenderSource,
                 $ContentSource,
-                $SortCode,
                 $ExtraChatChannel,
                 false
             )
@@ -297,27 +400,28 @@ internal class MessageStore : IDisposable
                 Receiver = excluded.Receiver,
                 ContentId = excluded.ContentId,
                 Date = excluded.Date,
-                Code = excluded.Code,
+                ChatType = excluded.ChatType,
+                SourceKind = excluded.SourceKind,
+                TargetKind = excluded.TargetKind,
                 Sender = excluded.Sender,
                 Content = excluded.Content,
                 SenderSource = excluded.SenderSource,
                 ContentSource = excluded.ContentSource,
-                SortCode = excluded.SortCode,
                 ExtraChatChannel = excluded.ExtraChatChannel,
-                Deleted = false
-            ;
+                Deleted = false;
         ";
 
         cmd.Parameters.AddWithValue("$Id", message.Id);
         cmd.Parameters.AddWithValue("$Receiver", message.Receiver);
         cmd.Parameters.AddWithValue("$ContentId", message.ContentId);
         cmd.Parameters.AddWithValue("$Date", message.Date.ToUnixTimeMilliseconds());
-        cmd.Parameters.AddWithValue("$Code", message.Code.Raw);
+        cmd.Parameters.AddWithValue("$ChatType", message.Code.Type);
+        cmd.Parameters.AddWithValue("$SourceKind", message.Code.Source);
+        cmd.Parameters.AddWithValue("$TargetKind", message.Code.Target);
         cmd.Parameters.AddWithValue("$Sender", MessagePackSerializer.Serialize(message.Sender, MsgPackOptions));
         cmd.Parameters.AddWithValue("$Content", MessagePackSerializer.Serialize(message.Content, MsgPackOptions));
         cmd.Parameters.AddWithValue("$SenderSource", MessagePackSerializer.Serialize(message.SenderSource, MsgPackOptions));
         cmd.Parameters.AddWithValue("$ContentSource", MessagePackSerializer.Serialize(message.ContentSource, MsgPackOptions));
-        cmd.Parameters.AddWithValue("$SortCode", message.SortCode.Encode());
         cmd.Parameters.AddWithValue("$ExtraChatChannel", message.ExtraChatChannel);
 
         cmd.ExecuteNonQuery();
@@ -350,12 +454,13 @@ internal class MessageStore : IDisposable
                     Receiver,
                     ContentId,
                     Date,
-                    Code,
+                    ChatType,
+                    SourceKind,
+                    TargetKind,
                     Sender,
                     Content,
                     SenderSource,
                     ContentSource,
-                    SortCode,
                     ExtraChatChannel
                 FROM messages
                 " + whereClause + @"
@@ -387,14 +492,14 @@ internal class MessageStore : IDisposable
         cmd.ExecuteNonQuery();
     }
 
-    internal long CountDateRange(DateTime after, DateTime before, uint[] channels, ulong? receiver = null)
+    internal long CountDateRange(DateTime after, DateTime before, IEnumerable<byte> channels, ulong? receiver = null)
     {
         List<string> whereClauses = ["deleted = false"];
         if (receiver != null)
             whereClauses.Add("Receiver = $Receiver");
 
         whereClauses.Add("Date BETWEEN $After AND $Before");
-        whereClauses.Add($"Channel IN ({string.Join(", ", channels)})");
+        whereClauses.Add($"ChatType IN ({string.Join(", ", channels)})");
 
         var whereClause = "WHERE " + string.Join(" AND ", whereClauses);
 
@@ -416,14 +521,14 @@ internal class MessageStore : IDisposable
         return (long) cmd.ExecuteScalar()!;
     }
 
-    internal MessageEnumerator GetDateRange(DateTime after, DateTime before, uint[] channels, ulong? receiver = null, int page = 0)
+    internal MessageEnumerator GetDateRange(DateTime after, DateTime before, IEnumerable<byte> channels, ulong? receiver = null)
     {
         List<string> whereClauses = ["deleted = false"];
         if (receiver != null)
             whereClauses.Add("Receiver = $Receiver");
 
         whereClauses.Add("Date BETWEEN $After AND $Before");
-        whereClauses.Add($"Channel IN ({string.Join(", ", channels)})");
+        whereClauses.Add($"ChatType IN ({string.Join(", ", channels)})");
 
         var whereClause = $"WHERE {string.Join(" AND ", whereClauses)}";
 
@@ -436,15 +541,58 @@ internal class MessageStore : IDisposable
                 Receiver,
                 ContentId,
                 Date,
-                Code,
+                ChatType,
+                SourceKind,
+                TargetKind,
                 Sender,
                 Content,
                 SenderSource,
                 ContentSource,
-                SortCode,
+                ExtraChatChannel
+            FROM messages
+            " + whereClause;
+        cmd.CommandTimeout = 120; // this could take a while on slow computers
+
+        if (receiver != null)
+            cmd.Parameters.AddWithValue("$Receiver", receiver);
+
+        cmd.Parameters.AddWithValue("$After", ((DateTimeOffset) after).ToUnixTimeMilliseconds());
+        cmd.Parameters.AddWithValue("$Before", ((DateTimeOffset) before).ToUnixTimeMilliseconds());
+
+        return new MessageEnumerator(cmd.ExecuteReader());
+    }
+
+    internal MessageEnumerator GetPagedDateRange(DateTime after, DateTime before, IEnumerable<byte> channels, ulong? receiver = null, int page = 0)
+    {
+        List<string> whereClauses = ["deleted = false"];
+        if (receiver != null)
+            whereClauses.Add("Receiver = $Receiver");
+
+        whereClauses.Add("Date BETWEEN $After AND $Before");
+        whereClauses.Add($"ChatType IN ({string.Join(", ", channels)})");
+
+        var whereClause = $"WHERE {string.Join(" AND ", whereClauses)}";
+
+        var cmd = Connection.CreateCommand();
+        // Select last N messages by date DESC, but reverse the order to get
+        // them in ascending order.
+        cmd.CommandText = @"
+            SELECT
+                Id,
+                Receiver,
+                ContentId,
+                Date,
+                ChatType,
+                SourceKind,
+                TargetKind,
+                Sender,
+                Content,
+                SenderSource,
+                ContentSource,
                 ExtraChatChannel
             FROM messages
             " + whereClause + @"
+            ORDER BY Date
             LIMIT $Offset, $OffsetCount;
         ";
         cmd.CommandTimeout = 120; // this could take a while on slow computers
@@ -485,13 +633,12 @@ internal class MessageEnumerator(DbDataReader reader) : IEnumerable<Message>, ID
                     (ulong)reader.GetInt64(1),
                     (ulong)reader.GetInt64(2),
                     DateTimeOffset.FromUnixTimeMilliseconds(reader.GetInt64(3)),
-                    new ChatCode((ushort)reader.GetInt32(4)),
-                    MessagePackSerializer.Deserialize<List<Chunk>>(reader.GetFieldValue<byte[]>(5), MessageStore.MsgPackOptions),
-                    MessagePackSerializer.Deserialize<List<Chunk>>(reader.GetFieldValue<byte[]>(6), MessageStore.MsgPackOptions),
-                    MessagePackSerializer.Deserialize<SeString>(reader.GetFieldValue<byte[]>(7), MessageStore.MsgPackOptions),
-                    MessagePackSerializer.Deserialize<SeString>(reader.GetFieldValue<byte[]>(8), MessageStore.MsgPackOptions),
-                    new SortCode((uint)reader.GetInt32(9)),
-                    reader.GetGuid(10)
+                    new ChatCode((byte)reader.GetInt32(4), (byte)reader.GetInt32(5), (byte)reader.GetInt32(6)),
+                    MessagePackSerializer.Deserialize<List<Chunk>>(reader.GetFieldValue<byte[]>(7), MessageStore.MsgPackOptions),
+                    MessagePackSerializer.Deserialize<List<Chunk>>(reader.GetFieldValue<byte[]>(8), MessageStore.MsgPackOptions),
+                    MessagePackSerializer.Deserialize<SeString>(reader.GetFieldValue<byte[]>(9), MessageStore.MsgPackOptions),
+                    MessagePackSerializer.Deserialize<SeString>(reader.GetFieldValue<byte[]>(10), MessageStore.MsgPackOptions),
+                    reader.GetGuid(11)
                 );
             }
             catch (Exception e)

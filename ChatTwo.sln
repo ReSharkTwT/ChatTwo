@@ -4,8 +4,6 @@ VisualStudioVersion = 17.14.36310.24 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatTwo", "ChatTwo\ChatTwo.csproj", "{739F75E6-B65F-41EF-9D90-F7BC519E4875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatTwo.Tests", "ChatTwo.Tests\ChatTwo.Tests.csproj", "{A9FE423A-240C-4EDA-ACC6-21474B562128}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

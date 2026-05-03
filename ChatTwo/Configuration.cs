@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Concurrent;
 using ChatTwo.Code;
 using ChatTwo.GameFunctions.Types;
 using ChatTwo.Resources;
@@ -13,7 +12,7 @@ using Dalamud.Bindings.ImGui;
 namespace ChatTwo;
 
 [Serializable]
-internal class ConfigKeyBind
+public class ConfigKeyBind
 {
     public ModifierFlag Modifier;
     public VirtualKey Key;
@@ -32,9 +31,19 @@ internal class ConfigKeyBind
 }
 
 [Serializable]
-internal class Configuration : IPluginConfiguration
+public enum MigrationStatus
 {
-    private const int LatestVersion = 5;
+    NotStarted,
+    Started,
+    Copied,
+    Failed,
+    Finished,
+}
+
+[Serializable]
+public class Configuration : IPluginConfiguration
+{
+    private const int LatestVersion = 6;
 
     public int Version { get; set; } = LatestVersion;
 
@@ -47,7 +56,11 @@ internal class Configuration : IPluginConfiguration
     public bool HideWhenInactive;
     public int InactivityHideTimeout = 10;
     public bool InactivityHideActiveDuringBattle = true;
-    public Dictionary<ChatType, ChatSource>? InactivityHideChannels;
+
+    [Obsolete("Use InactivityHideChannelsV2 instead")]
+    public Dictionary<ChatType, ChatSource> InactivityHideChannels = [];
+
+    public Dictionary<ChatType, (ChatSource, ChatSource)> InactivityHideChannelsV2 = [];
     public bool InactivityHideExtraChatAll = true;
     public HashSet<Guid> InactivityHideExtraChatChannels = [];
     public bool ShowHideButton = true;
@@ -92,18 +105,18 @@ internal class Configuration : IPluginConfiguration
     public SingleFontSpec GlobalFontV2 = new()
     {
         // dalamud only ships KR as regular, which chat2 used previously for global fonts
-        FontId = new DalamudAssetFontAndFamilyId(DalamudAsset.NotoSansKrRegular),
+        FontId = new DalamudAssetFontAndFamilyId(DalamudAsset.NotoSansCjkRegular),
         SizePt = 12.75f,
     };
     public SingleFontSpec JapaneseFontV2 = new()
     {
-        FontId = new DalamudAssetFontAndFamilyId(DalamudAsset.NotoSansJpMedium),
+        FontId = new DalamudAssetFontAndFamilyId(DalamudAsset.NotoSansCjkMedium),
         SizePt = 12.75f,
     };
     public bool ItalicEnabled;
     public SingleFontSpec ItalicFontV2 = new()
     {
-        FontId = new DalamudAssetFontAndFamilyId(DalamudAsset.NotoSansKrRegular),
+        FontId = new DalamudAssetFontAndFamilyId(DalamudAsset.NotoSansCjkRegular),
         SizePt = 12.75f,
     };
 
@@ -126,7 +139,10 @@ internal class Configuration : IPluginConfiguration
     public HashSet<string> AuthStore = [];
     public int WebinterfaceMaxLinesToSend = 1000; // 1-10000
 
-    internal void UpdateFrom(Configuration other, bool backToOriginal)
+    // Migration safety
+    public MigrationStatus MigrationStatus = MigrationStatus.NotStarted;
+
+    public void UpdateFrom(Configuration other, bool backToOriginal)
     {
         if (backToOriginal)
             foreach (var tab in Tabs.Where(t => t.PopOut))
@@ -141,7 +157,7 @@ internal class Configuration : IPluginConfiguration
         HideWhenInactive = other.HideWhenInactive;
         InactivityHideTimeout = other.InactivityHideTimeout;
         InactivityHideActiveDuringBattle = other.InactivityHideActiveDuringBattle;
-        InactivityHideChannels = other.InactivityHideChannels?.ToDictionary(entry => entry.Key, entry => entry.Value);
+        InactivityHideChannelsV2 = other.InactivityHideChannelsV2.ToDictionary(pair => pair.Key, pair => pair.Value);
         InactivityHideExtraChatAll = other.InactivityHideExtraChatAll;
         InactivityHideExtraChatChannels = other.InactivityHideExtraChatChannels.ToHashSet();
         ShowHideButton = other.ShowHideButton;
@@ -201,18 +217,19 @@ internal class Configuration : IPluginConfiguration
         WebinterfacePassword = other.WebinterfacePassword;
         WebinterfacePort = other.WebinterfacePort;
         WebinterfaceMaxLinesToSend = other.WebinterfaceMaxLinesToSend;
+        MigrationStatus = other.MigrationStatus;
     }
 }
 
 [Serializable]
-internal enum UnreadMode
+public enum UnreadMode
 {
     All,
     Unseen,
     None,
 }
 
-internal static class UnreadModeExt
+public static class UnreadModeExt
 {
     internal static string Name(this UnreadMode mode) => mode switch
     {
@@ -232,10 +249,14 @@ internal static class UnreadModeExt
 }
 
 [Serializable]
-internal class Tab
+public class Tab
 {
     public string Name = Language.Tab_DefaultName;
+
+    [Obsolete("Removed in favor of SelectedChannels")]
     public Dictionary<ChatType, ChatSource> ChatCodes = new();
+
+    public Dictionary<ChatType, (ChatSource, ChatSource)> SelectedChannels = new();
     public bool ExtraChatAll;
     public HashSet<Guid> ExtraChatChannels = [];
 
@@ -259,6 +280,10 @@ internal class Tab
     public bool HideInBattle;
     public bool HideWhenInactive;
 
+    public bool IsTempTab;
+    public bool AllSenderMessages;
+    public TellTarget TellTarget = TellTarget.Empty();
+
     [NonSerialized] public uint Unread;
     [NonSerialized] public uint LastSendUnread;
     [NonSerialized] public long LastActivity;
@@ -268,27 +293,31 @@ internal class Tab
 
     [NonSerialized] public Guid Identifier = Guid.NewGuid();
 
-    internal bool Matches(Message message) => message.Matches(ChatCodes, ExtraChatAll, ExtraChatChannels);
+    public bool Matches(Message message)
+    {
+        return message.Matches(SelectedChannels, ExtraChatAll, ExtraChatChannels);
+    }
 
-    internal void AddMessage(Message message, bool unread = true)
+    public void AddMessage(Message message, bool unread = true)
     {
         Messages.AddPrune(message, MessageManager.MessageDisplayLimit);
         if (!unread)
             return;
 
         Unread += 1;
-        if (message.Matches(Plugin.Config.InactivityHideChannels!, Plugin.Config.InactivityHideExtraChatAll, Plugin.Config.InactivityHideExtraChatChannels))
+        if (message.Matches(Plugin.Config.InactivityHideChannelsV2, Plugin.Config.InactivityHideExtraChatAll, Plugin.Config.InactivityHideExtraChatChannels))
             LastActivity = Environment.TickCount64;
     }
 
-    internal void Clear() => Messages.Clear();
+    public void Clear()
+        => Messages.Clear();
 
-    internal Tab Clone()
+    public Tab Clone()
     {
         return new Tab
         {
             Name = Name,
-            ChatCodes = ChatCodes.ToDictionary(entry => entry.Key, entry => entry.Value),
+            SelectedChannels = SelectedChannels.ToDictionary(pair => pair.Key, pair => pair.Value),
             ExtraChatAll = ExtraChatAll,
             ExtraChatChannels = ExtraChatChannels.ToHashSet(),
             UnreadMode = UnreadMode,
@@ -312,6 +341,9 @@ internal class Tab
             HideInLoadingScreens = HideInLoadingScreens,
             HideInBattle = HideInBattle,
             HideWhenInactive = HideWhenInactive,
+            IsTempTab = IsTempTab,
+            AllSenderMessages = AllSenderMessages,
+            TellTarget = TellTarget.From(TellTarget),
         };
     }
 
@@ -319,7 +351,7 @@ internal class Tab
     /// MessageList provides an ordered list of messages with duplicate ID
     /// tracking, sorting and mutex protection.
     /// </summary>
-    internal class MessageList
+    public class MessageList
     {
         private readonly SemaphoreSlim LockSlim = new(1, 1);
 
@@ -432,7 +464,7 @@ internal class Tab
             return new RLockedMessageList(LockSlim, Messages);
         }
 
-        internal class RLockedMessageList(SemaphoreSlim lockSlim, List<Message> messages) : IReadOnlyList<Message>, IDisposable
+        public class RLockedMessageList(SemaphoreSlim lockSlim, List<Message> messages) : IReadOnlyList<Message>, IDisposable
         {
             public IEnumerator<Message> GetEnumerator()
             {
@@ -456,31 +488,31 @@ internal class Tab
     }
 }
 
-internal class UsedChannel
+public class UsedChannel
 {
-    internal InputChannel Channel = InputChannel.Invalid;
-    internal List<Chunk> Name = [];
-    internal TellTarget? TellTarget;
+    public InputChannel Channel = InputChannel.Invalid;
+    public List<Chunk> Name = [];
+    public TellTarget? TellTarget;
 
-    internal bool UseTempChannel;
-    internal InputChannel TempChannel = InputChannel.Invalid;
-    internal TellTarget? TempTellTarget;
+    public bool UseTempChannel;
+    public InputChannel TempChannel = InputChannel.Invalid;
+    public TellTarget? TempTellTarget;
 
-    internal void ResetTempChannel()
+    public void ResetTempChannel()
     {
         UseTempChannel = false;
         TempTellTarget = null;
         TempChannel = InputChannel.Invalid;
     }
 
-    internal void SetChannel(InputChannel channel)
+    public void SetChannel(InputChannel channel)
     {
         Channel = channel;
     }
 }
 
 [Serializable]
-internal enum PreviewPosition
+public enum PreviewPosition
 {
     None,
     Inside,
@@ -489,9 +521,9 @@ internal enum PreviewPosition
     Tooltip,
 }
 
-internal static class PreviewPositionExt
+public static class PreviewPositionExt
 {
-    internal static string Name(this PreviewPosition position) => position switch
+    public static string Name(this PreviewPosition position) => position switch
     {
         PreviewPosition.None => Language.Options_Preview_None,
         PreviewPosition.Inside => Language.Options_Preview_Inside,
@@ -503,16 +535,16 @@ internal static class PreviewPositionExt
 }
 
 [Serializable]
-internal enum CommandHelpSide
+public enum CommandHelpSide
 {
     None,
     Left,
     Right,
 }
 
-internal static class CommandHelpSideExt
+public static class CommandHelpSideExt
 {
-    internal static string Name(this CommandHelpSide side) => side switch
+    public static string Name(this CommandHelpSide side) => side switch
     {
         CommandHelpSide.None => Language.CommandHelpSide_None,
         CommandHelpSide.Left => Language.CommandHelpSide_Left,
@@ -522,22 +554,22 @@ internal static class CommandHelpSideExt
 }
 
 [Serializable]
-internal enum KeybindMode
+public enum KeybindMode
 {
     Flexible,
     Strict,
 }
 
-internal static class KeybindModeExt
+public static class KeybindModeExt
 {
-    internal static string Name(this KeybindMode mode) => mode switch
+    public static string Name(this KeybindMode mode) => mode switch
     {
         KeybindMode.Flexible => Language.KeybindMode_Flexible_Name,
         KeybindMode.Strict => Language.KeybindMode_Strict_Name,
         _ => throw new ArgumentOutOfRangeException(nameof(mode), mode, null),
     };
 
-    internal static string? Tooltip(this KeybindMode mode) => mode switch
+    public static string? Tooltip(this KeybindMode mode) => mode switch
     {
         KeybindMode.Flexible => Language.KeybindMode_Flexible_Tooltip,
         KeybindMode.Strict => Language.KeybindMode_Strict_Tooltip,
@@ -546,7 +578,7 @@ internal static class KeybindModeExt
 }
 
 [Serializable]
-internal enum LanguageOverride
+public enum LanguageOverride
 {
     None,
     ChineseSimplified,
@@ -569,9 +601,9 @@ internal enum LanguageOverride
     Swedish,
 }
 
-internal static class LanguageOverrideExt
+public static class LanguageOverrideExt
 {
-    internal static string Name(this LanguageOverride mode) => mode switch
+    public static string Name(this LanguageOverride mode) => mode switch
     {
         LanguageOverride.None => Language.LanguageOverride_None,
         LanguageOverride.ChineseSimplified => "简体中文",
@@ -593,7 +625,7 @@ internal static class LanguageOverrideExt
         _ => throw new ArgumentOutOfRangeException(nameof(mode), mode, null),
     };
 
-    internal static string Code(this LanguageOverride mode) => mode switch
+    public static string Code(this LanguageOverride mode) => mode switch
     {
         LanguageOverride.None => "",
         LanguageOverride.ChineseSimplified => "zh-hans",
@@ -618,7 +650,7 @@ internal static class LanguageOverrideExt
 
 [Serializable]
 [Flags]
-internal enum ExtraGlyphRanges
+public enum ExtraGlyphRanges
 {
     ChineseFull = 1 << 0,
     ChineseSimplifiedCommon = 1 << 1,
@@ -629,9 +661,9 @@ internal enum ExtraGlyphRanges
     Vietnamese = 1 << 6,
 }
 
-internal static class ExtraGlyphRangesExt
+public static class ExtraGlyphRangesExt
 {
-    internal static string Name(this ExtraGlyphRanges ranges) => ranges switch
+    public static string Name(this ExtraGlyphRanges ranges) => ranges switch
     {
         ExtraGlyphRanges.ChineseFull => Language.ExtraGlyphRanges_ChineseFull_Name,
         ExtraGlyphRanges.ChineseSimplifiedCommon => Language.ExtraGlyphRanges_ChineseSimplifiedCommon_Name,
@@ -643,7 +675,7 @@ internal static class ExtraGlyphRangesExt
         _ => throw new ArgumentOutOfRangeException(nameof(ranges), ranges, null),
     };
 
-    internal static unsafe nint Range(this ExtraGlyphRanges ranges) => ranges switch
+    public static unsafe nint Range(this ExtraGlyphRanges ranges) => ranges switch
     {
         ExtraGlyphRanges.ChineseFull => (nint)ImGui.GetIO().Fonts.GetGlyphRangesChineseFull(),
         ExtraGlyphRanges.ChineseSimplifiedCommon => (nint)ImGui.GetIO().Fonts.GetGlyphRangesChineseSimplifiedCommon(),

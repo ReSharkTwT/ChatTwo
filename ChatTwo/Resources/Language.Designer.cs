@@ -88,11 +88,65 @@ namespace ChatTwo.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Select all 的本地化字符串。
+        /// </summary>
+        internal static string ChannelSelector_Select {
+            get {
+                return ResourceManager.GetString("ChannelSelector_Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unselect all 的本地化字符串。
+        /// </summary>
+        internal static string ChannelSelector_Unselect {
+            get {
+                return ResourceManager.GetString("ChannelSelector_Unselect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 An error occured while sending this tell message 的本地化字符串。
         /// </summary>
         internal static string Chat_SendTell_Error {
             get {
                 return ResourceManager.GetString("Chat_SendTell_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 message is empty 的本地化字符串。
+        /// </summary>
+        internal static string ChatBox_Error_Empty {
+            get {
+                return ResourceManager.GetString("ChatBox_Error_Empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 message contained invalid characters 的本地化字符串。
+        /// </summary>
+        internal static string ChatBox_Error_Invalid {
+            get {
+                return ResourceManager.GetString("ChatBox_Error_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 message is longer than 500 bytes 的本地化字符串。
+        /// </summary>
+        internal static string ChatBox_Error_Too_Long {
+            get {
+                return ResourceManager.GetString("ChatBox_Error_Too_Long", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Loading logs ... 的本地化字符串。
+        /// </summary>
+        internal static string ChatExport_Initial {
+            get {
+                return ResourceManager.GetString("ChatExport_Initial", resourceCulture);
             }
         }
         
@@ -1420,6 +1474,34 @@ namespace ChatTwo.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Database migration has failed, a new database will be created.
+        ///Your old database can still be recovered, please contact the plugin author for help. 的本地化字符串。
+        /// </summary>
+        internal static string Database_Migration_Error_Desc {
+            get {
+                return ResourceManager.GetString("Database_Migration_Error_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Chat2 Database Migration Error 的本地化字符串。
+        /// </summary>
+        internal static string Database_Migration_Error_Title {
+            get {
+                return ResourceManager.GetString("Database_Migration_Error_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Open date picker 的本地化字符串。
+        /// </summary>
+        internal static string DatePicker_Tooltip {
+            get {
+                return ResourceManager.GetString("DatePicker_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Fri 的本地化字符串。
         /// </summary>
         internal static string DateWidget_Day_Fri {
@@ -1609,6 +1691,15 @@ namespace ChatTwo.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Reset date selection. 的本地化字符串。
+        /// </summary>
+        internal static string DbViewer_Date_Reset_Tooltip {
+            get {
+                return ResourceManager.GetString("DbViewer_Date_Reset_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 FromTo: 的本地化字符串。
         /// </summary>
         internal static string DbViewer_DatePicker_FromTo {
@@ -1699,6 +1790,24 @@ namespace ChatTwo.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Export the message history to a json file. 的本地化字符串。
+        /// </summary>
+        internal static string Export_Json_Tooltip {
+            get {
+                return ResourceManager.GetString("Export_Json_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Export the message history to a text file. 的本地化字符串。
+        /// </summary>
+        internal static string Export_Txt_Tooltip {
+            get {
+                return ResourceManager.GetString("Export_Txt_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Chinese (full) 的本地化字符串。
         /// </summary>
         internal static string ExtraGlyphRanges_ChineseFull_Name {
@@ -1758,6 +1867,42 @@ namespace ChatTwo.Resources {
         internal static string ExtraGlyphRanges_Vietnamese_Name {
             get {
                 return ResourceManager.GetString("ExtraGlyphRanges_Vietnamese_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Pick a folder location for export. 的本地化字符串。
+        /// </summary>
+        internal static string Folder_Export_Location_Tooltip {
+            get {
+                return ResourceManager.GetString("Folder_Export_Location_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Pick an export location 的本地化字符串。
+        /// </summary>
+        internal static string Folder_Selection_Header {
+            get {
+                return ResourceManager.GetString("Folder_Selection_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Source 的本地化字符串。
+        /// </summary>
+        internal static string ImGuiUtil_ChannelSelector_Source {
+            get {
+                return ResourceManager.GetString("ImGuiUtil_ChannelSelector_Source", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Target 的本地化字符串。
+        /// </summary>
+        internal static string ImGuiUtil_ChannelSelector_Target {
+            get {
+                return ResourceManager.GetString("ImGuiUtil_ChannelSelector_Target", resourceCulture);
             }
         }
         
@@ -2469,6 +2614,24 @@ namespace ChatTwo.Resources {
         internal static string Options_FontSize_Name {
             get {
                 return ResourceManager.GetString("Options_FontSize_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Target 的本地化字符串。
+        /// </summary>
+        internal static string Options_Header_Target {
+            get {
+                return ResourceManager.GetString("Options_Header_Target", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 This disables the channel selection and shows all messages coming from the target. 的本地化字符串。
+        /// </summary>
+        internal static string Options_Help_SenderMessages {
+            get {
+                return ResourceManager.GetString("Options_Help_SenderMessages", resourceCulture);
             }
         }
         
@@ -3427,6 +3590,15 @@ namespace ChatTwo.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Show all messages sent by target 的本地化字符串。
+        /// </summary>
+        internal static string Options_Tabs_SenderMessages {
+            get {
+                return ResourceManager.GetString("Options_Tabs_SenderMessages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Show timestamps 的本地化字符串。
         /// </summary>
         internal static string Options_Tabs_ShowTimestamps {
@@ -3652,6 +3824,24 @@ namespace ChatTwo.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Previous page 的本地化字符串。
+        /// </summary>
+        internal static string Page_ArrowLeft_Tooltip {
+            get {
+                return ResourceManager.GetString("Page_ArrowLeft_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Next page 的本地化字符串。
+        /// </summary>
+        internal static string Page_ArrowRight_Tooltip {
+            get {
+                return ResourceManager.GetString("Page_ArrowRight_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Unable to find ID for this message, please try another one. 的本地化字符串。
         /// </summary>
         internal static string PartyInvite_NoId {
@@ -3738,6 +3928,15 @@ namespace ChatTwo.Resources {
         internal static string Tabs_Presets_General {
             get {
                 return ResourceManager.GetString("Tabs_Presets_General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Tell Exclusive 的本地化字符串。
+        /// </summary>
+        internal static string Tabs_Presets_Tell {
+            get {
+                return ResourceManager.GetString("Tabs_Presets_Tell", resourceCulture);
             }
         }
         

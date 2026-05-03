@@ -28,7 +28,8 @@ public static class EmoteCache
     private const string Top100Emotes = "{0}/emotes/shared/top?before={1}&limit=100";
     private const string EmotePath = "https://cdn.betterttv.net/emote/{0}/3x";
 
-    private struct Top100
+    [Serializable]
+    private struct Top100()
     {
         [JsonPropertyName("emote")]
         public Emote Emote { get; set; }
@@ -37,15 +38,18 @@ public static class EmoteCache
         public string Id { get; set; }
     }
 
-    public struct Emote
+    [Serializable]
+    public struct Emote()
     {
         [JsonPropertyName("id")]
         public string Id { get; set; }
+
         [JsonPropertyName("code")]
         public string Code { get; set; }
+
         [JsonPropertyName("imageType")]
         public string ImageType { get; set; }
-    };
+    }
 
     public enum LoadingState
     {

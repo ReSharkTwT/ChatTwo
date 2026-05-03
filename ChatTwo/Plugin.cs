@@ -7,44 +7,44 @@ using ChatTwo.Resources;
 using ChatTwo.Ui;
 using ChatTwo.Util;
 using Dalamud.Game.ClientState.Conditions;
-using Dalamud.Game.ClientState.Objects;
 using Dalamud.Interface.Windowing;
 using Dalamud.IoC;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
 using Dalamud.Bindings.ImGui;
+using Dalamud.Interface.ImGuiFileDialog;
 
 namespace ChatTwo;
 
 // ReSharper disable once ClassNeverInstantiated.Global
 public sealed class Plugin : IDalamudPlugin
 {
-    internal const string PluginName = "Chat 2";
+    public const string PluginName = "Chat 2";
 
-    [PluginService] internal static IPluginLog Log { get; private set; } = null!;
-    [PluginService] internal static IDalamudPluginInterface Interface { get; private set; } = null!;
-    [PluginService] internal static IChatGui ChatGui { get; private set; } = null!;
+    [PluginService] public static IPluginLog Log { get; private set; } = null!;
+    [PluginService] public static IDalamudPluginInterface Interface { get; private set; } = null!;
+    [PluginService] public static IChatGui ChatGui { get; private set; } = null!;
+    [PluginService] public static ISigScanner SigScanner { get; private set; } = null!;
+    [PluginService] public static IClientState ClientState { get; private set; } = null!;
+    [PluginService] public static ICommandManager CommandManager { get; private set; } = null!;
+    [PluginService] public static ICondition Condition { get; private set; } = null!;
+    [PluginService] public static IDataManager DataManager { get; private set; } = null!;
+    [PluginService] public static IFramework Framework { get; private set; } = null!;
+    [PluginService] public static IGameGui GameGui { get; private set; } = null!;
+    [PluginService] public static IKeyState KeyState { get; private set; } = null!;
+    [PluginService] public static IObjectTable ObjectTable { get; private set; } = null!;
+    [PluginService] public static IPartyList PartyList { get; private set; } = null!;
+    [PluginService] public static ITargetManager TargetManager { get; private set; } = null!;
+    [PluginService] public static ITextureProvider TextureProvider { get; private set; } = null!;
+    [PluginService] public static IGameInteropProvider GameInteropProvider { get; private set; } = null!;
+    [PluginService] public static IGameConfig GameConfig { get; private set; } = null!;
+    [PluginService] public static INotificationManager Notification { get; private set; } = null!;
+    [PluginService] public static IAddonLifecycle AddonLifecycle { get; private set; } = null!;
+    [PluginService] public static IPlayerState PlayerState { get; private set; } = null!;
+    [PluginService] public static ISeStringEvaluator Evaluator { get; private set; } = null!;
 
-    // 【新增】添加 ISigScanner 服务注入
-    [PluginService] internal static ISigScanner SigScanner { get; private set; } = null!;
-    [PluginService] internal static IClientState ClientState { get; private set; } = null!;
-    [PluginService] internal static ICommandManager CommandManager { get; private set; } = null!;
-    [PluginService] internal static ICondition Condition { get; private set; } = null!;
-    [PluginService] internal static IDataManager DataManager { get; private set; } = null!;
-    [PluginService] internal static IFramework Framework { get; private set; } = null!;
-    [PluginService] internal static IGameGui GameGui { get; private set; } = null!;
-    [PluginService] internal static IKeyState KeyState { get; private set; } = null!;
-    [PluginService] internal static IObjectTable ObjectTable { get; private set; } = null!;
-    [PluginService] internal static IPartyList PartyList { get; private set; } = null!;
-    [PluginService] internal static ITargetManager TargetManager { get; private set; } = null!;
-    [PluginService] internal static ITextureProvider TextureProvider { get; private set; } = null!;
-    [PluginService] internal static IGameInteropProvider GameInteropProvider { get; private set; } = null!;
-    [PluginService] internal static IGameConfig GameConfig { get; private set; } = null!;
-    [PluginService] internal static INotificationManager Notification { get; private set; } = null!;
-    [PluginService] internal static IAddonLifecycle AddonLifecycle { get; private set; } = null!;
-    [PluginService] internal static IPlayerState PlayerState { get; private set; } = null!;
-
-    internal static Configuration Config = null!;
+    public static Configuration Config = null!;
+    public static FileDialogManager FileDialogManager { get; private set; } = null!;
 
     public readonly WindowSystem WindowSystem = new(PluginName);
     public SettingsWindow SettingsWindow { get; }
@@ -63,7 +63,7 @@ public sealed class Plugin : IDalamudPlugin
     internal TypingIpc TypingIpc { get; }
     internal FontManager FontManager { get; }
 
-    internal ServerCore ServerCore { get; }
+    public readonly ServerCore ServerCore;
 
     internal int DeferredSaveFrames = -1;
 
@@ -89,9 +89,33 @@ public sealed class Plugin : IDalamudPlugin
 
             Config = Interface.GetPluginConfig() as Configuration ?? new Configuration();
 
+#pragma warning disable CS0618 // Type or member is obsolete
+            // TODO Remove after 01.07.2026
+            // Migrate old channel values
+            if (Config.Version <= 5)
+            {
+                foreach (var tab in Config.Tabs)
+                {
+                    if (tab.ChatCodes.Count > 0)
+                    {
+                        tab.SelectedChannels = tab.ChatCodes.ToDictionary(pair => pair.Key, pair => (pair.Value, pair.Value));
+                        tab.ChatCodes.Clear();
+                    }
+
+                    if (Config.InactivityHideChannels.Count > 0)
+                    {
+                        Config.InactivityHideChannelsV2 = Config.InactivityHideChannels.ToDictionary(pair => pair.Key, pair => (pair.Value, pair.Value));
+                        Config.InactivityHideChannels.Clear();
+                    }
+
+                    Config.Version = 6;
+                    SaveConfig();
+                }
+            }
+#pragma warning restore CS0618 // Type or member is obsolete
+
             if (Config.Tabs.Count == 0)
                 Config.Tabs.Add(TabsUtil.VanillaGeneral);
-            Config.InactivityHideChannels ??= TabsUtil.AllChannels();
 
             LanguageChanged(Interface.UiLanguage);
             ImGuiUtil.Initialize(this);
@@ -102,15 +126,19 @@ public sealed class Plugin : IDalamudPlugin
             // ===========================================
 
 
-            // Functions calls this in its ctor if the player is already logged in
+            FileDialogManager = new FileDialogManager();
+
+            // Function call this in its ctor if the player is already logged in
             ServerCore = new ServerCore(this);
 
-            Commands = new Commands(this);
+            Commands = new Commands();
             Functions = new GameFunctions.GameFunctions(this);
             Ipc = new IpcManager();
             TypingIpc = new TypingIpc(this);
-            ExtraChat = new ExtraChat(this);
+            ExtraChat = new ExtraChat();
             FontManager = new FontManager();
+
+            MessageManager = new MessageManager(this); // Does it require UI?
 
             ChatLogWindow = new ChatLogWindow(this);
             SettingsWindow = new SettingsWindow(this);
@@ -132,8 +160,6 @@ public sealed class Plugin : IDalamudPlugin
 
             Interface.UiBuilder.DisableCutsceneUiHide = true;
             Interface.UiBuilder.DisableGposeUiHide = true;
-
-            MessageManager = new MessageManager(this); // requires Ui
 
             // let all the other components register, then initialize commands
             Commands.Initialise();
@@ -220,7 +246,7 @@ public sealed class Plugin : IDalamudPlugin
         if (Config.HideInLoadingScreens && Condition[ConditionFlag.BetweenAreas])
         {
             ChatLogWindow.FinalizeFrame();
-            TypingIpc?.Update();
+            TypingIpc.Update();
             return;
         }
 
@@ -230,20 +256,20 @@ public sealed class Plugin : IDalamudPlugin
         ChatLogWindow.DefaultText = ImGui.GetStyle().Colors[(int) ImGuiCol.Text];
 
         using ((Config.FontsEnabled ? FontManager.RegularFont : FontManager.Axis).Push())
-        {
             WindowSystem.Draw();
-        }
 
         ChatLogWindow.FinalizeFrame();
-        TypingIpc?.Update();
+        TypingIpc.Update();
+
+        FileDialogManager.Draw();
     }
 
-    internal void SaveConfig()
+    public void SaveConfig()
     {
         Interface.SavePluginConfig(Config);
     }
 
-    internal void LanguageChanged(string langCode)
+    public void LanguageChanged(string langCode)
     {
         var info = Config.LanguageOverride is LanguageOverride.None
             ? new CultureInfo(langCode)

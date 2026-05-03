@@ -69,13 +69,13 @@ public class Processing
 
             color ??= 0;
 
-            var userContent = text.Content ?? string.Empty;
+            var userContent = text.Content;
             if (HostContext.Core.Plugin.ChatLogWindow.ScreenshotMode)
             {
                 if (chunk.Link is PlayerPayload playerPayload)
                     userContent = HostContext.Core.Plugin.ChatLogWindow.HidePlayerInString(userContent, playerPayload.PlayerName, playerPayload.World.RowId);
-                else if (Plugin.ObjectTable.LocalPlayer is { } player)
-                    userContent = HostContext.Core.Plugin.ChatLogWindow.HidePlayerInString(userContent, player.Name.TextValue, player.HomeWorld.RowId);
+                else if (Plugin.PlayerState.IsLoaded)
+                    userContent = HostContext.Core.Plugin.ChatLogWindow.HidePlayerInString(userContent, Plugin.PlayerState.CharacterName, Plugin.PlayerState.HomeWorld.RowId);
             }
 
             var isNotUrl = text.Link is not UriPayload;
